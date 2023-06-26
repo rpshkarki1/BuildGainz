@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_img"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/logoForApp"
+        android:layout_width="140dp"
+        android:layout_height="140sp"
+        android:layout_marginTop="100sp"
+        android:src="@drawable/logo_for_app"
+        android:contentDescription="@string/logoFor_app"
+        />
+
+    <TextView
+        android:id="@+id/buildGainz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/cardview_default_radius"
+        android:fontFamily="Gill Sans MT"
+        android:text="@string/buildgainz_string"
+        android:textColor="@color/buildgainz_color"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
