@@ -6,4 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".getStarted">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="858dp"
+        android:layout_height="774dp"
+        app:layout_constraintBottom_toTopOf="@+id/motto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="414dp"
+        android:layout_height="568dp"
+        android:layout_marginTop="365dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blob_scene_haikei__1__2_shape" />
+
+    <ImageView
+        android:id="@+id/logoForApp"
+        android:layout_width="98dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/motto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo_for_app" />
+
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="345dp"
+        android:layout_height="65dp"
+        android:fontFamily="@font/cooper"
+        android:text="GET STARTED"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/motto"
+        android:layout_width="414dp"
+        android:layout_height="231dp"
+        android:fontFamily="@font/cooper"
+        android:gravity="center"
+        android:text="@string/motto"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/app_name"
+        android:textColor="#939799"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logoForApp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
