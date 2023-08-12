@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
 
 public class getStartedActivity extends AppCompatActivity {
@@ -18,14 +18,11 @@ public class getStartedActivity extends AppCompatActivity {
 
         btnGetStart = findViewById(R.id.getStartedButton);
 
-        btnGetStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent iGetStart ;
-                iGetStart = new Intent(getStartedActivity.this,loginPageActivity.class);
-                startActivity(iGetStart);
-                finish();
-            }
+        btnGetStart.setOnClickListener(v -> {
+            Intent iGetStart ;
+            iGetStart = new Intent(getStartedActivity.this,loginPageActivity.class);
+            startActivity(iGetStart);
+            finish();
         });
 
 
