@@ -1,81 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".getStartedActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="858dp"
-        android:layout_height="774dp"
-        app:layout_constraintBottom_toTopOf="@+id/motto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="402dp"
-        android:layout_height="562dp"
-        android:layout_marginTop="365dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blob_scene_haikei__1__2_shape" />
-
-    <ImageView
-        android:id="@+id/logoForApp"
-        android:layout_width="98dp"
-        android:layout_height="88dp"
-        app:layout_constraintBottom_toTopOf="@+id/motto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logo_for_app" />
-
-    <Button
-        android:id="@+id/getStartedButton"
-        android:layout_width="345dp"
-        android:layout_height="65dp"
-        android:fontFamily="@font/cooper"
-        android:text="GET STARTED"
-        android:textSize="26dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/motto" />
-
-    <TextView
-        android:id="@+id/motto"
-        android:layout_width="392dp"
-        android:layout_height="227dp"
-        android:fontFamily="@font/cooper"
-        android:gravity="center"
-        android:text="@string/motto"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/appName" />
-
-    <TextView
-        android:id="@+id/appName"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="@string/app_name"
-        android:textColor="#939799"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/logoForApp"
-        app:layout_constraintStart_toStartOf="@+id/logoForApp"
-        app:layout_constraintTop_toTopOf="@+id/logoForApp" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/black_bg"
+        app:cardCornerRadius="45sp"
+        android:layout_marginBottom="-30sp"
+
+        tools:ignore="VisualLintBounds">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/black_bg"
+            >
+            <ImageView
+                android:id="@+id/logoForApp"
+                android:layout_width="105sp"
+                android:layout_height="107sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                app:srcCompat="@drawable/logo_for_app"
+                android:contentDescription="@string/logoFor_app" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
+                android:text="@string/app_name"
+                android:textColor="#929698"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/motto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/motto"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/moto"
+            />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/getStartedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:layout_marginBottom="40sp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/get_started"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:letterSpacing="0.02"
+
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

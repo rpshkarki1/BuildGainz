@@ -15,6 +15,7 @@
         <color name="rectangle_1_color">#ffffff</color>
         <color name="buildgainz_color">#FF1744</color>
         <color name="_bg__getstartedscreen_color">#FFFFFF</color>
-        <color name="blob_scene_haikei__1__2_color">#1C2022</color>
+        <color name="grey">#1C2022</color>
         <color name="_box_color">#6750A4</color>
+        <color name="black_bg">#1C2022</color>
 </resources>

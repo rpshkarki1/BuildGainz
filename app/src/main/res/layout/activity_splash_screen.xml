@@ -1,11 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_img"
     android:orientation="vertical"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/logoForApp"
@@ -22,7 +20,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="@dimen/cardview_default_radius"
-        android:fontFamily="Gill Sans MT"
+        android:fontFamily="@font/cooper"
         android:text="@string/buildgainz_string"
         android:textColor="@color/buildgainz_color"
         android:textSize="28sp"
