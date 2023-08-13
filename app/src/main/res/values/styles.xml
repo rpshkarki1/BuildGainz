@@ -13,4 +13,16 @@
         <item name="cornerSize" >52sp</item>
 
     </style>
+
+    <style name="forgot_pass">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="signupbtn">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>

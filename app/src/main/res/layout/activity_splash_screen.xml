@@ -11,7 +11,7 @@
         android:layout_height="140sp"
         android:layout_marginTop="100sp"
         android:src="@drawable/logo_for_app"
-        android:contentDescription="@string/logoFor_app"
+        android:contentDescription="@string/logoFor_App"
         />
 
     <TextView
@@ -21,7 +21,7 @@
         android:gravity="center"
         android:layout_marginTop="@dimen/cardview_default_radius"
         android:fontFamily="@font/cooper"
-        android:text="@string/buildgainz_string"
+        android:text="@string/buildGainz_String"
         android:textColor="@color/buildgainz_color"
         android:textSize="28sp"
         android:textStyle="bold" />

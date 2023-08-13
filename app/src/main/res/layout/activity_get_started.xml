@@ -15,7 +15,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/black_bg"
         app:cardCornerRadius="45sp"
-        android:layout_marginBottom="-30sp"
+        android:layout_marginBottom="-60sp"
 
         tools:ignore="VisualLintBounds">
 
@@ -32,7 +32,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20sp"
                 app:srcCompat="@drawable/logo_for_app"
-                android:contentDescription="@string/logoFor_app" />
+                android:contentDescription="@string/logoFor_App" />
 
             <TextView
                 android:id="@+id/appName"
@@ -56,7 +56,7 @@
                 android:layout_gravity="center"
                 android:text="@string/motto"
                 android:textColor="@color/white"
-                android:textSize="50sp"
+                android:textSize="44sp"
                 android:textStyle="bold"
                 android:contentDescription="@string/moto"
             />
@@ -67,9 +67,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="65dp"
                 android:gravity="center"
-                android:layout_marginBottom="40sp"
+                android:layout_marginBottom="70sp"
                 android:fontFamily="@font/cooper"
-                android:text="@string/get_started"
+                android:text="@string/get_Started"
                 android:textSize="35sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
