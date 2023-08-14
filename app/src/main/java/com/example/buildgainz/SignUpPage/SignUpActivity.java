@@ -1,4 +1,4 @@
-package com.example.buildgainz;
+package com.example.buildgainz.SignUpPage;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.buildgainz.DashBoardActivity;
+import com.example.buildgainz.LoginPageActivity;
+import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;

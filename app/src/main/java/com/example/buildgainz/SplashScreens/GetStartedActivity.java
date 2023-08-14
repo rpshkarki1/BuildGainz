@@ -1,4 +1,4 @@
-package com.example.buildgainz;
+package com.example.buildgainz.SplashScreens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.Button;
+
+import com.example.buildgainz.LoginPageActivity;
+import com.example.buildgainz.R;
 
 public class GetStartedActivity extends AppCompatActivity {
 

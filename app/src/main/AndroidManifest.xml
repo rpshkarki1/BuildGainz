@@ -16,7 +16,7 @@
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".SignUpPage.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".DashBoardActivity"
@@ -25,10 +25,10 @@
             android:name=".LoginPageActivity"
             android:exported="false" />
         <activity
-            android:name=".GetStartedActivity"
+            android:name=".SplashScreens.GetStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".SplashScreens.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

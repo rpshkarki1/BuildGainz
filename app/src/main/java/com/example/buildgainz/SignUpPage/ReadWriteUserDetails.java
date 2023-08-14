@@ -1,4 +1,4 @@
-package com.example.buildgainz;
+package com.example.buildgainz.SignUpPage;
 
 public class ReadWriteUserDetails {
 
