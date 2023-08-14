@@ -3,11 +3,14 @@ package com.example.buildgainz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +35,7 @@ public class LoginPageActivity extends AppCompatActivity {
     private TextView signUp, forgotPass;
     private FirebaseAuth authProfile;
     private Button buttonSignIn;
+    private ImageView imageViewShowHidePwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,27 @@ public class LoginPageActivity extends AppCompatActivity {
 
         emailEditText = findViewById(R.id.editTextYourEmail);
         passEditText = findViewById(R.id.editTextYourPassword);
+        imageViewShowHidePwd = findViewById(R.id.imgViewShowHide);
+        imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+
+        //Show hide password using Eye icon using imgView
+        imageViewShowHidePwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passEditText.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+
+                    //if pwd is visible then hides it
+                    passEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //Then Change Icon
+                    imageViewShowHidePwd.setImageResource(R.drawable.ic_show_pwd);
+                } else{
+                    passEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+
+                }
+            }
+        });
+
 
         authProfile = FirebaseAuth.getInstance();
 

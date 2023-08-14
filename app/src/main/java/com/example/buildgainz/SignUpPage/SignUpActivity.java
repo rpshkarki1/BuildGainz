@@ -3,11 +3,14 @@ package com.example.buildgainz.SignUpPage;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +33,8 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText fullName, yourEmail, yourPassword, reEnterPassword;
 
     private final String TAG = "SignUpActivity";
+    private ImageView imageViewShowHidePwd,imageViewShowHidePwd2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,53 @@ public class SignUpActivity extends AppCompatActivity {
         yourEmail = findViewById(R.id.yourEmail);
         yourPassword = findViewById(R.id.enterPass);
         reEnterPassword = findViewById(R.id.reEnterPass);
+        imageViewShowHidePwd = findViewById(R.id.imgViewShowHide1);
+        imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+
+        //Show hide password using Eye icon using imgView
+        imageViewShowHidePwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (yourPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+
+                    //if pwd is visible then hides it
+                    yourPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //Then Change Icon
+                    imageViewShowHidePwd.setImageResource(R.drawable.ic_show_pwd);
+                } else{
+                    yourPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+
+                }
+            }
+        });
+
+        imageViewShowHidePwd2 = findViewById(R.id.imgViewShowHide2);
+        imageViewShowHidePwd2.setImageResource(R.drawable.ic_hide_pwd);
+
+        //Show hide password using Eye icon using imgView
+        imageViewShowHidePwd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (reEnterPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+
+                    //if pwd is visible then hides it
+                    reEnterPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    //Then Change Icon
+                    imageViewShowHidePwd2.setImageResource(R.drawable.ic_show_pwd);
+                } else{
+                    reEnterPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageViewShowHidePwd2.setImageResource(R.drawable.ic_hide_pwd);
+
+                }
+            }
+        });
+
+
+
+
+
+
         TextView signInNow = findViewById(R.id.signInNow);
         Button signUp = findViewById(R.id.signUpAccBtn);
 

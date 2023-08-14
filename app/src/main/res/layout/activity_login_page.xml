@@ -85,15 +85,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:padding="10sp">
 
             <EditText
                 android:id="@+id/editTextYourEmail"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="48sp"
-                android:autofillHints=""
+                android:minWidth="280sp"
+                android:autofillHints="emailAddress"
                 android:drawableStart="@drawable/email_icon"
                 android:drawablePadding="16sp"
                 android:hint="@string/your_email"
@@ -102,6 +104,10 @@
                 android:textColorHint="#757575"
                 android:textSize="18sp"
                 tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -126,9 +132,10 @@
 
             <EditText
                 android:id="@+id/editTextYourPassword"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="48sp"
-                android:autofillHints=""
+                android:minWidth="280sp"
+                android:autofillHints="password"
                 android:drawableStart="@drawable/lock_icon"
                 android:drawablePadding="16sp"
                 android:hint="@string/your_password"
@@ -136,7 +143,13 @@
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 android:textSize="18sp"
-                tools:ignore="VisualLintTextFieldSize" />
+                tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+            
+            <ImageView
+                android:id="@+id/imgViewShowHide"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -185,7 +198,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:layout_marginStart="10sp"
-        android:layout_marginBottom="300sp"
+        android:layout_marginBottom="280sp"
         android:gravity="center"
         android:orientation="horizontal">
 

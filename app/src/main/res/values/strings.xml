@@ -20,4 +20,5 @@
     <string name="re_enter_your_password">Re-Enter Your Password</string>
     <string name="sign_in_now"> " " Sign In now</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="eyeButton">eyeBtn</string>
 </resources>
