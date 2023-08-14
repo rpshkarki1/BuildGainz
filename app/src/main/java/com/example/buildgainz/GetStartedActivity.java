@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import android.widget.Button;
 
-public class getStartedActivity extends AppCompatActivity {
+public class GetStartedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class getStartedActivity extends AppCompatActivity {
 
         btnGetStart.setOnClickListener(v -> {
             Intent iGetStart ;
-            iGetStart = new Intent(getStartedActivity.this,loginPageActivity.class);
+            iGetStart = new Intent(GetStartedActivity.this, LoginPageActivity.class);
             startActivity(iGetStart);
             finish();
         });

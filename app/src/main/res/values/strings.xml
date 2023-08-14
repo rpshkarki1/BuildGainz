@@ -2,7 +2,7 @@
     <string name="app_name">BuildGainz</string>
     <string name="buildGainz_String">BuildGainz</string>
     <string name="logoFor_App">Logo For App</string>
-    <string name="motto">Unleash the Power Within, Unlock Your Potential.</string>
+    <string name="motto">Unleash the Power \n Within, \n Unlock Your Potential.</string>
     <string name="get_Started">GET STARTED</string>
     <string name="moto">motto</string>
     <string name="welcome">Welcome to BuildGainz</string>
@@ -13,4 +13,9 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="need_acc">Need an account?</string>
     <string name="sign_up_now">Sign Up now</string>
+    <string name="create_acc">Create an new account</string>
+    <string name="lets_get_started">Let’s Get Started</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="re_enter_your_password">Re-Enter Your Password</string>
 </resources>

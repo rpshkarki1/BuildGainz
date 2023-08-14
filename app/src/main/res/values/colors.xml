@@ -19,4 +19,5 @@
         <color name="_box_color">#6750A4</color>
         <color name="black_bg">#1C2022</color>
     <color name="grey_app_name">#94989A</color>
+    <color name="blue">#4191DD</color>
 </resources>

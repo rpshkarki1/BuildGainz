@@ -13,10 +13,19 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
-            android:name=".loginPageActivity"
+            android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".getStartedActivity"
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GetStartedActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"

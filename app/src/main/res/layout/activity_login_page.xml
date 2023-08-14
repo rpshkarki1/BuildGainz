@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:orientation="vertical"
-    tools:context=".loginPageActivity">
+    tools:context=".LoginPageActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -97,8 +97,9 @@
                 android:drawablePadding="16sp"
                 android:hint="@string/your_email"
                 android:inputType="textEmailAddress"
+                android:textColorHint="#757575"
                 android:minHeight="48dp"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 tools:ignore="VisualLintTextFieldSize" />
 
         </LinearLayout>
@@ -131,7 +132,8 @@
                 android:hint="@string/your_password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textSize="14sp"
+                android:textColorHint="#757575"
+                android:textSize="18sp"
                 tools:ignore="VisualLintTextFieldSize" />
 
         </LinearLayout>
@@ -149,9 +151,9 @@
             android:id="@+id/signInBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
             android:layout_marginStart="20sp"
             android:layout_marginEnd="20sp"
+            android:layout_marginTop="190sp"
             android:fontFamily="@font/cooper"
             android:gravity="center"
             android:letterSpacing="0.12"
@@ -171,7 +173,8 @@
         android:layout_marginTop="550dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/forgot_password"
-        android:textAppearance="@style/forgot_pass" />
+        android:textAppearance="@style/forgot_pass"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -187,7 +190,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="623dp"
             android:text="@string/need_acc"
-            android:textAppearance="@style/signupbtn"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
 
 
             />
@@ -199,7 +203,7 @@
             android:layout_marginTop="623dp"
             android:text="@string/sign_up_now"
             android:textAppearance="@style/signupbtn"
-            android:textColor="#4191DD"
+            android:textSize="18sp"
 
             />
 
