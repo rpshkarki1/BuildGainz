@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".SignUp">
+    tools:context=".SignUpActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -96,13 +96,14 @@
                 android:padding="10sp">
 
                 <EditText
+                    android:id="@+id/fullName"
                     android:layout_width="match_parent"
                     android:layout_height="48sp"
-                    android:autofillHints=""
+                    android:autofillHints="name"
                     android:drawableStart="@drawable/full_name"
                     android:drawablePadding="16sp"
                     android:hint="@string/full_name"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
                     android:textSize="18sp"
@@ -130,9 +131,10 @@
                 android:padding="10sp">
 
                 <EditText
+                    android:id="@+id/yourEmail"
                     android:layout_width="match_parent"
                     android:layout_height="48sp"
-                    android:autofillHints=""
+                    android:autofillHints="emailAddress"
                     android:drawableStart="@drawable/email_icon"
                     android:drawablePadding="16sp"
                     android:hint="@string/your_email"
@@ -163,9 +165,10 @@
                 android:padding="10sp">
 
                 <EditText
+                    android:id="@+id/enterPass"
                     android:layout_width="match_parent"
                     android:layout_height="48sp"
-                    android:autofillHints=""
+                    android:autofillHints="password"
                     android:drawableStart="@drawable/lock_icon"
                     android:drawablePadding="16sp"
                     android:hint="@string/your_password"
@@ -196,9 +199,10 @@
                 android:padding="10sp">
 
                 <EditText
+                    android:id="@+id/reEnterPass"
                     android:layout_width="match_parent"
                     android:layout_height="48sp"
-                    android:autofillHints=""
+                    android:autofillHints="password"
                     android:drawableStart="@drawable/lock_icon"
                     android:drawablePadding="16sp"
                     android:hint="@string/re_enter_your_password"
@@ -224,12 +228,12 @@
             android:letterSpacing="0.12"
             android:text="@string/sign_up"
             android:textSize="23sp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize,VisualLintOverlap" />
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="10sp"
@@ -237,11 +241,11 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/needAcc"
+                android:id="@+id/havaAcc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="630dp"
-                android:text="@string/need_acc"
+                android:text="@string/already_have_an_account"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
 
@@ -249,11 +253,11 @@
                 />
 
             <TextView
-                android:id="@+id/signUpBtn"
+                android:id="@+id/signInNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="630dp"
-                android:text="@string/sign_up_now"
+                android:text="@string/sign_in_now"
                 android:textAppearance="@style/signupbtn"
                 android:textSize="18sp"
 

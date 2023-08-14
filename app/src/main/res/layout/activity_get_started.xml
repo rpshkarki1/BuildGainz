@@ -44,6 +44,7 @@
                 android:fontFamily="@font/cooper"
                 android:textColor="#929698"
                 android:textSize="40sp"
+                android:letterSpacing="0.05"
                 android:textStyle="bold" />
 
             <TextView
@@ -57,7 +58,8 @@
                 android:layout_gravity="center"
                 android:text="@string/motto"
                 android:textColor="@color/white"
-                android:textSize="34sp"
+                android:textSize="38sp"
+                android:letterSpacing="0.02"
                 android:textStyle="bold"
                 android:contentDescription="@string/moto"
             />

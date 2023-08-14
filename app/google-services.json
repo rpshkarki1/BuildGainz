@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "524051663890",
+    "project_id": "buildgainz-f00d1",
+    "storage_bucket": "buildgainz-f00d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524051663890:android:758fd484790af1a8639ccb",
+        "android_client_info": {
+          "package_name": "com.example.buildgainz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524051663890-50sdguj47tqt7969vcednsiru7o7rba6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClKYjlcVWfCd4I6bT7lpu2-7z0_9BPqI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524051663890-50sdguj47tqt7969vcednsiru7o7rba6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
