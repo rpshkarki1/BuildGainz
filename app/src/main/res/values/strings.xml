@@ -12,7 +12,7 @@
     <string name="sign_in">Sign In</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="need_acc">Need an account?</string>
-    <string name="sign_up_now">Sign Up now</string>
+    <string name="sign_up_now">"" Sign Up now</string>
     <string name="create_acc">Create an new account</string>
     <string name="lets_get_started">Let’s Get Started</string>
     <string name="sign_up">Sign Up</string>
@@ -21,4 +21,7 @@
     <string name="sign_in_now"> " " Sign In now</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="eyeButton">eyeBtn</string>
+    <string name="enter_password">Please enter your password email address. You will receive a link creative a new password via email.</string>
+    <string name="continueButton">Continue</string>
+    <string name="back_button">Back Button</string>
 </resources>

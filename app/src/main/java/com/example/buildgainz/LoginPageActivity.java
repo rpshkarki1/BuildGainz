@@ -1,5 +1,6 @@
 package com.example.buildgainz;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,15 +16,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.buildgainz.SignUpPage.SignUpActivity;
+import com.example.buildgainz.SplashScreens.GetStartedActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
@@ -71,9 +75,9 @@ public class LoginPageActivity extends AppCompatActivity {
                     passEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     //Then Change Icon
                     imageViewShowHidePwd.setImageResource(R.drawable.ic_show_pwd);
-                } else{
+                } else {
                     passEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                        imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+                    imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
 
                 }
             }
@@ -114,10 +118,22 @@ public class LoginPageActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(LoginPageActivity.this, "You are logged in now.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginPageActivity.this, DashBoardActivity.class);
-                            startActivity(intent);
-                            finish();
+                            //Get instance of User
+                            FirebaseUser firebaseUser = authProfile.getCurrentUser();
+
+                            //Check if email is verified before user can access their profile
+                            if (firebaseUser.isEmailVerified()) {
+                                Toast.makeText(LoginPageActivity.this, "You are logged in.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginPageActivity.this, DashBoardActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                firebaseUser.sendEmailVerification();
+                                authProfile.signOut();
+                                showAlertDialogBox();
+                            }
+
+
                         } else {
 
                             try {
@@ -139,4 +155,46 @@ public class LoginPageActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void showAlertDialogBox() {
+
+        //Set up for Alert Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginPageActivity.this);
+        builder.setTitle("Email is not Verified!");
+        builder.setMessage("Please verify your email now. You can't login without verifying email.");
+
+        //Open Email Apps if User Clicks Continue Btn
+        builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_APP_EMAIL);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //To Email App in new Window
+                startActivity(intent);
+            }
+        });
+
+        //Create AlertDialog
+        AlertDialog alertDialog = builder.create();
+
+
+        //Show alertDialog
+        alertDialog.show();
+
+    }
+
+
+    //Check if User is alerady Logged in if thats the case then it takes to the user's profile
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (authProfile.getCurrentUser()!= null){
+            Toast.makeText(LoginPageActivity.this, "Already Logged In!", Toast.LENGTH_SHORT).show();
+
+            //Start the UserProfile Activity
+            startActivity(new Intent(LoginPageActivity.this, DashBoardActivity.class));
+            finish();
+        }
+    }
+
 }
