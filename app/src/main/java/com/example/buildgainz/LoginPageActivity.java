@@ -208,7 +208,9 @@ public class LoginPageActivity extends AppCompatActivity {
                         Toast.makeText(LoginPageActivity.this, "Already Logged In!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginPageActivity.this, DashBoardActivity.class));
                         finish();
-                    } else {}
+                    } else {
+                        Toast.makeText(LoginPageActivity.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
                 @Override

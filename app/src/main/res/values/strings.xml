@@ -24,4 +24,7 @@
     <string name="enter_password">Please enter your password email address. You will receive a link creative a new password via email.</string>
     <string name="continueButton">Continue</string>
     <string name="back_button">Back Button</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile_button">Profile Button</string>
+    <string name="setting_button">Setting Button</string>
 </resources>
