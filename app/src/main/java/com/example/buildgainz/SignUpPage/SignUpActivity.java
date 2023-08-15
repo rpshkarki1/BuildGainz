@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.buildgainz.DashBoardActivity;
 import com.example.buildgainz.LoginPageActivity;
 import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,10 +29,9 @@ import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private EditText fullName, yourEmail, yourPassword, reEnterPassword;
-
     private final String TAG = "SignUpActivity";
-    private ImageView imageViewShowHidePwd,imageViewShowHidePwd2;
+    private EditText fullName, yourEmail, yourPassword, reEnterPassword;
+    private ImageView imageViewShowHidePwd, imageViewShowHidePwd2;
 
 
     @Override
@@ -52,20 +50,17 @@ public class SignUpActivity extends AppCompatActivity {
         imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
 
         //Show hide password using Eye icon using imgView
-        imageViewShowHidePwd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (yourPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+        imageViewShowHidePwd.setOnClickListener(v -> {
+            if (yourPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
 
-                    //if pwd is visible then hides it
-                    yourPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    //Then Change Icon
-                    imageViewShowHidePwd.setImageResource(R.drawable.ic_show_pwd);
-                } else{
-                    yourPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
+                //if pwd is visible then hides it
+                yourPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                //Then Change Icon
+                imageViewShowHidePwd.setImageResource(R.drawable.ic_show_pwd);
+            } else {
+                yourPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                imageViewShowHidePwd.setImageResource(R.drawable.ic_hide_pwd);
 
-                }
             }
         });
 
@@ -73,26 +68,19 @@ public class SignUpActivity extends AppCompatActivity {
         imageViewShowHidePwd2.setImageResource(R.drawable.ic_hide_pwd);
 
         //Show hide password using Eye icon using imgView
-        imageViewShowHidePwd2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (reEnterPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
+        imageViewShowHidePwd2.setOnClickListener(v -> {
+            if (reEnterPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())) {
 
-                    //if pwd is visible then hides it
-                    reEnterPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    //Then Change Icon
-                    imageViewShowHidePwd2.setImageResource(R.drawable.ic_show_pwd);
-                } else{
-                    reEnterPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    imageViewShowHidePwd2.setImageResource(R.drawable.ic_hide_pwd);
+                //if pwd is visible then hides it
+                reEnterPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                //Then Change Icon
+                imageViewShowHidePwd2.setImageResource(R.drawable.ic_show_pwd);
+            } else {
+                reEnterPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                imageViewShowHidePwd2.setImageResource(R.drawable.ic_hide_pwd);
 
-                }
             }
         });
-
-
-
-
 
 
         TextView signInNow = findViewById(R.id.signInNow);
@@ -128,7 +116,7 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Please Enter your password", Toast.LENGTH_LONG).show();
                     yourPassword.setError("Password is required");
                     yourPassword.requestFocus();
-                } else if (textYourPassword.length() < 9) {
+                } else if (textYourPassword.length() < 8) {
                     Toast.makeText(SignUpActivity.this, "Password Should be at least 8 digit.", Toast.LENGTH_LONG).show();
                     yourPassword.setError("Write 8-digit Password");
                     yourPassword.requestFocus();
@@ -162,37 +150,32 @@ public class SignUpActivity extends AppCompatActivity {
                         FirebaseUser firebaseUser = auth.getCurrentUser();
 
                         //Enter User Data into the firebase Realtime Database
-                        ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textFullName,textYourEmail);
+                        ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textFullName, textYourEmail);
 
                         //Extracting user reference from Database for Registered User
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Registered Users");
 
                         reference.child(Objects.requireNonNull(firebaseUser).getUid()).setValue(writeUserDetails).addOnCompleteListener(task1 -> {
 
-                            if(task1.isSuccessful()){
+                            if (task1.isSuccessful()) {
 
                                 //Send Verification Email
-                                firebaseUser.sendEmailVerification();
 
                                 Toast.makeText(SignUpActivity.this, "User Signed Up Successfully. Please verify your email.", Toast.LENGTH_SHORT).show();
 
 
                                 //Go back to Sign In page
-                                Intent intent = new Intent(SignUpActivity.this, DashBoardActivity.class);
-
-                                //prevent user from returning back to registerActivity
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                Intent intent = new Intent(SignUpActivity.this, LoginPageActivity.class);
                                 startActivity(intent);
-                                finish(); //Can't go back when backBtn Clicked
+                                firebaseUser.sendEmailVerification();
 
-                            }else {
+
+                            } else {
                                 Toast.makeText(SignUpActivity.this, "User registered failed. Try again!", Toast.LENGTH_SHORT).show();
                             }
 
 
                         });
-
-
 
 
                     } else {

@@ -28,6 +28,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
@@ -143,7 +148,10 @@ public class LoginPageActivity extends AppCompatActivity {
                                 emailEditText.requestFocus();
                             } catch (FirebaseAuthInvalidCredentialsException e) {
                                 emailEditText.setError("Invalid credentials. Please check again and re-Enter.");
+                                passEditText.setError("Invalid credentials. Please check again and re-Enter.");
+
                                 emailEditText.requestFocus();
+                                passEditText.requestFocus();
                             } catch (Exception e) {
                                 Log.e(TAG, Objects.requireNonNull(e.getMessage()));
                                 Toast.makeText(LoginPageActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -183,18 +191,33 @@ public class LoginPageActivity extends AppCompatActivity {
 
     }
 
-
-    //Check if User is alerady Logged in if thats the case then it takes to the user's profile
     @Override
     protected void onStart() {
         super.onStart();
-        if (authProfile.getCurrentUser()!= null){
-            Toast.makeText(LoginPageActivity.this, "Already Logged In!", Toast.LENGTH_SHORT).show();
+        FirebaseUser currentUser = authProfile.getCurrentUser();
 
-            //Start the UserProfile Activity
-            startActivity(new Intent(LoginPageActivity.this, DashBoardActivity.class));
-            finish();
+        if (currentUser != null) {
+            // Check if the user is verified in the Firebase database
+            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(currentUser.getUid());
+
+            userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists() && dataSnapshot.child("verified").getValue(Boolean.class)) {
+                        // User is verified, proceed to dashboard
+                        Toast.makeText(LoginPageActivity.this, "Already Logged In!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(LoginPageActivity.this, DashBoardActivity.class));
+                        finish();
+                    } else {}
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
     }
+
 
 }
