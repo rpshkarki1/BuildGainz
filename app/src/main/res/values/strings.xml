@@ -27,4 +27,7 @@
     <string name="dashboard">Dashboard</string>
     <string name="profile_button">Profile Button</string>
     <string name="setting_button">Setting Button</string>
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="change_password">Change Password</string>
 </resources>

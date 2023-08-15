@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/item1" android:title="Item 1" />
-    <item android:id="@+id/item2" android:title="Item 2" />
+    <item android:id="@+id/changePass" android:title="@string/change_password" />
+    <item android:id="@+id/deleteAcc" android:title="@string/delete_account" />
+    <item android:id="@+id/logout" android:title="@string/logout" />
 
 </menu>
