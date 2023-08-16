@@ -8,6 +8,7 @@
     <string name="welcome">Welcome to BuildGainz</string>
     <string name="signInContinue">Sign in to continue</string>
     <string name="your_email">Your Email</string>
+    <string name="your_current_password">Your Current Password</string>
     <string name="your_password">Your Password</string>
     <string name="sign_in">Sign In</string>
     <string name="forgot_password">Forgot Password?</string>
@@ -30,4 +31,12 @@
     <string name="logout">Logout</string>
     <string name="delete_account">Delete Account</string>
     <string name="change_password">Change Password</string>
+    <string name="change_pwd_head">Please enter your credential before \n changing password</string>
+    <string name="your_new_pass">Your New Password*</string>
+    <string name="again_your_new_pass">Again Your New Password*</string>
+
+    <string name="update_pass">Update Password</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="not_verified">Your are not authenticated/verified yet!</string>
+    <string name="textViewOfAuthenticate">You are authenticated/verified. And You can change your password now!</string>
 </resources>
