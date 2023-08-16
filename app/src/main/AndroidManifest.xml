@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
-            android:name=".DashBoard.Settings.DeletePasswordActivity"
+            android:name=".DashBoard.Settings.DeleteUserActivity"
             android:exported="false" />
         <activity
             android:name=".DashBoard.Settings.ChangePasswordActivity"

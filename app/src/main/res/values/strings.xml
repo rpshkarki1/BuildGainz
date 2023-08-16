@@ -31,7 +31,8 @@
     <string name="logout">Logout</string>
     <string name="delete_account">Delete Account</string>
     <string name="change_password">Change Password</string>
-    <string name="change_pwd_head">Please enter your credential before \n changing password</string>
+    <string name="change_pwd_head">Please enter your credential before \n changing password.</string>
+    <string name="delete_pwd_head">Please enter your credential before \n deleting user.</string>
     <string name="your_new_pass">Your New Password*</string>
     <string name="again_your_new_pass">Again Your New Password*</string>
 
@@ -39,4 +40,7 @@
     <string name="authenticate">Authenticate</string>
     <string name="not_verified">Your are not authenticated/verified yet!</string>
     <string name="textViewOfAuthenticate">You are authenticated/verified. And You can change your password now!</string>
+    <string name="textViewOfDeleteAuthenticate">You are authenticated/verified. And You can delete your account now!</string>
+
+    <string name="delete_user">Delete User</string>
 </resources>

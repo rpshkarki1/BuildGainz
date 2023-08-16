@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoard.Settings.DeleteUserActivity"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarChangePwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/cooper"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/delete_user"
+                    android:textColor="@color/white"
+                    android:textSize="36sp" />
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_pwd_head"
+            android:gravity="center"
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="50sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+
+            />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="50sp"
+            app:cardCornerRadius="30sp"
+            app:cardElevation="20sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <EditText
+                    android:id="@+id/currentPassEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48sp"
+                    android:minWidth="280sp"
+                    android:autofillHints="password"
+                    android:drawableStart="@drawable/lock_icon"
+                    android:drawablePadding="16sp"
+                    android:hint="@string/your_current_password"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textColorHint="#757575"
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:contentDescription="@string/eyeButton" />
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/authenticateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cooper"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:paddingStart="20sp"
+            android:paddingEnd="20sp"
+            android:text="@string/authenticate"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="40sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/changePwdAuthenticate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/not_verified"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="50sp"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/deleteAccBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cooper"
+            android:gravity="center"
+            android:text="@string/delete_account"
+            android:textSize="35sp"
+            android:minWidth="30sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize" />
+
+
+    </LinearLayout>
+</LinearLayout>

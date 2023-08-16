@@ -14,7 +14,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
-import com.example.buildgainz.DashBoard.Settings.DeletePasswordActivity;
+import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
 import com.example.buildgainz.DashBoard.Settings.ProfileActivity;
 import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
@@ -49,7 +49,7 @@ public class DashBoardActivity extends AppCompatActivity {
                 if (id == R.id.changePass) {
                     startActivity(new Intent(DashBoardActivity.this, ChangePasswordActivity.class));
                 }else if (id == R.id.deleteAcc) {
-                    startActivity(new Intent(DashBoardActivity.this, DeletePasswordActivity.class));
+                    startActivity(new Intent(DashBoardActivity.this, DeleteUserActivity.class));
                 }else if (id == R.id.logout) {//create logout with DialogBox
                     showLogoutDialog();
                     return true;
