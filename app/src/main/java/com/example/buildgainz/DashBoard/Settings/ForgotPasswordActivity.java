@@ -1,4 +1,4 @@
-package com.example.buildgainz;
+package com.example.buildgainz.DashBoard.Settings;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.buildgainz.LoginPage.LoginPageActivity;
+import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 

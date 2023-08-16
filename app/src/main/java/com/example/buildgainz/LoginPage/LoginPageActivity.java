@@ -1,4 +1,4 @@
-package com.example.buildgainz;
+package com.example.buildgainz.LoginPage;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,8 +19,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.buildgainz.DashBoard.DashBoardActivity;
+import com.example.buildgainz.DashBoard.Settings.ForgotPasswordActivity;
+import com.example.buildgainz.R;
 import com.example.buildgainz.SignUpPage.SignUpActivity;
-import com.example.buildgainz.SplashScreens.GetStartedActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.buildgainz.DashBoardActivity;
-import com.example.buildgainz.LoginPageActivity;
+import com.example.buildgainz.DashBoard.DashBoardActivity;
+import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
 public class GetStartedActivity extends AppCompatActivity {

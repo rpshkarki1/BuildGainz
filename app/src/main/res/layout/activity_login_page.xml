@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/grey"
     android:orientation="vertical"
-    tools:context=".LoginPageActivity">
+    tools:context=".LoginPage.LoginPageActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -74,9 +74,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10sp"
+        android:layout_marginStart="20sp"
         android:layout_marginTop="280sp"
-        android:layout_marginEnd="10sp"
+        android:layout_marginEnd="20sp"
         app:cardCornerRadius="30sp"
         app:cardElevation="20sp"
 
@@ -88,7 +88,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="10sp">
+            android:padding="10sp"
+
+            >
 
             <EditText
                 android:id="@+id/editTextYourEmail"
@@ -116,9 +118,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10sp"
+        android:layout_marginStart="20sp"
         android:layout_marginTop="370sp"
-        android:layout_marginEnd="10sp"
+        android:layout_marginEnd="20sp"
         app:cardCornerRadius="30sp"
         app:cardElevation="20sp">
 

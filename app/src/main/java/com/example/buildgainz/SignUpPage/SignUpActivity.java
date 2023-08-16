@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.buildgainz.LoginPageActivity;
+import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;

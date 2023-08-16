@@ -1,8 +1,10 @@
-package com.example.buildgainz;
+package com.example.buildgainz.DashBoard.Settings;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.buildgainz.R;
 
 public class DeletePasswordActivity extends AppCompatActivity {
 

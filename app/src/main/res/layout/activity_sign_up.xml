@@ -80,9 +80,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
+            android:layout_marginStart="20sp"
             android:layout_marginTop="240sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="20sp"
             app:cardCornerRadius="30sp"
             app:cardElevation="20sp"
 
@@ -109,7 +109,7 @@
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
                     android:textSize="18sp"
-                    tools:ignore="VisualLintTextFieldSize" />
+                    tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
                 <ImageView
                     android:layout_width="30sp"
                     android:layout_height="30sp"
@@ -121,9 +121,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
+            android:layout_marginStart="20sp"
             android:layout_marginTop="320sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="20sp"
             app:cardCornerRadius="30sp"
             app:cardElevation="20sp"
 
@@ -164,9 +164,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
+            android:layout_marginStart="20sp"
             android:layout_marginTop="400sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="20sp"
             app:cardCornerRadius="30sp"
             app:cardElevation="20sp">
 
@@ -206,9 +206,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
+            android:layout_marginStart="20sp"
             android:layout_marginTop="480sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="20sp"
             app:cardCornerRadius="30sp"
             app:cardElevation="20sp">
 

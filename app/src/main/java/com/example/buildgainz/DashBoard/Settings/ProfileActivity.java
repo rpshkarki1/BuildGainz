@@ -1,14 +1,16 @@
-package com.example.buildgainz;
+package com.example.buildgainz.DashBoard.Settings;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ChangePasswordActivity extends AppCompatActivity {
+import com.example.buildgainz.R;
+
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_password);
+        setContentView(R.layout.activity_profile);
     }
 }
