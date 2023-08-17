@@ -20,6 +20,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.buildgainz.DashBoard.DashBoardActivity;
+import com.example.buildgainz.DashBoard.Settings.ProfileActivity;
 import com.example.buildgainz.R;
 import com.example.buildgainz.LoginPage.SignUpPage.SignUpActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -128,11 +129,21 @@ public class LoginPageActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = authProfile.getCurrentUser();
 
                             //Check if email is verified before user can access their profile
-                            if (firebaseUser.isEmailVerified()) {
+                            if (firebaseUser.isEmailVerified() && firebaseUser != null) {
                                 Toast.makeText(LoginPageActivity.this, "You are logged in.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginPageActivity.this, DashBoardActivity.class);
                                 startActivity(intent);
                                 finish();
+
+                                String fullName = getIntent().getStringExtra("full_name");
+                                String email = getIntent().getStringExtra("email");
+
+                                Intent profileIntent = new Intent(LoginPageActivity.this, ProfileActivity.class);
+                                profileIntent.putExtra("user_id", firebaseUser.getUid());
+                                profileIntent.putExtra("full_name", fullName);
+                                profileIntent.putExtra("email", email);
+                                startActivity(profileIntent);
+
                             } else {
                                 firebaseUser.sendEmailVerification();
                                 authProfile.signOut();

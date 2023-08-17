@@ -163,11 +163,16 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 Toast.makeText(SignUpActivity.this, "User Signed Up Successfully. Please verify your email.", Toast.LENGTH_SHORT).show();
 
+                                String userId = firebaseUser.getUid();
 
                                 //Go back to Sign In page
                                 Intent intent = new Intent(SignUpActivity.this, LoginPageActivity.class);
+                                intent.putExtra("user_id",userId);
+                                intent.putExtra("full_name", textFullName);
+                                intent.putExtra("email", textYourEmail);
                                 startActivity(intent);
                                 firebaseUser.sendEmailVerification();
+
 
 
                             } else {
