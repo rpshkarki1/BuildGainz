@@ -22,4 +22,9 @@
         <color name="black_bg">#1C2022</color>
     <color name="grey_app_name">#94989A</color>
     <color name="blue">#4191DD</color>
+    <color name="sky_blue">#1786ED</color>
+    <color name="li_red">#E31919</color>
+        <color name="select_white">#D9D9D9</color>
+    <color name="outline_color_checked">#EC1707</color>
+    <color name="outline_color_unchecked">#D8D8D8</color>
 </resources>

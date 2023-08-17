@@ -43,4 +43,20 @@
     <string name="textViewOfDeleteAuthenticate">You are authenticated/verified. And You can delete your account now!</string>
 
     <string name="delete_user">Delete User</string>
+    <string name="skip">Skip</string>
+    <string name="profile">Profile</string>
+    <string name="change_profile_pic">Change Profile Picture</string>
+    <string name="profile_pic">Profile Pic</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="level">Level</string>
+    <string name="beginner">Beginner</string>
+    <string name="your_goals">Your goals</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="losing_weight">Losing Weight</string>
+    <string name="build_muscle">Build Muscle</string>
+    <string name="body_recomposition">Body Recomposition</string>
 </resources>

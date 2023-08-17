@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_checked="true">
+    <layer-list>
+        <!-- Background when checked -->
+        <item>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/li_red" />
+                <corners android:radius="12sp" />
+            </shape>
+        </item>
+        <!-- Outline when checked -->
+        <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/transparent" />
+                <stroke android:width="2dp" android:color="@color/outline_color_checked" />
+                <corners android:radius="12sp" />
+            </shape>
+        </item>
+    </layer-list>
+</item>
+
+<item android:state_checked="false">
+    <layer-list>
+        <!-- Background when unchecked -->
+        <item>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/select_white" />
+                <corners android:radius="12sp" />
+            </shape>
+        </item>
+        <!-- Outline when unchecked -->
+        <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/transparent" />
+                <stroke android:width="2dp" android:color="@color/outline_color_unchecked" />
+                <corners android:radius="12sp" />
+            </shape>
+        </item>
+    </layer-list>
+</item>
+</selector>

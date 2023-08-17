@@ -22,10 +22,10 @@
             android:name=".DashBoard.Settings.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.Settings.ForgotPasswordActivity"
+            android:name=".LoginPage.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpPage.SignUpActivity"
+            android:name=".LoginPage.SignUpPage.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".DashBoard.DashBoardActivity"

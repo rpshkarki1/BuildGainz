@@ -1,4 +1,4 @@
-package com.example.buildgainz.SignUpPage;
+package com.example.buildgainz.LoginPage.SignUpPage;
 
 import android.content.Intent;
 import android.os.Bundle;

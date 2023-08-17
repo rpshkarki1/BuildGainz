@@ -76,7 +76,12 @@ public class DashBoardActivity extends AppCompatActivity {
             // Do nothing or handle cancellation if needed.
         });
 
+
+
         AlertDialog alertDialog = alertDialogBuilder.create();
+
+        alertDialog.setOnShowListener(dialog -> alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.red)));
+
         alertDialog.show();
     }
 }

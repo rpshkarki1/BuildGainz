@@ -20,9 +20,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.buildgainz.DashBoard.DashBoardActivity;
-import com.example.buildgainz.DashBoard.Settings.ForgotPasswordActivity;
 import com.example.buildgainz.R;
-import com.example.buildgainz.SignUpPage.SignUpActivity;
+import com.example.buildgainz.LoginPage.SignUpPage.SignUpActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
