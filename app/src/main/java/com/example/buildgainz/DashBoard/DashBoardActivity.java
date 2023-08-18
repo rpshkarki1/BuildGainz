@@ -34,7 +34,14 @@ public class DashBoardActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         profileButton = findViewById(R.id.profileBtn);
-        profileButton.setOnClickListener(v -> startActivity(new Intent(DashBoardActivity.this, ProfileActivity.class)));
+        profileButton.setOnClickListener(v -> {
+
+            Intent profileIntent = new Intent(DashBoardActivity.this, ProfileActivity.class);
+
+            startActivity(profileIntent);
+            finish();
+
+        });
 
         imageButton = findViewById(R.id.settingBtn);
         imageButton.setOnClickListener(v -> {

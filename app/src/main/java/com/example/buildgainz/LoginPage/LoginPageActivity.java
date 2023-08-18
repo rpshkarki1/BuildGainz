@@ -131,10 +131,6 @@ public class LoginPageActivity extends AppCompatActivity {
                             //Check if email is verified before user can access their profile
                             if (firebaseUser.isEmailVerified() && firebaseUser != null) {
                                 Toast.makeText(LoginPageActivity.this, "You are logged in.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginPageActivity.this, DashBoardActivity.class);
-                                startActivity(intent);
-                                finish();
-
                                 String fullName = getIntent().getStringExtra("full_name");
                                 String email = getIntent().getStringExtra("email");
 
@@ -143,6 +139,8 @@ public class LoginPageActivity extends AppCompatActivity {
                                 profileIntent.putExtra("full_name", fullName);
                                 profileIntent.putExtra("email", email);
                                 startActivity(profileIntent);
+                                finish();
+
 
                             } else {
                                 firebaseUser.sendEmailVerification();
@@ -175,6 +173,8 @@ public class LoginPageActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void showAlertDialogBox() {
 
