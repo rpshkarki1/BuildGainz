@@ -165,8 +165,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 //Go back to Sign In page
                                 Intent intent = new Intent(SignUpActivity.this, LoginPageActivity.class);
-                                intent.putExtra("fullName", textFullName);
-                                intent.putExtra("email", textYourEmail);
+
                                 startActivity(intent);
                                 firebaseUser.sendEmailVerification();
 

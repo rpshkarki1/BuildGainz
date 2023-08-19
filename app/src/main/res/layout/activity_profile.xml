@@ -38,20 +38,7 @@
                     android:textColor="@color/white"
                     android:textSize="40sp" />
 
-                <TextView
-                    android:id="@+id/skipTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/profile"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="15sp"
-                    android:background="@color/grey"
-                    android:fontFamily="@font/cooper"
-                    android:gravity="center"
-                    android:text="@string/skip"
-                    android:textColor="@color/red"
-                    android:textSize="25sp" />
+
 
             </RelativeLayout>
 

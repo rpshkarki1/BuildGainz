@@ -129,19 +129,15 @@ public class LoginPageActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = authProfile.getCurrentUser();
 
                                 //Check if email is verified before user can access their profile
-                                if (firebaseUser.isEmailVerified()&& firebaseUser != null){
+                                if (firebaseUser != null && firebaseUser.isEmailVerified() ){
                                     Bundle extras = getIntent().getExtras();
-                                    if (extras != null) {
-                                        String fullName = extras.getString("fullName");
-                                        String email = extras.getString("email");
+
 
                                         Intent intent = new Intent(LoginPageActivity.this,DashBoardActivity.class);
-                                        intent.putExtra("fullName", fullName);
-                                        intent.putExtra("email", email);
+
                                         startActivity(intent);
                                     }
 
-                                }
 
                             else {
                                 firebaseUser.sendEmailVerification();
@@ -222,7 +218,6 @@ public class LoginPageActivity extends AppCompatActivity {
                         startActivity(new Intent(LoginPageActivity.this, DashBoardActivity.class));
                         finish();
                     } else {
-                        Toast.makeText(LoginPageActivity.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
                     }
                 }
 

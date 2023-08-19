@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.DashBoardActivity;
 import com.example.buildgainz.R;
@@ -21,17 +23,31 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity {
 
-
     private final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Registered Users");
-
     private FlexboxLayout genderFlexBox;
     private FlexboxLayout levelFlexBox;
     private FlexboxLayout goalsFlexBox;
+    Toolbar toolbar;
+
+    TextView changeProfilePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        toolbar = findViewById(R.id.toolbarProfile);
+        setSupportActionBar(toolbar);
+        changeProfilePic =findViewById(R.id.changeProfilePic);
+        changeProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
         genderFlexBox = findViewById(R.id.genderFlexboxLayout);
@@ -41,18 +57,18 @@ public class ProfileActivity extends AppCompatActivity {
         setupGenderRadioButtons();
         setupLevelRadioButtons();
         setupGoalsRadioButtons();
+        loadProfileDataFromFirebase();
         setupSaveButton();
 
+
+
     }
+
 
     private void setupSaveButton() {
         Button saveButton = findViewById(R.id.saveBtn);
-        saveButton.setOnClickListener(v -> {
-            loadProfileDataFromFirebase();
-            saveRadioGroupValues();
-        });
+        saveButton.setOnClickListener(v -> saveRadioGroupValues());
     }
-
 
     private void setupGenderRadioButtons() {
         RadioButton maleRadioButton = findViewById(R.id.maleRadioButton);
@@ -157,6 +173,7 @@ public class ProfileActivity extends AppCompatActivity {
         DatabaseReference levelRef = databaseReference.child("level");
         DatabaseReference goalRef = databaseReference.child("goal");
 
+
         genderRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -203,10 +220,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-
     private void saveRadioGroupValues() {
-
-
         String selectedGender = getSelectedRadioButtonText(genderFlexBox);
         String selectedLevel = getSelectedRadioButtonText(levelFlexBox);
         String selectedGoal = getSelectedRadioButtonText(goalsFlexBox);
@@ -246,6 +260,4 @@ public class ProfileActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }

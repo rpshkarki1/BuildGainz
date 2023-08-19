@@ -46,6 +46,8 @@
     <string name="skip">Skip</string>
     <string name="profile">Profile</string>
     <string name="change_profile_pic">Change Profile Picture</string>
+    <string name="upload_profile_pic">Upload Profile Picture</string>
+
     <string name="profile_pic">Profile Pic</string>
     <string name="personal_data">Personal Data</string>
     <string name="gender">Gender</string>
@@ -60,4 +62,7 @@
     <string name="build_muscle">Build Muscle</string>
     <string name="body_recomposition">Body Recomposition</string>
     <string name="save">Save</string>
+    <string name="change_profile_picture">Change Profile Pic</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="choose_picture">Choose Picture</string>
 </resources>
