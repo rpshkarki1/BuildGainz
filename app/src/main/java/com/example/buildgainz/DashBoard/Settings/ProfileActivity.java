@@ -1,12 +1,9 @@
 package com.example.buildgainz.DashBoard.Settings;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -16,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.buildgainz.DashBoard.DashBoardActivity;
 import com.example.buildgainz.R;
 import com.google.android.flexbox.FlexboxLayout;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,53 +21,66 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity {
 
+
+    private final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Registered Users");
+
     private FlexboxLayout genderFlexBox;
     private FlexboxLayout levelFlexBox;
     private FlexboxLayout goalsFlexBox;
-
-    private String fullName;
-    private String email;
-private EditText fullNameEditText,emailEditText;
-    private final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Registered Users");
-    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        databaseReference.child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                fullNameEditText.setText(snapshot.child("fullName").getValue(String.class));
-                emailEditText.setText(snapshot.child("email").getValue(String.class));
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("ProfileActivity", error.getMessage());
-            }
-        });
-
-        preferences = getSharedPreferences("ProfileData", MODE_PRIVATE);
-        loadProfileDataFromSharedPreferences();
-        loadProfileDataFromFirebase();
 
         genderFlexBox = findViewById(R.id.genderFlexboxLayout);
         levelFlexBox = findViewById(R.id.levelFlexboxLayout);
         goalsFlexBox = findViewById(R.id.goalsFlexboxLayout);
 
-        setupSaveButton();
+        setupGenderRadioButtons();
         setupLevelRadioButtons();
         setupGoalsRadioButtons();
+        setupSaveButton();
+
     }
 
     private void setupSaveButton() {
         Button saveButton = findViewById(R.id.saveBtn);
         saveButton.setOnClickListener(v -> {
-            saveProfileDataToSharedPreferences();
+            loadProfileDataFromFirebase();
             saveRadioGroupValues();
         });
+    }
+
+
+    private void setupGenderRadioButtons() {
+        RadioButton maleRadioButton = findViewById(R.id.maleRadioButton);
+        RadioButton femaleRadioButton = findViewById(R.id.femaleRadioButton);
+
+
+        maleRadioButton.setOnClickListener(this::onGenderRadioButtonClicked);
+        femaleRadioButton.setOnClickListener(this::onGenderRadioButtonClicked);
+    }
+
+    private void onGenderRadioButtonClicked(View view) {
+        RadioButton selectedRadioButton = (RadioButton) view;
+        clearGenderRadioButtonsExcept(selectedRadioButton.getId());
+    }
+
+    private void clearGenderRadioButtonsExcept(int selectedId) {
+        RadioButton maleRadioButton = findViewById(R.id.maleRadioButton);
+        RadioButton femaleRadioButton = findViewById(R.id.femaleRadioButton);
+
+
+        if (selectedId != maleRadioButton.getId()) {
+            maleRadioButton.setChecked(false);
+        }
+
+        if (selectedId != femaleRadioButton.getId()) {
+            femaleRadioButton.setChecked(false);
+        }
+
     }
 
     private void setupLevelRadioButtons() {
@@ -140,31 +149,10 @@ private EditText fullNameEditText,emailEditText;
         }
     }
 
-    private void saveProfileDataToSharedPreferences() {
-        EditText fullNameEditText = findViewById(R.id.fullNameProfile);
-        EditText emailEditText = findViewById(R.id.yourEmailProfile);
-
-        String fullName = fullNameEditText.getText().toString();
-        String email = emailEditText.getText().toString();
-
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("fullName", fullName);
-        editor.putString("email", email);
-        editor.apply();
-    }
-
-    private void loadProfileDataFromSharedPreferences() {
-        EditText fullNameEditText = findViewById(R.id.fullNameProfile);
-        EditText emailEditText = findViewById(R.id.yourEmailProfile);
-
-        String storedFullName = preferences.getString("fullName", "");
-        String storedEmail = preferences.getString("email", "");
-
-        fullNameEditText.setText(storedFullName);
-        emailEditText.setText(storedEmail);
-    }
 
     private void loadProfileDataFromFirebase() {
+
+
         DatabaseReference genderRef = databaseReference.child("gender");
         DatabaseReference levelRef = databaseReference.child("level");
         DatabaseReference goalRef = databaseReference.child("goal");
@@ -215,7 +203,10 @@ private EditText fullNameEditText,emailEditText;
         });
     }
 
+
     private void saveRadioGroupValues() {
+
+
         String selectedGender = getSelectedRadioButtonText(genderFlexBox);
         String selectedLevel = getSelectedRadioButtonText(levelFlexBox);
         String selectedGoal = getSelectedRadioButtonText(goalsFlexBox);
@@ -250,12 +241,11 @@ private EditText fullNameEditText,emailEditText;
             View radioButton = flexboxLayout.getChildAt(i);
             if (radioButton instanceof RadioButton) {
                 String radioButtonValue = ((RadioButton) radioButton).getText().toString();
-                if (radioButtonValue.equals(value)) {
-                    ((RadioButton) radioButton).setChecked(true);
-                } else {
-                    ((RadioButton) radioButton).setChecked(false); // Uncheck other options
-                }
+                // Uncheck other options
+                ((RadioButton) radioButton).setChecked(radioButtonValue.equals(value));
             }
         }
     }
+
+
 }

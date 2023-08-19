@@ -128,21 +128,22 @@ public class LoginPageActivity extends AppCompatActivity {
                             //Get instance of User
                             FirebaseUser firebaseUser = authProfile.getCurrentUser();
 
-                            //Check if email is verified before user can access their profile
-                            if (firebaseUser.isEmailVerified() && firebaseUser != null) {
-                                Toast.makeText(LoginPageActivity.this, "You are logged in.", Toast.LENGTH_SHORT).show();
-                                String fullName = getIntent().getStringExtra("full_name");
-                                String email = getIntent().getStringExtra("email");
+                                //Check if email is verified before user can access their profile
+                                if (firebaseUser.isEmailVerified()&& firebaseUser != null){
+                                    Bundle extras = getIntent().getExtras();
+                                    if (extras != null) {
+                                        String fullName = extras.getString("fullName");
+                                        String email = extras.getString("email");
 
-                                Intent profileIntent = new Intent(LoginPageActivity.this, ProfileActivity.class);
-                                profileIntent.putExtra("user_id", firebaseUser.getUid());
-                                profileIntent.putExtra("full_name", fullName);
-                                profileIntent.putExtra("email", email);
-                                startActivity(profileIntent);
-                                finish();
+                                        Intent intent = new Intent(LoginPageActivity.this,DashBoardActivity.class);
+                                        intent.putExtra("fullName", fullName);
+                                        intent.putExtra("email", email);
+                                        startActivity(intent);
+                                    }
 
+                                }
 
-                            } else {
+                            else {
                                 firebaseUser.sendEmailVerification();
                                 authProfile.signOut();
                                 showAlertDialogBox();

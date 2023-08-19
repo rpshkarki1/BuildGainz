@@ -35,11 +35,16 @@ public class DashBoardActivity extends AppCompatActivity {
 
         profileButton = findViewById(R.id.profileBtn);
         profileButton.setOnClickListener(v -> {
+            Bundle extras = getIntent().getExtras();
+            if (extras != null) {
+                String fullName = extras.getString("fullName");
+                String email = extras.getString("email");
 
-            Intent profileIntent = new Intent(DashBoardActivity.this, ProfileActivity.class);
-
-            startActivity(profileIntent);
-            finish();
+                Intent intent = new Intent(DashBoardActivity.this, ProfileActivity.class);
+                intent.putExtra("fullName", fullName);
+                intent.putExtra("email", email);
+                startActivity(intent);
+            }
 
         });
 

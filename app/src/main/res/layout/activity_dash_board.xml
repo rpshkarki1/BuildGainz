@@ -35,7 +35,8 @@
                     android:layout_marginTop="5dp"
                     android:background="@color/grey"
                     android:contentDescription="@string/profile_button"
-                    android:src="@drawable/profile" />
+                    android:src="@drawable/profile"
+                    tools:ignore="RedundantDescriptionCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,20 +46,22 @@
                     android:gravity="start|center_vertical"
                     android:text="@string/dashboard"
                     android:textColor="@color/white"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    tools:ignore="RelativeOverlap" />
 
                 <ImageButton
                     android:id="@+id/settingBtn"
                     android:layout_width="48sp"
                     android:layout_height="48sp"
-                    android:background="@color/grey"
-                    android:src="@drawable/setting"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="16dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:contentDescription="@string/setting_button" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/grey"
+                    android:contentDescription="@string/setting_button"
+                    android:padding="16dp"
+                    android:src="@drawable/setting"
+                    tools:ignore="RedundantDescriptionCheck" />
 
             </RelativeLayout>
 
