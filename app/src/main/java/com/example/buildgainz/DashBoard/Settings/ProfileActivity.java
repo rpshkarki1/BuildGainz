@@ -1,7 +1,9 @@
 package com.example.buildgainz.DashBoard.Settings;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,11 +18,16 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.buildgainz.DashBoard.DashBoardActivity;
 import com.example.buildgainz.R;
 import com.google.android.flexbox.FlexboxLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -32,26 +39,29 @@ public class ProfileActivity extends AppCompatActivity {
 
     ImageView imageView;
     TextView changeProfilePic;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        imageView = findViewById(R.id.profilePic);
-        imageView.setOnClickListener(v -> {
-            Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
-            startActivity(intent);
-        });
 
         toolbar = findViewById(R.id.toolbarProfile);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
+
+
         changeProfilePic =findViewById(R.id.changeProfilePic);
         changeProfilePic.setOnClickListener(v -> {
             Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
             startActivity(intent);
         });
-
+        imageView = findViewById(R.id.profilePic);
+        imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
+            startActivity(intent);
+        });
 
 
 
@@ -63,6 +73,10 @@ public class ProfileActivity extends AppCompatActivity {
         setupLevelRadioButtons();
         setupGoalsRadioButtons();
         loadProfileDataFromFirebase();
+
+
+
+
         setupSaveButton();
 
 
@@ -178,6 +192,16 @@ public class ProfileActivity extends AppCompatActivity {
         DatabaseReference levelRef = databaseReference.child("level");
         DatabaseReference goalRef = databaseReference.child("goal");
 
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser(); // Add this line to get the current user
+
+        // Load user profile picture using Picasso
+        if (firebaseUser != null && firebaseUser.getPhotoUrl() != null) {
+            Uri photoUri = firebaseUser.getPhotoUrl();//After user has uploaded set User PP
+            Picasso.get().load(photoUri).into(imageView); //Loading uri to ImageView
+        }
+
+
+
 
         genderRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -264,5 +288,15 @@ public class ProfileActivity extends AppCompatActivity {
                 ((RadioButton) radioButton).setChecked(radioButtonValue.equals(value));
             }
         }
+    }
+
+    //Back Button
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if ( item.getItemId ( ) == android.R.id.home ) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }

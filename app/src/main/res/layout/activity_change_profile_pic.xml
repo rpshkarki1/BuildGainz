@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashBoard.Settings.ChangeProfilePicActivity"
-    android:orientation="vertical"
     android:background="@color/grey"
-    >
-
-
+    android:orientation="vertical"
+    tools:context=".DashBoard.Settings.ChangeProfilePicActivity">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -26,9 +22,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                >
+                android:orientation="horizontal">
 
 
                 <TextView
@@ -47,75 +42,78 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/upload_profile_pic"
-            android:gravity="center"
-            android:layout_marginTop="50sp"
-            android:layout_marginBottom="50sp"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
+            android:orientation="vertical">
 
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:layout_marginBottom="50sp"
+                android:gravity="center"
+                android:text="@string/upload_profile_pic"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+
+                />
 
 
+            <Button
+                android:id="@+id/choosePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50sp"
+                android:fontFamily="@font/cooper"
+                android:gravity="center"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="@string/choose_picture"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintButtonSize" />
 
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-        <Button
-            android:id="@+id/choosePicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/cooper"
-            android:gravity="center"
-            android:paddingStart="20sp"
-            android:paddingEnd="20sp"
-            android:text="@string/choose_picture"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="40sp"
-            tools:ignore="VisualLintButtonSize" />
+                <ImageView
+                    android:id="@+id/imageViewProfilePic"
+                    android:layout_width="300sp"
+                    android:layout_height="300sp"
+                    android:layout_marginBottom="40sp"
+                    android:contentDescription="@string/profile_pic"
+                    android:src="@drawable/profile_pic" />
 
-        <ImageView
-            android:id="@+id/imageViewProfilePic"
-            android:layout_width="400sp"
-            android:layout_height="400sp"
-            android:layout_gravity="center"
-            android:padding="20sp"
+            </FrameLayout>
 
-            android:layout_marginBottom="20sp"
-            android:contentDescription="@string/profile_pic"
-            android:src="@drawable/profile_pic" />
+            <Button
+                android:id="@+id/uploadPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40sp"
+                android:layout_marginBottom="40sp"
+                android:fontFamily="@font/cooper"
+                android:gravity="center"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="@string/upload_profile_pic"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
-        <Button
-            android:id="@+id/uploadPicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40sp"
-            android:fontFamily="@font/cooper"
-            android:gravity="center"
-            android:paddingStart="20sp"
-            android:paddingEnd="20sp"
-            android:text="@string/upload_profile_pic"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
+        </LinearLayout>
 
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
 </LinearLayout>
 
 
