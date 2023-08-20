@@ -4,9 +4,13 @@ public class ReadWriteUserDetails {
 
     public String fullName,email;
 
-    public ReadWriteUserDetails(String textFullName, String textEmail) {
-        this.fullName = textFullName;
-        this.email = textEmail;
+    public ReadWriteUserDetails(){}// Empty Constructor to store value
+
+
+    public ReadWriteUserDetails(String fullName, String email) {
+        this.fullName = fullName;
+        this.email = email;
     }
+
 
 }

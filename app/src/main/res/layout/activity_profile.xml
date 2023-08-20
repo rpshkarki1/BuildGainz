@@ -39,7 +39,6 @@
                     android:textSize="40sp" />
 
 
-
             </RelativeLayout>
 
 
@@ -58,6 +57,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcomeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:hint="@string/loading"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
 
             <ImageView
                 android:id="@+id/profilePic"
@@ -78,6 +91,96 @@
                 android:textColor="@color/sky_blue"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                app:cardCornerRadius="30sp"
+                app:cardElevation="20sp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10sp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/fullNameProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48sp"
+
+                        android:autofillHints="name"
+                        android:drawablePadding="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/full_name"
+                        android:minWidth="280sp"
+                        android:minHeight="48dp"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/email_icon"
+                        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:contentDescription="@string/eyeButton" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                app:cardCornerRadius="30sp"
+                app:cardElevation="20sp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10sp"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/yourEmailProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48sp"
+
+                        android:autofillHints="emailAddress"
+                        android:drawablePadding="16sp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/your_email"
+                        android:minWidth="280sp"
+                        android:minHeight="48dp"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="18sp"
+                        app:drawableStartCompat="@drawable/email_icon"
+                        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+                    <ImageView
+
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:contentDescription="@string/eyeButton" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -294,8 +397,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="30sp"
-                    android:text="@string/save"
                     android:fontFamily="@font/cooper"
+                    android:text="@string/save"
                     android:textSize="35sp"
 
                     />

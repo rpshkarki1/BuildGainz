@@ -65,4 +65,6 @@
     <string name="change_profile_picture">Change Profile Pic</string>
     <string name="profile_picture">Profile Picture</string>
     <string name="choose_picture">Choose Picture</string>
+    <string name="welcome_user">Welcome,</string>
+    <string name="loading">Loading…</string>
 </resources>
