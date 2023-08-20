@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
     private FlexboxLayout goalsFlexBox;
     Toolbar toolbar;
 
+    ImageView imageView;
     TextView changeProfilePic;
 
     @Override
@@ -36,15 +38,18 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        imageView = findViewById(R.id.profilePic);
+        imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
+            startActivity(intent);
+        });
+
         toolbar = findViewById(R.id.toolbarProfile);
         setSupportActionBar(toolbar);
         changeProfilePic =findViewById(R.id.changeProfilePic);
-        changeProfilePic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
-                startActivity(intent);
-            }
+        changeProfilePic.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this,ChangeProfilePicActivity.class);
+            startActivity(intent);
         });
 
 

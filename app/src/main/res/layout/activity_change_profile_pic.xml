@@ -89,9 +89,11 @@
 
         <ImageView
             android:id="@+id/imageViewProfilePic"
-            android:layout_width="match_parent"
+            android:layout_width="400sp"
             android:layout_height="400sp"
             android:layout_gravity="center"
+            android:padding="20sp"
+
             android:layout_marginBottom="20sp"
             android:contentDescription="@string/profile_pic"
             android:src="@drawable/profile_pic" />
