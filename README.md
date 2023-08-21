@@ -15,8 +15,8 @@ We're always looking for ways to improve BuildGainz. If you have any ideas or su
 
 `Firebase `
 
-`Google Maps 
-`
+`Google Maps `
+
 ## Features
 > Track your steps and calories in real-time.
 
@@ -31,8 +31,8 @@ We're always looking for ways to improve BuildGainz. If you have any ideas or su
 ## Installation
 > To install BuildGainz, you will need to have the following installed:
 
-
-
+` Android Studio `
+` Emulator `
 
 This will start the BuildGainz app in development mode. You can then open the app on your mobile simulator or device.But you have to add dependencies and set up firebase for your own database use.
 
