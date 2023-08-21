@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
 import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
-import com.example.buildgainz.DashBoard.Settings.ProfileActivity;
+import com.example.buildgainz.DashBoard.Profile.ProfileActivity;
 import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;

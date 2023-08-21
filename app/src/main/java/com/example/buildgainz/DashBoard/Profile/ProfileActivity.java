@@ -1,11 +1,8 @@
-package com.example.buildgainz.DashBoard.Settings;
+package com.example.buildgainz.DashBoard.Profile;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,11 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.example.buildgainz.DashBoard.DashBoardActivity;
 import com.example.buildgainz.LoginPage.SignUpPage.ReadWriteUserDetails;
@@ -47,12 +41,10 @@ public class ProfileActivity extends AppCompatActivity {
     TextView changeProfilePic, yourEmailProfile, fullNameProfile, welcomeUser;
     FirebaseAuth authProfile;
     FirebaseUser firebaseUser;
-    String displayName;
     private FlexboxLayout genderFlexBox;
     private FlexboxLayout levelFlexBox;
     private FlexboxLayout goalsFlexBox;
 
-    @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -86,17 +78,6 @@ public class ProfileActivity extends AppCompatActivity {
         setupSaveButton ( );
 
 
-        // Check if the app has the necessary permissions.
-        if ( ContextCompat.checkSelfPermission ( this , Manifest.permission.GET_ACCOUNTS ) != PackageManager.PERMISSION_GRANTED ) {
-            // The app does not have the necessary permissions.
-            // Request the permissions.
-            ActivityCompat.requestPermissions ( this , new String[]{Manifest.permission.GET_ACCOUNTS} , 1 );
-        } else {
-            // The app has the necessary permissions.
-            // Get the display name from the Firebase server.
-            displayName = firebaseUser.getDisplayName ( );
-        }
-
 
         if ( firebaseUser != null ) {
             showUserProfile ( firebaseUser );
@@ -117,22 +98,6 @@ public class ProfileActivity extends AppCompatActivity {
         } );
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        // Check if the permission being requested is "GET_ACCOUNTS"
-        if (requestCode == 1 && permissions.length > 0 && permissions[0].equals(Manifest.permission.GET_ACCOUNTS)) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission has been granted. Now you can retrieve the user's display name.
-                displayName = firebaseUser.getDisplayName();
-                // Other code to handle the display name
-            } else {
-                // Permission has been denied.
-                Toast.makeText(this, "The permission to read the profile was denied.", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
     private void setupSaveButton ( ) {
         Button saveButton = findViewById ( R.id.saveBtn );

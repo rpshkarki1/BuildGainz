@@ -1,4 +1,4 @@
-package com.example.buildgainz.DashBoard.Settings;
+package com.example.buildgainz.DashBoard.Profile;
 
 import android.content.ContentResolver;
 import android.content.Intent;

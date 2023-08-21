@@ -20,7 +20,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.buildgainz.DashBoard.DashBoardActivity;
-import com.example.buildgainz.DashBoard.Settings.ProfileActivity;
 import com.example.buildgainz.R;
 import com.example.buildgainz.LoginPage.SignUpPage.SignUpActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
