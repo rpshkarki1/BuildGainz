@@ -11,12 +11,6 @@ To get started with BuildGainz, you'll need to create an account. Once you've cr
 Contributing
 We're always looking for ways to improve BuildGainz. If you have any ideas or suggestions, please feel free to open a pull request.
 
-License
-BuildGainz is open source software released under the MIT License.
-
-# BuildGainz
-BuildGainz is a fitness app that tracks users' real-time steps and calories. It is built with React Native and uses the following technologies:
-
 `Java`
 
 `Firebase `
