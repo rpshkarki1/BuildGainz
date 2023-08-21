@@ -17,27 +17,29 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/grey"
             android:layout_marginBottom="20sp"
             >
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="horizontal"
                 >
 
-                <ImageButton
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profileBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48sp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_marginTop="5sp"
                     android:background="@color/grey"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    android:scaleType="centerCrop"
+                    app:strokeColor="@color/sky_blue"
+                    app:strokeWidth="2sp"
+                    android:padding="2sp"
                     android:contentDescription="@string/profile_button"
                     android:src="@drawable/profile"
                     tools:ignore="RedundantDescriptionCheck" />

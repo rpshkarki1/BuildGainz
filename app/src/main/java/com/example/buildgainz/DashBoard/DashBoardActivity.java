@@ -4,6 +4,7 @@ import static com.example.buildgainz.R.layout;
 import static com.example.buildgainz.R.menu;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -19,13 +20,18 @@ import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
 import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
 import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 public class DashBoardActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    ImageButton settingButton, profileButton;
+    ImageButton settingButton;
+    ShapeableImageView profileButton;
     RelativeLayout exercisePlan;
+    FirebaseAuth authProfile;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
@@ -38,7 +44,14 @@ public class DashBoardActivity extends AppCompatActivity {
         settingButton = findViewById ( R.id.settingBtn );
         profileButton = findViewById ( R.id.profileBtn );
         exercisePlan = findViewById ( R.id.exerCardView );
+        authProfile = FirebaseAuth.getInstance ( );
+        FirebaseUser firebaseUser = authProfile.getCurrentUser ( );
+        if ( firebaseUser != null && firebaseUser.getPhotoUrl ( ) != null ) {
+            Uri photoUri = firebaseUser.getPhotoUrl ( );//After user has uploaded set User PP
+            Picasso.get ( ).load ( photoUri ).into ( profileButton ); //Loading uri to ImageView
 
+
+        }
         profileButton.setOnClickListener ( v -> {
 
 
@@ -72,6 +85,8 @@ public class DashBoardActivity extends AppCompatActivity {
         } );
 
         exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this, Exercises.class ) ) );
+
+
 
     }
 

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
@@ -31,7 +31,7 @@ public class ChangeProfilePicActivity extends AppCompatActivity {
     StorageReference storageReference;
     FirebaseAuth authProfile;
     FirebaseUser firebaseUser;
-    private ImageView imageViewUpload;
+    private ShapeableImageView imageViewUpload;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
@@ -55,7 +55,7 @@ public class ChangeProfilePicActivity extends AppCompatActivity {
         Uri uri = Objects.requireNonNull ( firebaseUser ).getPhotoUrl ( );
 
         //Set user's current profilePic in ImageView  (Regular URIs).
-        Picasso.get ( ).load ( uri ).centerCrop ( ).into ( imageViewUpload );
+        Picasso.get ( ).load ( uri ).into ( imageViewUpload );
 
         //Choose image to upload
         buttonUploadPicChoose.setOnClickListener ( v -> openFileChooser ( ) );

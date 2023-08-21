@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +19,7 @@ import com.example.buildgainz.DashBoard.DashBoardActivity;
 import com.example.buildgainz.LoginPage.SignUpPage.ReadWriteUserDetails;
 import com.example.buildgainz.R;
 import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -37,10 +37,10 @@ public class ProfileActivity extends AppCompatActivity {
     Toolbar toolbar;
     String fullName;
     String email;
-    ImageView imageView;
     TextView changeProfilePic, yourEmailProfile, fullNameProfile, welcomeUser;
     FirebaseAuth authProfile;
     FirebaseUser firebaseUser;
+    private ShapeableImageView imageView;
     private FlexboxLayout genderFlexBox;
     private FlexboxLayout levelFlexBox;
     private FlexboxLayout goalsFlexBox;
@@ -52,9 +52,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         toolbar = findViewById ( R.id.toolbarProfile );
 
-
-        authProfile = FirebaseAuth.getInstance ( );
-        firebaseUser = authProfile.getCurrentUser ( );
 
         yourEmailProfile = findViewById ( R.id.yourEmailProfile );
         fullNameProfile = findViewById ( R.id.fullNameProfile );
@@ -74,10 +71,13 @@ public class ProfileActivity extends AppCompatActivity {
         setupGenderRadioButtons ( );
         setupLevelRadioButtons ( );
         setupGoalsRadioButtons ( );
+
         loadProfileDataFromFirebase ( );
+
         setupSaveButton ( );
 
-
+        authProfile = FirebaseAuth.getInstance ( );
+        firebaseUser = authProfile.getCurrentUser ( );
 
         if ( firebaseUser != null ) {
             showUserProfile ( firebaseUser );
@@ -86,16 +86,15 @@ public class ProfileActivity extends AppCompatActivity {
 
         }
 
+        imageView.setOnClickListener ( v -> openChangeProfilePicActivity ( ) );
+        changeProfilePic.setOnClickListener ( v -> openChangeProfilePicActivity ( ) );
 
-        changeProfilePic.setOnClickListener ( v -> {
-            Intent intent = new Intent ( ProfileActivity.this , ChangeProfilePicActivity.class );
-            startActivity ( intent );
-        } );
 
-        imageView.setOnClickListener ( v -> {
-            Intent intent = new Intent ( ProfileActivity.this , ChangeProfilePicActivity.class );
-            startActivity ( intent );
-        } );
+    }
+
+    private void openChangeProfilePicActivity ( ) {
+        Intent intent = new Intent ( ProfileActivity.this , ChangeProfilePicActivity.class );
+        startActivity ( intent );
     }
 
 

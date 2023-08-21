@@ -72,14 +72,19 @@
                 android:textStyle="bold"
                 tools:ignore="TextContrastCheck" />
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profilePic"
-                android:layout_width="150sp"
-                android:layout_height="150sp"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20sp"
                 android:contentDescription="@string/profile_pic"
-                android:src="@drawable/profile_pic" />
+                android:padding="10sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_pic"
+                app:shapeAppearanceOverlay="@style/circular"
+                app:strokeColor="@color/sky_blue"
+                app:strokeWidth="2sp" />
 
             <TextView
                 android:id="@+id/changeProfilePic"
@@ -226,7 +231,7 @@
                         android:id="@+id/maleRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
-                        android:layout_marginStart="50sp"
+                        android:layout_marginStart="30sp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/custom_radio_button"
                         android:button="@null"
@@ -279,7 +284,7 @@
                         android:id="@+id/beginnerRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
-                        android:layout_marginStart="50sp"
+                        android:layout_marginStart="30sp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/custom_radio_button"
                         android:button="@null"
@@ -309,7 +314,7 @@
                         android:id="@+id/advanceRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
-                        android:layout_marginStart="50sp"
+                        android:layout_marginStart="30sp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/custom_radio_button"
                         android:button="@null"
@@ -347,7 +352,7 @@
                         android:id="@+id/losingWeightRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
-                        android:layout_marginStart="50sp"
+                        android:layout_marginStart="30sp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/custom_radio_button"
                         android:button="@null"
@@ -377,7 +382,7 @@
                         android:id="@+id/bodyRecompRadioButton"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
-                        android:layout_marginStart="50sp"
+                        android:layout_marginStart="30sp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/custom_radio_button"
                         android:button="@null"
