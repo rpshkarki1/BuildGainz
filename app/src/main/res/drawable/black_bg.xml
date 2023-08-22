@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- blob_scene_haikei__1__2 from your XD file. -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
 	android:shape="rectangle" >
-	<corners android:radius="53dp" />
+	<corners android:topLeftRadius="53dp"
+		android:topRightRadius="53sp"
+		android:bottomLeftRadius="0sp"
+		android:bottomRightRadius="0sp"
+		/>
 	<solid android:color="@color/grey" />
 </shape>
 

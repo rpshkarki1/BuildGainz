@@ -84,8 +84,7 @@ public class DashBoardActivity extends AppCompatActivity {
             } );
         } );
 
-        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this, Exercises.class ) ) );
-
+        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , Exercises.class ) ) );
 
 
     }

@@ -266,7 +266,7 @@ public class ProfileActivity extends AppCompatActivity {
         //Extracting User reference from firebase
         DatabaseReference reference = FirebaseDatabase.getInstance ( ).getReference ( "Registered Users" );
         reference.child ( userId ).addListenerForSingleValueEvent ( new ValueEventListener ( ) {
-            @SuppressLint("SetTextI18n")
+            @SuppressLint ( "SetTextI18n" )
             @Override
             public void onDataChange ( @NonNull DataSnapshot snapshot ) {
                 ReadWriteUserDetails writeUserDetails = snapshot.getValue ( ReadWriteUserDetails.class );

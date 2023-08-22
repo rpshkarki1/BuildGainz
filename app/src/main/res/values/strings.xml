@@ -2,7 +2,7 @@
     <string name="app_name">BuildGainz</string>
     <string name="buildGainz_String">BuildGainz</string>
     <string name="logoFor_App">Logo For App</string>
-    <string name="motto">Unleash the Power \n Within, \n Unlock Your \n Potential.</string>
+    <string name="motto">It is a shame to grow old without seeing the beauty and strength of which their body is capable.</string>
     <string name="get_Started">GET STARTED</string>
     <string name="moto">motto</string>
     <string name="welcome">Welcome to BuildGainz</string>
@@ -67,4 +67,5 @@
     <string name="choose_picture">Choose Picture</string>
     <string name="welcome_user">Welcome,</string>
     <string name="loading">Loading…</string>
+    <string name="exercise_plan">Exercise Plan</string>
 </resources>

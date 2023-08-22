@@ -1,302 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".LoginPage.SignUpPage.SignUpActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginPage.SignUpPage.SignUpActivity"
 
-    <RelativeLayout
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/logoForAppli"
+            android:layout_width="70dp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:background="@drawable/logo_for_app_bg" />
+
+        <TextView
+            android:id="@+id/appNameInLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cooper"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/app_name"
+            android:textAppearance="@style/AppTheme"
+            android:textColor="@color/grey_app_name"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginTop="40sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cooper"
+            android:gravity="center"
+            android:text="@string/lets_get_started"
+            android:textAppearance="@style/AppTheme"
+            android:textColor="@color/grey_app_name"
+            android:textSize="38sp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:gravity="center"
+            android:text="@string/create_acc"
+            android:textAppearance="@style/AppTheme"
+            android:textColor="@color/grey_app_name"
+            android:textSize="20sp"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="20sp"
+        app:cardCornerRadius="30sp"
+        app:cardElevation="20sp"
 
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50sp"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/logoForAppli"
-                android:layout_width="70dp"
-                android:layout_height="70sp"
-                android:layout_gravity="center"
-                android:background="@drawable/logo_for_app_bg" />
-
-            <TextView
-                android:id="@+id/appNameInLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/cooper"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/app_name"
-                android:textAppearance="@style/AppTheme"
-                android:textColor="@color/grey_app_name"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="140sp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/cooper"
-                android:gravity="center"
-                android:text="@string/lets_get_started"
-                android:textAppearance="@style/AppTheme"
-                android:textColor="@color/grey_app_name"
-                android:textSize="38sp"
-
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10sp"
-                android:gravity="center"
-                android:text="@string/create_acc"
-                android:textAppearance="@style/AppTheme"
-                android:textColor="@color/grey_app_name"
-                android:textSize="20sp"
-
-                />
-
-        </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="240sp"
-            android:layout_marginEnd="20sp"
-            app:cardCornerRadius="30sp"
-            app:cardElevation="20sp"
-
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10sp">
-
-                <EditText
-                    android:id="@+id/fullName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48sp"
-                    android:autofillHints="name"
-                    android:drawableStart="@drawable/full_name"
-                    android:drawablePadding="16sp"
-                    android:hint="@string/full_name"
-                    android:inputType="text"
-                    android:minWidth="280sp"
-                    android:minHeight="48dp"
-                    android:textColorHint="#757575"
-                    android:textSize="18sp"
-                    tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
-                <ImageView
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:contentDescription="@string/eyeButton" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="320sp"
-            android:layout_marginEnd="20sp"
-            app:cardCornerRadius="30sp"
-            app:cardElevation="20sp"
-
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10sp">
-
-                <EditText
-                    android:id="@+id/yourEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48sp"
-
-                    android:autofillHints="emailAddress"
-                    android:drawableStart="@drawable/email_icon"
-                    android:drawablePadding="16sp"
-                    android:hint="@string/your_email"
-                    android:inputType="textEmailAddress"
-                    android:minWidth="280sp"
-                    android:minHeight="48dp"
-                    android:textColorHint="#757575"
-                    android:textSize="18sp"
-                    tools:ignore="VisualLintTextFieldSize" />
-                <ImageView
-
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:contentDescription="@string/eyeButton" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="400sp"
-            android:layout_marginEnd="20sp"
-            app:cardCornerRadius="30sp"
-            app:cardElevation="20sp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10sp">
-
-                <EditText
-                    android:id="@+id/enterPass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48sp"
-
-                    android:autofillHints="password"
-                    android:drawableStart="@drawable/lock_icon"
-                    android:drawablePadding="16sp"
-                    android:hint="@string/your_password"
-                    android:inputType="textPassword"
-                    android:minWidth="280sp"
-                    android:minHeight="48dp"
-                    android:textColorHint="#757575"
-                    android:textSize="18sp"
-                    tools:ignore="VisualLintTextFieldSize" />
-
-                <ImageView
-                    android:id="@+id/imgViewShowHide1"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:contentDescription="@string/eyeButton" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginTop="480sp"
-            android:layout_marginEnd="20sp"
-            app:cardCornerRadius="30sp"
-            app:cardElevation="20sp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10sp">
-
-                <EditText
-                    android:id="@+id/reEnterPass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48sp"
-
-                    android:autofillHints="password"
-                    android:drawableStart="@drawable/lock_icon"
-                    android:drawablePadding="16sp"
-                    android:hint="@string/re_enter_your_password"
-                    android:inputType="textPassword"
-                    android:minWidth="280sp"
-                    android:minHeight="48dp"
-                    android:textColorHint="#757575"
-                    android:textSize="18sp"
-                    tools:ignore="VisualLintTextFieldSize" />
-
-                <ImageView
-                    android:id="@+id/imgViewShowHide2"
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:contentDescription="@string/eyeButton" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <Button
-            android:id="@+id/signUpAccBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50sp"
-            android:layout_marginTop="560sp"
-            android:layout_marginEnd="50sp"
-            android:fontFamily="@font/cooper"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:letterSpacing="0.12"
-            android:text="@string/sign_up"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            tools:ignore="VisualLintButtonSize,VisualLintOverlap" />
+            android:orientation="horizontal"
+            android:padding="10sp">
 
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="10sp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/havaAcc"
+            <EditText
+                android:id="@+id/fullName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="630dp"
-                android:text="@string/already_have_an_account"
-                android:textColor="#FFFFFF"
+                android:layout_height="48sp"
+                android:autofillHints="name"
+                android:drawableStart="@drawable/full_name"
+                android:drawablePadding="16sp"
+                android:hint="@string/full_name"
+                android:inputType="text"
+                android:minWidth="280sp"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
                 android:textSize="18sp"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
-
-                />
-
-            <TextView
-                android:id="@+id/signInNow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="630dp"
-                android:text="@string/sign_in_now"
-                android:textAppearance="@style/signupbtn"
-                android:textSize="18sp"
-
-                />
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
 
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        app:cardCornerRadius="30sp"
+        app:cardElevation="20sp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <EditText
+                android:id="@+id/yourEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+
+                android:autofillHints="emailAddress"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="16sp"
+                android:hint="@string/your_email"
+                android:inputType="textEmailAddress"
+                android:minWidth="280sp"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:textSize="18sp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <ImageView
+
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        app:cardCornerRadius="30sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <EditText
+                android:id="@+id/enterPass"
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+
+                android:autofillHints="password"
+                android:drawableStart="@drawable/lock_icon"
+                android:drawablePadding="16sp"
+                android:hint="@string/your_password"
+                android:inputType="textPassword"
+                android:minWidth="280sp"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:textSize="18sp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <ImageView
+                android:id="@+id/imgViewShowHide1"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        app:cardCornerRadius="30sp"
+        app:cardElevation="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <EditText
+                android:id="@+id/reEnterPass"
+                android:layout_width="wrap_content"
+                android:layout_height="48sp"
+
+                android:autofillHints="password"
+                android:drawableStart="@drawable/lock_icon"
+                android:drawablePadding="16sp"
+                android:hint="@string/re_enter_your_password"
+                android:inputType="textPassword"
+                android:minWidth="280sp"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:textSize="18sp"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <ImageView
+                android:id="@+id/imgViewShowHide2"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/eyeButton" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/signUpAccBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="50sp"
+        android:fontFamily="@font/cooper"
+        android:gravity="center"
+        android:letterSpacing="0.12"
+        android:text="@string/sign_up"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        tools:ignore="VisualLintButtonSize,VisualLintOverlap" />
 
 
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40sp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/havaAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            android:layout_gravity="bottom"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/signInNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_now"
+            android:textAppearance="@style/signupbtn"
+            android:layout_gravity="bottom"
+
+            android:textSize="18sp"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

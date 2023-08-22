@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,58 +29,69 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
-        Button continueBtn = findViewById(R.id.continueButton);
-        emailEditText = findViewById(R.id.editTextEmail);
-        ImageButton backBtn = findViewById(R.id.backButton);
-        backBtn.setOnClickListener(v -> startActivity(new Intent(ForgotPasswordActivity.this, LoginPageActivity.class)));
+    protected void onCreate ( Bundle savedInstanceState ) {
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_forgot_password );
+        Button continueBtn = findViewById ( R.id.continueButton );
+        emailEditText = findViewById ( R.id.editTextEmail );
+        Toolbar toolbar = findViewById ( R.id.toolbarForgetPass );
+        setSupportActionBar ( toolbar );
+        Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 
-        continueBtn.setOnClickListener(v -> {
-            String email = emailEditText.getText().toString();
+        continueBtn.setOnClickListener ( v -> {
+            String email = emailEditText.getText ( ).toString ( );
 
-            if (TextUtils.isEmpty(email)) {
-                Toast.makeText(ForgotPasswordActivity.this, "Please enter your registered email!", Toast.LENGTH_SHORT).show();
-                emailEditText.setError("Email is required.");
-                emailEditText.requestFocus();
-            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                Toast.makeText(ForgotPasswordActivity.this, "Please enter your valid email.", Toast.LENGTH_SHORT).show();
-                emailEditText.setError("Valid Email is required.");
-                emailEditText.requestFocus();
+            if ( TextUtils.isEmpty ( email ) ) {
+                Toast.makeText ( ForgotPasswordActivity.this , "Please enter your registered email!" , Toast.LENGTH_SHORT ).show ( );
+                emailEditText.setError ( "Email is required." );
+                emailEditText.requestFocus ( );
+            } else if ( ! Patterns.EMAIL_ADDRESS.matcher ( email ).matches ( ) ) {
+                Toast.makeText ( ForgotPasswordActivity.this , "Please enter your valid email." , Toast.LENGTH_SHORT ).show ( );
+                emailEditText.setError ( "Valid Email is required." );
+                emailEditText.requestFocus ( );
             } else {
-                resetPassword(email);
+                resetPassword ( email );
             }
 
-        });
+        } );
 
 
     }
 
-    private void resetPassword(String email) {
-        FirebaseAuth authProfile = FirebaseAuth.getInstance();
-        authProfile.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                Toast.makeText(ForgotPasswordActivity.this, "Check your Inbox for password reset link!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ForgotPasswordActivity.this, LoginPageActivity.class);
+    private void resetPassword ( String email ) {
+        FirebaseAuth authProfile = FirebaseAuth.getInstance ( );
+        authProfile.sendPasswordResetEmail ( email ).addOnCompleteListener ( task -> {
+            if ( task.isSuccessful ( ) ) {
+                Toast.makeText ( ForgotPasswordActivity.this , "Check your Inbox for password reset link!" , Toast.LENGTH_SHORT ).show ( );
+                Intent intent = new Intent ( ForgotPasswordActivity.this , LoginPageActivity.class );
 
                 //prevent user from returning back to registerActivity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
+                intent.setFlags ( Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK );
+                startActivity ( intent );
+                finish ( );
             } else {
 
                 try {
-                    throw Objects.requireNonNull(task.getException());
+                    throw Objects.requireNonNull ( task.getException ( ) );
 
-                } catch (FirebaseAuthInvalidUserException e) {
-                    emailEditText.setError("User does not exists or is no longer available.");
-                } catch (Exception e){
-                    Log.e(TAG, Objects.requireNonNull(e.getMessage()));
+                } catch ( FirebaseAuthInvalidUserException e ) {
+                    emailEditText.setError ( "User does not exists or is no longer available." );
+                } catch ( Exception e ) {
+                    Log.e ( TAG , Objects.requireNonNull ( e.getMessage ( ) ) );
 
-                    Toast.makeText(ForgotPasswordActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText ( ForgotPasswordActivity.this , e.getMessage ( ) , Toast.LENGTH_SHORT ).show ( );
                 }
             }
-        });
+        } );
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if ( item.getItemId ( ) == android.R.id.home ) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }

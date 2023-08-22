@@ -66,7 +66,7 @@ public class ChangeProfilePicActivity extends AppCompatActivity {
     }
 
     private void UploadPic ( ) {
-        if ( uriImage != null ) {
+        if (uriImage != null) {
             //Save the image with uid of the currently logged User
             StorageReference fileReference = storageReference.child ( Objects.requireNonNull ( authProfile.getCurrentUser ( ) ).getUid ( ) + "." +
                     getFilesExtension ( uriImage ) );
@@ -110,7 +110,7 @@ public class ChangeProfilePicActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult ( int requestCode , int resultCode , @Nullable Intent data ) {
         super.onActivityResult ( requestCode , resultCode , data );
-        if ( requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData ( ) != null ) {
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData ( ) != null) {
             uriImage = data.getData ( );
             imageViewUpload.setImageURI ( uriImage );
         }
@@ -120,7 +120,7 @@ public class ChangeProfilePicActivity extends AppCompatActivity {
     //Back Button
     @Override
     public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
-        if ( item.getItemId ( ) == android.R.id.home ) {
+        if (item.getItemId ( ) == android.R.id.home) {
             onBackPressed ( ); // This will emulate the behavior of the back button
             return true;
         }
