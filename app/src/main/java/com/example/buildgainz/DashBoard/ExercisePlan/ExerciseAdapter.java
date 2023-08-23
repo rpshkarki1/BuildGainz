@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.ExerciseViewHolder > {
 
-    private final Context context;
+    Context context;
     private final List < Exercise > exercises;
 
     public ExerciseAdapter ( Context context , List < Exercise > exercises ) {
@@ -47,8 +47,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
         return exercises.size ( );
     }
 
-    public static class ExerciseViewHolder extends RecyclerView.ViewHolder {
-        private final ImageView imageView;
+    public class ExerciseViewHolder extends RecyclerView.ViewHolder {
+
 
         private final TextView exerciseNameTextView;
         private final TextView forceTextView;
@@ -57,10 +57,12 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
         private final TextView equipmentTextView;
         private final TextView primaryMusclesTextView;
         private final TextView secondaryMusclesTextView;
+        private final ImageView exerciseImageView;
+
 
         public ExerciseViewHolder ( @NonNull View itemView ) {
             super ( itemView );
-            imageView = itemView.findViewById ( R.id.exerciseImageView );
+            exerciseImageView = itemView.findViewById(R.id.exerciseImageView);
             exerciseNameTextView = itemView.findViewById ( R.id.name );
             forceTextView = itemView.findViewById ( R.id.force );
             levelTextView = itemView.findViewById ( R.id.level );
@@ -80,18 +82,20 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
             primaryMusclesTextView.setText ( formatListToString ( exercise.getPrimaryMuscles ( ) ) );
             secondaryMusclesTextView.setText ( formatListToString ( exercise.getSecondaryMuscles ( ) ) );
 
-
-            AssetManager assetManager = itemView.getContext ( ).getAssets ( );
+            // Load and set the first exercise image here
+            AssetManager assetManager = context.getAssets();
             try {
-                String imagePath = "exercises_img/" + exercise.getImageSubdirectory ( ) + "/" + exercise.getImageFilename ( ) + ".jpg"; // Adjust the file extension if needed
-                InputStream inputStream = assetManager.open ( imagePath );
-                Drawable drawable = Drawable.createFromStream ( inputStream , null );
-                imageView.setImageDrawable ( drawable );
-                inputStream.close ( );
-            } catch ( IOException e ) {
-                e.printStackTrace ( );
+                String imagePath = "exercises_img/" + exercise.getImageSubdirectory() + "/" + exercise.getImageFilename() + ".jpg";
+                InputStream inputStream = assetManager.open(imagePath);
+                Drawable drawable = Drawable.createFromStream(inputStream, null);
+                exerciseImageView.setImageDrawable(drawable);
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
+
+
 
         private String formatListToString ( List < String > list ) {
             StringBuilder stringBuilder = new StringBuilder ( );
