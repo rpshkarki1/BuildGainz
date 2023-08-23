@@ -21,6 +21,11 @@
 
     </style>
 
+
+    <style name="CapitalizedText">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
     <style name="circular">
         <item name="cornerSize">50%</item>
     </style>

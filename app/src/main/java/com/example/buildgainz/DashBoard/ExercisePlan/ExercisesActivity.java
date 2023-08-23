@@ -63,7 +63,6 @@ public class ExercisesActivity extends AppCompatActivity {
                 exercise.setName(jsonObject.getString("name"));
                 exercise.setForce(jsonObject.getString("force"));
                 exercise.setLevel(jsonObject.getString("level"));
-                exercise.setMechanic(jsonObject.getString("mechanic"));
                 exercise.setEquipment(jsonObject.getString("equipment"));
 
                 // Extract and set primary muscles
@@ -74,13 +73,7 @@ public class ExercisesActivity extends AppCompatActivity {
                 }
                 exercise.setPrimaryMuscles(primaryMuscles);
 
-                // Extract and set secondary muscles
-                JSONArray secondaryMusclesArray = jsonObject.getJSONArray("secondaryMuscles");
-                List<String> secondaryMuscles = new ArrayList<>();
-                for (int j = 0; j < secondaryMusclesArray.length(); j++) {
-                    secondaryMuscles.add(secondaryMusclesArray.getString(j));
-                }
-                exercise.setSecondaryMuscles(secondaryMuscles);
+
 
                 // Extract and set instructions
                 JSONArray instructionsArray = jsonObject.getJSONArray("instructions");

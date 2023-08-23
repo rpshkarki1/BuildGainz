@@ -6,7 +6,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -55,7 +55,7 @@
     "mechanic": "isolation",
     "equipment": "machine",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -78,7 +78,7 @@
     "mechanic": "compound",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "shoulders"
@@ -148,7 +148,7 @@
     "mechanic": "isolation",
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -175,7 +175,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -251,7 +251,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -382,7 +382,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -487,7 +487,7 @@
       "middle back"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "chest",
       "lats",
@@ -710,7 +710,7 @@
       "lower back"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "adductors",
       "biceps",
       "calves",
@@ -904,7 +904,7 @@
       "lats"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "forearms",
       "middle back"
     ],
@@ -1051,7 +1051,7 @@
     "mechanic": "compound",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "lower back",
@@ -1077,7 +1077,7 @@
     "mechanic": "compound",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "lower back",
@@ -1454,7 +1454,7 @@
     "mechanic": "compound",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -1582,7 +1582,7 @@
     "mechanic": "isolation",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "lower back"
@@ -2050,7 +2050,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -2264,7 +2264,7 @@
     "mechanic": "compound",
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -2373,7 +2373,7 @@
       "triceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "forearms"
     ],
     "instructions": [
@@ -2423,7 +2423,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -2525,7 +2525,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -2535,7 +2535,7 @@
       "With both hands, reach back and grab the handle of each cable.",
       "With your feet positioned in a wide stance, extend your arms straight out in front of you and in between your knees. Your hands should be at knee level.",
       "Keep your arms straight and in-line with the upward angle of the cable. Elevate your torso in a crunching motion without dropping or bending your arms.",
-      "Maintain the rigid position with your arms. Slowly descend back to the starting position with your back arched around the Bosu Ball and your abdominals elongated.",
+      "Maintain the rigid position with your arms. Slowly descend back to the starting position with your back arched around the Bosu Ball and your abdominal elongated.",
       "Repeat the same series of movements to failure.",
       "Once you reach failure, keep your abs tight and raise your torso into plank position so your back is elevated off the Bosu Ball.",
       "Lower your arms down to your side; keep them straight. Start doing alternating side bends; reach for your heels! This finishing movement will focus on your obliques."
@@ -2578,7 +2578,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -2796,7 +2796,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -2920,7 +2920,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -3120,7 +3120,7 @@
     "mechanic": "compound",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -3244,7 +3244,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -3321,7 +3321,7 @@
     "mechanic": "compound",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -3347,7 +3347,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -3714,7 +3714,7 @@
       "adductors"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "abductors",
       "calves",
       "glutes",
@@ -3768,7 +3768,7 @@
       "lats"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "chest",
       "shoulders"
     ],
@@ -3967,7 +3967,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -3993,7 +3993,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -4020,7 +4020,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -4046,7 +4046,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -4314,7 +4314,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "hamstrings",
       "lower back",
@@ -4349,7 +4349,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings",
@@ -4605,7 +4605,7 @@
       "triceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "chest",
       "shoulders"
     ],
@@ -4655,7 +4655,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -4680,7 +4680,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "calves",
       "forearms",
@@ -4732,7 +4732,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -4812,7 +4812,7 @@
       "lower back"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "abductors",
       "glutes",
       "hamstrings",
@@ -4860,7 +4860,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -4884,7 +4884,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -4892,7 +4892,7 @@
       "Place your feet three to four inches apart and point your toes inward so they touch.",
       "Place your hands lightly on either side of your head keeping your elbows in. Tip: Don't lock your fingers behind your head.",
       "Push the small of your back down in the floor in order to better isolate your abdominal muscles. This will be your starting position.",
-      "Begin to roll your shoulders off the floor and continue to push down as hard as you can with your lower back. Your shoulders should come up off the floor only about four inches, and your lower back should remain on the floor. Breathe out as you execute this portion of the movement. Squeeze your abdominals hard at the top of the contraction and hold for a second. Tip: Focus on a slow, controlled movement. Refrain from using momentum at any time.",
+      "Begin to roll your shoulders off the floor and continue to push down as hard as you can with your lower back. Your shoulders should come up off the floor only about four inches, and your lower back should remain on the floor. Breathe out as you execute this portion of the movement. Squeeze your abdominal hard at the top of the contraction and hold for a second. Tip: Focus on a slow, controlled movement. Refrain from using momentum at any time.",
       "Slowly go back down to the starting position as you inhale.",
       "Repeat for the recommended amount of repetitions."
     ],
@@ -4910,14 +4910,14 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
       "Lie flat on your back with your feet flat on the ground, or resting on a bench with your knees bent at a 90 degree angle. If you are resting your feet on a bench, place them three to four inches apart and point your toes inward so they touch.",
       "Now place your hands lightly on either side of your head keeping your elbows in. Tip: Don't lock your fingers behind your head.",
       "While pushing the small of your back down in the floor to better isolate your abdominal muscles, begin to roll your shoulders off the floor.",
-      "Continue to push down as hard as you can with your lower back as you contract your abdominals and exhale. Your shoulders should come up off the floor only about four inches, and your lower back should remain on the floor. At the top of the movement, contract your abdominals hard and keep the contraction for a second. Tip: Focus on slow, controlled movement - don't cheat yourself by using momentum.",
+      "Continue to push down as hard as you can with your lower back as you contract your abdominal and exhale. Your shoulders should come up off the floor only about four inches, and your lower back should remain on the floor. At the top of the movement, contract your abdominal hard and keep the contraction for a second. Tip: Focus on slow, controlled movement - don't cheat yourself by using momentum.",
       "After the one second contraction, begin to come down slowly again to the starting position as you inhale.",
       "Repeat for the recommended amount of repetitions."
     ],
@@ -4987,7 +4987,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -5129,14 +5129,14 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
       "Secure your legs at the end of the decline bench and lie down.",
       "Now place your hands lightly on either side of your head keeping your elbows in. Tip: Don't lock your fingers behind your head.",
       "While pushing the small of your back down in the bench to better isolate your abdominal muscles, begin to roll your shoulders off it.",
-      "Continue to push down as hard as you can with your lower back as you contract your abdominals and exhale. Your shoulders should come up off the bench only about four inches, and your lower back should remain on the bench. At the top of the movement, contract your abdominals hard and keep the contraction for a second. Tip: Focus on slow, controlled movement - don't cheat yourself by using momentum.",
+      "Continue to push down as hard as you can with your lower back as you contract your abdominal and exhale. Your shoulders should come up off the bench only about four inches, and your lower back should remain on the bench. At the top of the movement, contract your abdominal hard and keep the contraction for a second. Tip: Focus on slow, controlled movement - don't cheat yourself by using momentum.",
       "After the one second contraction, begin to come down slowly again to the starting position as you inhale.",
       "Repeat for the recommended amount of repetitions."
     ],
@@ -5254,7 +5254,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -5305,7 +5305,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -5629,7 +5629,7 @@
     "mechanic": null,
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -5689,7 +5689,7 @@
       "glutes"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "hamstrings"
     ],
     "instructions": [
@@ -6408,7 +6408,7 @@
     "mechanic": "isolation",
     "equipment": "dumbbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -6656,7 +6656,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -6740,7 +6740,7 @@
       "Sit down on the machine and place your feet on the front platform or crossbar provided making sure that your knees are slightly bent and not locked.",
       "Lean over as you keep the natural alignment of your back and grab the V-bar handles.",
       "With your arms extended pull back until your torso is at a 90-degree angle from your legs. Your back should be slightly arched and your chest should be sticking out. You should be feeling a nice stretch on your lats as you hold the bar in front of you. This is the starting position of the exercise.",
-      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominals. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in.",
+      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominal. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in.",
       "Repeat for the recommended amount of repetitions."
     ],
     "category": "strength",
@@ -6782,13 +6782,13 @@
     "mechanic": "isolation",
     "equipment": "exercise ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
       "Lie on an exercise ball with your lower back curvature pressed against the spherical surface of the ball. Your feet should be bent at the knee and pressed firmly against the floor. The upper torso should be hanging off the top of the ball. The arms should either be kept alongside the body or crossed on top of your chest as these positions avoid neck strains (as opposed to the hands behind the back of the head position).",
       "Lower your torso into a stretch position keeping the neck stationary at all times. This will be your starting position.",
-      "With the hips stationary, flex the waist by contracting the abdominals and curl the shoulders and trunk upward until you feel a nice contraction on your abdominals. The arms should simply slide up the side of your legs if you have them at the side or just stay on top of your chest if you have them crossed. The lower back should always stay in contact with the ball. Exhale as you perform this movement and hold the contraction for a second.",
+      "With the hips stationary, flex the waist by contracting the abdominal and curl the shoulders and trunk upward until you feel a nice contraction on your abdominal. The arms should simply slide up the side of your legs if you have them at the side or just stay on top of your chest if you have them crossed. The lower back should always stay in contact with the ball. Exhale as you perform this movement and hold the contraction for a second.",
       "As you inhale, go back to the starting position.",
       "Repeat for the recommended amount of repetitions."
     ],
@@ -6806,7 +6806,7 @@
     "mechanic": "compound",
     "equipment": "exercise ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -6951,7 +6951,7 @@
       "forearms"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "hamstrings",
       "lower back",
@@ -7054,7 +7054,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -7078,7 +7078,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -7281,7 +7281,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings"
@@ -7360,7 +7360,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -7649,7 +7649,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "hamstrings"
     ],
@@ -7854,7 +7854,7 @@
       "hamstrings"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "lower back"
     ],
@@ -7880,7 +7880,7 @@
       "hamstrings"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "lower back"
     ],
@@ -7902,7 +7902,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "biceps",
@@ -8190,7 +8190,7 @@
       "hamstrings"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "forearms",
       "glutes",
@@ -8222,7 +8222,7 @@
       "hamstrings"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "forearms",
       "glutes",
@@ -8254,7 +8254,7 @@
       "hamstrings"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "glutes",
       "lower back"
     ],
@@ -8278,7 +8278,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -8301,7 +8301,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -8328,7 +8328,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "forearms",
       "glutes",
       "hamstrings",
@@ -8357,7 +8357,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -9071,7 +9071,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -9099,7 +9099,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -9127,7 +9127,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -9395,7 +9395,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -9446,7 +9446,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -9469,7 +9469,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -9554,7 +9554,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves"
     ],
     "instructions": [
@@ -9602,7 +9602,7 @@
       "lower back"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "calves",
       "forearms",
@@ -9685,7 +9685,7 @@
     "mechanic": null,
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "hamstrings",
@@ -9762,7 +9762,7 @@
     "mechanic": "compound",
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -9790,7 +9790,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "instructions": [
       "With a wide stance, hold a kettlebell with both hands. Allow it to hang at waist level with your arms extended. This will be your starting position.",
@@ -9944,7 +9944,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "hamstrings",
       "quadriceps",
       "triceps"
@@ -9971,7 +9971,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "hamstrings",
       "quadriceps",
@@ -9996,7 +9996,7 @@
     "mechanic": "compound",
     "equipment": "kettlebells",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -10026,7 +10026,7 @@
       "lats"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "forearms",
       "middle back",
@@ -10104,7 +10104,7 @@
     "mechanic": "isolation",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -10159,7 +10159,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "instructions": [
       "This drill helps increase arm efficiency during the run. Begin kneeling, left foot in front, right knee down. Apply pressure through the front heel to keep your glutes and hamstrings activated.",
@@ -10181,7 +10181,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -10360,7 +10360,7 @@
       "glutes"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "hamstrings",
       "lower back"
     ],
@@ -10383,7 +10383,7 @@
     "mechanic": "compound",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -10414,7 +10414,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "chest",
       "hamstrings",
@@ -10699,7 +10699,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -11005,7 +11005,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "chest",
       "glutes",
       "hamstrings",
@@ -11181,7 +11181,7 @@
     "mechanic": null,
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -11923,7 +11923,7 @@
     "mechanic": "compound",
     "equipment": "medicine ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "shoulders"
@@ -11951,7 +11951,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "hamstrings",
       "quadriceps"
     ],
@@ -12000,7 +12000,7 @@
       "middle back"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "lats",
       "lower back"
     ],
@@ -12152,7 +12152,7 @@
       "lats"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "forearms",
       "middle back",
@@ -12343,7 +12343,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -12369,7 +12369,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -12518,7 +12518,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -12904,7 +12904,7 @@
     "mechanic": "compound",
     "equipment": "medicine ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "lats",
@@ -12989,7 +12989,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings",
@@ -13283,7 +13283,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "chest"
     ],
@@ -13412,7 +13412,7 @@
     "mechanic": "compound",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -13514,7 +13514,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings",
@@ -13544,7 +13544,7 @@
     "mechanic": "compound",
     "equipment": null,
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -13594,7 +13594,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -13623,7 +13623,7 @@
     "mechanic": "compound",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -13925,7 +13925,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -13970,11 +13970,11 @@
     "mechanic": "compound",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
-      "Lie down on the floor or an exercise mat with your legs fully extended and your upper body upright. Grab the plate by its sides with both hands out in front of your abdominals with your arms slightly bent.",
+      "Lie down on the floor or an exercise mat with your legs fully extended and your upper body upright. Grab the plate by its sides with both hands out in front of your abdominal with your arms slightly bent.",
       "Slowly cross your legs near your ankles and lift them up off the ground. Your knees should also be bent slightly. Note: Move your upper body back slightly to help keep you balanced turning this exercise. This is the starting position.",
       "Move the plate to the left side and touch the floor with it. Breathe out as you perform that movement.",
       "Come back to the starting position as you breathe in and then repeat the movement but this time to the right side of the body. Tip: Use a slow controlled movement at all times. Jerking motions can injure the back.",
@@ -14022,7 +14022,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings"
@@ -14204,7 +14204,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings",
@@ -14401,7 +14401,7 @@
     "mechanic": "compound",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -14410,7 +14410,7 @@
     ],
     "instructions": [
       "To begin, lie down on a bench with a barbell resting on your chest. Position your legs so they are secure on the extension of the abdominal bench. This is the starting position.",
-      "While inhaling, tighten your abdominals and glutes. Simultaneously curl your torso as you do when performing a sit-up and press the barbell to an overhead position while exhaling. Tip: Use your arms to push the barbell out as you perform this exercise while still focusing on the abdominal muscles.",
+      "While inhaling, tighten your abdominal and glutes. Simultaneously curl your torso as you do when performing a sit-up and press the barbell to an overhead position while exhaling. Tip: Use your arms to push the barbell out as you perform this exercise while still focusing on the abdominal muscles.",
       "Lower your upper body back down to the starting position while bringing the barbell back down to your torso. Remember to breathe in while lowering the body.",
       "Repeat for the recommended amount of repetitions."
     ],
@@ -14532,7 +14532,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -14686,7 +14686,7 @@
       "chest"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "shoulders",
       "triceps"
     ],
@@ -15237,7 +15237,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -15493,7 +15493,7 @@
       "forearms"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "calves",
       "glutes",
       "hamstrings",
@@ -15738,7 +15738,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -15912,7 +15912,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "lower back"
@@ -15941,7 +15941,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "biceps",
       "calves",
       "forearms",
@@ -15997,7 +15997,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -16096,7 +16096,7 @@
     "mechanic": "isolation",
     "equipment": "barbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -16233,7 +16233,7 @@
       "For this exercise you will need access to a low pulley row machine with a V-bar. Note: The V-bar will enable you to have a neutral grip where the palms of your hands face each other. To get into the starting position, first sit down on the machine and place your feet on the front platform or crossbar provided making sure that your knees are slightly bent and not locked.",
       "Lean over as you keep the natural alignment of your back and grab the V-bar handles.",
       "With your arms extended pull back until your torso is at a 90-degree angle from your legs. Your back should be slightly arched and your chest should be sticking out. You should be feeling a nice stretch on your lats as you hold the bar in front of you. This is the starting position of the exercise.",
-      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominals. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in.",
+      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it until you touch the abdominal. Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard. Hold that contraction for a second and slowly go back to the original position while breathing in.",
       "Repeat for the recommended amount of repetitions."
     ],
     "category": "strength",
@@ -16478,7 +16478,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -16693,7 +16693,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -16777,7 +16777,7 @@
       "To get into the starting position, first sit down on the machine and place your feet on the front platform or crossbar provided making sure that your knees are slightly bent and not locked.",
       "Lean over as you keep the natural alignment of your back and grab the single handle attachment with your left arm using a palms-down grip.",
       "With your arm extended pull back until your torso is at a 90-degree angle from your legs. Your back should be slightly arched and your chest should be sticking out. You should be feeling a nice stretch on your lat as you hold the bar in front of you. The right arm can be kept by the waist. This is the starting position of the exercise.",
-      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it as you rotate the wrist, so that by the time your hand is by your abdominals it is in a neutral position (palms facing the torso). Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard.",
+      "Keeping the torso stationary, pull the handles back towards your torso while keeping the arms close to it as you rotate the wrist, so that by the time your hand is by your abdominal it is in a neutral position (palms facing the torso). Breathe out as you perform that movement. At that point you should be squeezing your back muscles hard.",
       "Hold that contraction for a second and slowly go back to the original position while breathing in. Tip: Remember to rotate the wrist as you go back to the starting position so that the palms are facing down again.",
       "Repeat for the recommended amount of repetitions and then perform the same movement with the right hand."
     ],
@@ -16795,7 +16795,7 @@
     "mechanic": "isolation",
     "equipment": null,
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -16943,7 +16943,7 @@
       "shoulders"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "triceps"
     ],
     "instructions": [
@@ -17103,7 +17103,7 @@
     "mechanic": null,
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "shoulders"
@@ -17150,7 +17150,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [],
@@ -17727,7 +17727,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -17954,7 +17954,7 @@
     "mechanic": "compound",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "calves",
@@ -18201,7 +18201,7 @@
     "mechanic": "isolation",
     "equipment": "machine",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -18757,7 +18757,7 @@
     "mechanic": "compound",
     "equipment": "dumbbell",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "glutes",
@@ -18783,7 +18783,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -19439,7 +19439,7 @@
     "mechanic": "compound",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "shoulders"
@@ -19468,7 +19468,7 @@
     "mechanic": "compound",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "shoulders"
@@ -19856,7 +19856,7 @@
     "mechanic": null,
     "equipment": null,
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -20242,7 +20242,7 @@
     "mechanic": "isolation",
     "equipment": "cable",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -20516,7 +20516,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -20819,7 +20819,7 @@
     "mechanic": "compound",
     "equipment": "medicine ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -20845,7 +20845,7 @@
     "mechanic": "compound",
     "equipment": "medicine ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -20872,7 +20872,7 @@
     "mechanic": "isolation",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [
       "chest",
@@ -20926,7 +20926,7 @@
     "mechanic": "isolation",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -21191,7 +21191,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -21216,7 +21216,7 @@
     "mechanic": null,
     "equipment": "exercise ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -21450,7 +21450,7 @@
     "mechanic": "isolation",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -21907,7 +21907,7 @@
     "mechanic": "isolation",
     "equipment": "exercise ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -21960,14 +21960,14 @@
     "mechanic": "isolation",
     "equipment": "medicine ball",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
       "Lie flat on your back with your feet flat on the ground or resting on a bench with your knees bent at a 90 degree angle.",
       "Hold a weight to your chest, or you may hold it extended above your torso. This will be your starting position.",
       "Now, exhale and slowly begin to roll your shoulders off the floor. Your shoulders should come up off the floor about 4 inches while your lower back remains on the floor.",
-      "At the top of the movement, flex your abdominals and hold for a brief pause.",
+      "At the top of the movement, flex your abdominal and hold for a brief pause.",
       "Then inhale and slowly lower yourself back down to the starting position."
     ],
     "category": "strength",
@@ -22065,7 +22065,7 @@
     "mechanic": "isolation",
     "equipment": "other",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -22361,7 +22361,7 @@
     "mechanic": "compound",
     "equipment": "body only",
     "primaryMuscles": [
-      "abdominals"
+      "abdominal"
     ],
     "secondaryMuscles": [],
     "instructions": [
@@ -22509,7 +22509,7 @@
       "quadriceps"
     ],
     "secondaryMuscles": [
-      "abdominals",
+      "abdominal",
       "abductors",
       "adductors",
       "calves",

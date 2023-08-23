@@ -31,7 +31,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/cooper"
                     android:gravity="start|center_vertical"
-                    android:text="@string/exercise_plan"
+                    android:text="@string/exercise_list"
                     android:textColor="@color/white"
                     android:textSize="36sp"
                     android:layout_marginBottom="20sp"

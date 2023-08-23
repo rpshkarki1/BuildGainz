@@ -5,10 +5,9 @@ public class Exercise {
     private String name;
     private String force;
     private String level;
-    private String mechanic;
+
     private String equipment;
     private List<String> primaryMuscles;
-    private List<String> secondaryMuscles;
     private List<String> instructions;
     private String category;
 
@@ -20,17 +19,15 @@ public class Exercise {
     public Exercise() {
     }
 
-    public Exercise(String name, String force, String level, String mechanic, String equipment,
-                    List<String> primaryMuscles, List<String> secondaryMuscles,
+    public Exercise(String name, String force, String level, String equipment,
+                    List<String> primaryMuscles,
                     List<String> instructions, String category,
                     String imageFilename, String imageSubdirectory, String id) {
         this.name = name;
         this.force = force;
         this.level = level;
-        this.mechanic = mechanic;
         this.equipment = equipment;
         this.primaryMuscles = primaryMuscles;
-        this.secondaryMuscles = secondaryMuscles;
         this.instructions = instructions;
         this.category = category;
         this.imageFilename = imageFilename;
@@ -63,13 +60,6 @@ public class Exercise {
         this.level = level;
     }
 
-    public String getMechanic() {
-        return mechanic;
-    }
-
-    public void setMechanic(String mechanic) {
-        this.mechanic = mechanic;
-    }
 
     public String getEquipment() {
         return equipment;
@@ -87,13 +77,7 @@ public class Exercise {
         this.primaryMuscles = primaryMuscles;
     }
 
-    public List<String> getSecondaryMuscles() {
-        return secondaryMuscles;
-    }
 
-    public void setSecondaryMuscles(List<String> secondaryMuscles) {
-        this.secondaryMuscles = secondaryMuscles;
-    }
 
     public List<String> getInstructions() {
         return instructions;

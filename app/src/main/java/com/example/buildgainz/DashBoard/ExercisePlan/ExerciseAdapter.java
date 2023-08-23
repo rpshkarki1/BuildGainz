@@ -1,5 +1,6 @@
 package com.example.buildgainz.DashBoard.ExercisePlan;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
@@ -53,10 +54,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
         private final TextView exerciseNameTextView;
         private final TextView forceTextView;
         private final TextView levelTextView;
-        private final TextView mechanicTextView;
         private final TextView equipmentTextView;
         private final TextView primaryMusclesTextView;
-        private final TextView secondaryMusclesTextView;
         private final ImageView exerciseImageView;
 
 
@@ -66,21 +65,18 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
             exerciseNameTextView = itemView.findViewById ( R.id.name );
             forceTextView = itemView.findViewById ( R.id.force );
             levelTextView = itemView.findViewById ( R.id.level );
-            mechanicTextView = itemView.findViewById ( R.id.mechanic );
             equipmentTextView = itemView.findViewById ( R.id.equipment );
             primaryMusclesTextView = itemView.findViewById ( R.id.primeMuscle );
-            secondaryMusclesTextView = itemView.findViewById ( R.id.secondMuscle );
         }
 
 
+        @SuppressLint ( "SetTextI18n" )
         public void bind ( Exercise exercise ) {
             exerciseNameTextView.setText ( exercise.getName ( ) );
-            forceTextView.setText ( exercise.getForce ( ) );
-            levelTextView.setText ( exercise.getLevel ( ) );
-            mechanicTextView.setText ( exercise.getMechanic ( ) );
-            equipmentTextView.setText ( exercise.getEquipment ( ) );
-            primaryMusclesTextView.setText ( formatListToString ( exercise.getPrimaryMuscles ( ) ) );
-            secondaryMusclesTextView.setText ( formatListToString ( exercise.getSecondaryMuscles ( ) ) );
+            forceTextView.setText ( "FORCE: ".concat (  exercise.getForce ( ).toUpperCase() ) );
+            levelTextView.setText ( "LEVEL: ".concat (  exercise.getLevel ( ).toUpperCase() ));
+            equipmentTextView.setText ( "EQUIPMENT: ".concat ( exercise.getEquipment ( ).toUpperCase()) );
+            primaryMusclesTextView.setText ("PRIMARY MUSCLE: ".concat (  formatListToString  (  exercise.getPrimaryMuscles ( ) ).toUpperCase() ));
 
             // Load and set the first exercise image here
             AssetManager assetManager = context.getAssets();

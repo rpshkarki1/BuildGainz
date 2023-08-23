@@ -75,4 +75,5 @@
     <string name="equipment">equipment</string>
     <string name="primary_muscle">primary muscle</string>
     <string name="secondary_muscle">Secondary Muscle</string>
+    <string name="exercise_list">Exercise List</string>
 </resources>

@@ -1,105 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/grey"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        app:cardBackgroundColor="#00000000"
         app:cardCornerRadius="20sp"
-        app:cardElevation="15sp"
+        app:cardElevation="5sp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
 
             android:id="@+id/exerCardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="170sp"
-            android:background="#050505"
-            android:padding="15sp">
-
-            <ImageView
-                android:id="@+id/exerciseImageView"
-                android:layout_width="170sp"
-                android:layout_height="120sp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/exercise_image"
-                android:scaleType="centerInside"
-                 />
+            android:layout_height="match_parent"
+            android:minHeight="200sp"
+            android:orientation="vertical"
+            android:padding="10sp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:padding="10sp">
 
-                <TextView
-                    android:id="@+id/name"
+                <ImageView
+                    android:id="@+id/exerciseImageView"
+                    android:layout_width="100sp"
+                    android:layout_height="80sp"
+                    android:layout_gravity="center"
+                    android:background="@color/blue"
+                    android:contentDescription="@string/exercise_image"
+                    android:scaleType="centerCrop" />
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/name"
-                    android:textColor="#607D8B" />
+                    android:orientation="vertical"
+                    android:padding="5sp">
 
-                <TextView
-                    android:id="@+id/force"
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/force"
-                    android:textColor="#607D8B" />
+                    <TextView
+                        android:id="@+id/force"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:padding="5sp"
+                        android:textSize="15sp"
+                        android:text="@string/force"
+                        android:textColor="#7ce6f7"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/level"
-                    android:id="@+id/level"
+                    <TextView
+                        android:id="@+id/level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:padding="5sp"
+                        android:text="@string/level"
+                        android:textColor="#3fa1f5"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-                    android:textColor="#607D8B" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:id="@+id/mechanic"
+                    <TextView
+                        android:id="@+id/equipment"
+                        android:layout_width="match_parent"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:includeFontPadding="true"
+                        android:padding="5sp"
+                        android:text="@string/equipment"
+                        android:textColor="#4cbc9c"
+                        android:textStyle="bold" />
 
-                    android:text="@string/mechanic"
-                    android:textColor="#607D8B" />
+                    <TextView
+                        android:id="@+id/primeMuscle"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingTop="5sp"
+                        android:text="@string/primary_muscle"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/equipment"
-                    android:id="@+id/equipment"
-                    android:textColor="#607D8B" />
+                        android:textColor="#cab28c"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
 
-                <TextView
-                    android:id="@+id/primeMuscle"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/primary_muscle"
-                    android:textColor="#607D8B" />
-
-                <TextView
-                    android:id="@+id/secondMuscle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10sp"
-                    android:text="@string/secondary_muscle"
-                    android:textColor="#607D8B" />
+                </LinearLayout>
 
             </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:text="@string/name"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
 
 
         </LinearLayout>
