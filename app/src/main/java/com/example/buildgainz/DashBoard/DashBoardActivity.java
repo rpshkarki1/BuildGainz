@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.buildgainz.DashBoard.Profile.ProfileActivity;
 import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
 import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.ExercisesActivity;
 import com.example.buildgainz.LoginPage.LoginPageActivity;
 import com.example.buildgainz.R;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -84,7 +85,7 @@ public class DashBoardActivity extends AppCompatActivity {
             } );
         } );
 
-        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , Exercises.class ) ) );
+        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , ExercisesActivity.class ) ) );
 
 
     }

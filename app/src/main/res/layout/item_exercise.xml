@@ -1,10 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="15sp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+
+            android:id="@+id/exerCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="170sp"
+            android:background="#050505"
+            android:padding="15sp">
+
+            <ImageView
+                android:id="@+id/exerciseImageView"
+                android:layout_width="170sp"
+                android:layout_height="120sp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/exercise_image"
+                android:scaleType="centerInside"
+                android:src="@drawable/exercise_cardview" />
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/name"
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:id="@+id/force"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/force"
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/level"
+                    android:id="@+id/level"
+
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:id="@+id/mechanic"
+
+                    android:text="@string/mechanic"
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/equipment"
+                    android:id="@+id/equipment"
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:id="@+id/primeMuscle"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/primary_muscle"
+                    android:textColor="#607D8B" />
+
+                <TextView
+                    android:id="@+id/secondMuscle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:text="@string/secondary_muscle"
+                    android:textColor="#607D8B" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

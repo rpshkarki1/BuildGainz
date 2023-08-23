@@ -68,4 +68,11 @@
     <string name="welcome_user">Welcome,</string>
     <string name="loading">Loading…</string>
     <string name="exercise_plan">Exercise Plan</string>
+    <string name="name">name:</string>
+    <string name="exercise_image">Exercise Image</string>
+    <string name="force">force</string>
+    <string name="mechanic">mechanic</string>
+    <string name="equipment">equipment</string>
+    <string name="primary_muscle">primary muscle</string>
+    <string name="secondary_muscle">Secondary Muscle</string>
 </resources>
