@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="#00000000"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="5sp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/exerCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="300sp"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+
+            <TextView
+                android:id="@+id/force"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="20sp"
+                android:padding="10sp"
+                android:text="@string/force"
+                android:textColor="#7ce6f7"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/level"
+                app:layout_constraintEnd_toEndOf="@+id/level"
+                app:layout_constraintStart_toStartOf="@+id/level"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_marginStart="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="@string/level"
+                android:textColor="#3fa1f5"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/primeMuscle"
+                app:layout_constraintEnd_toEndOf="@+id/primeMuscle"
+                app:layout_constraintStart_toStartOf="@+id/primeMuscle"
+                app:layout_constraintTop_toBottomOf="@+id/force" />
+
+            <TextView
+                android:id="@+id/primeMuscle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="5dp"
+                android:padding="10sp"
+                android:text="@string/primary_muscle"
+                android:textColor="#cab28c"
+                android:textSize="15sp"
+                android:layout_marginStart="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/level"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/name"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                app:layout_constraintBottom_toTopOf="@+id/force"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ScrollViewCount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageSwitcher
+                android:id="@+id/viewPager"
+                android:layout_width="wrap_content"
+                android:layout_height="300sp"
+                android:background="@drawable/exercise_cardview"
+                android:padding="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewInstruction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </ImageSwitcher>
+
+            <TextView
+                android:id="@+id/textViewInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20sp"
+                android:text="@string/textViewOfAuthenticate"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

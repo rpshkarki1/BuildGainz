@@ -40,7 +40,8 @@
                     android:layout_marginStart="5sp"
                     android:background="@color/select_white"
                     android:contentDescription="@string/exercise_image"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    tools:ignore="ImageContrastCheck" />
 
 
                 <LinearLayout

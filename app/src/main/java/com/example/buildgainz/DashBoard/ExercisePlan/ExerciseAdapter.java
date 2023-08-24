@@ -21,19 +21,23 @@ import java.util.List;
 
 public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.ExerciseViewHolder > {
 
+    private final RecyclerViewInterface recyclerViewInterface;
+
     Context context;
     private final List < Exercise > exercises;
 
-    public ExerciseAdapter ( Context context , List < Exercise > exercises ) {
+    public ExerciseAdapter (Context context , List < Exercise > exercises , RecyclerViewInterface recyclerViewInterface ) {
         this.context = context;
         this.exercises = exercises;
+        this.recyclerViewInterface = recyclerViewInterface;
+
     }
 
     @NonNull
     @Override
     public ExerciseViewHolder onCreateViewHolder ( @NonNull ViewGroup parent , int viewType ) {
         View view = LayoutInflater.from ( context ).inflate ( R.layout.item_exercise , parent , false );
-        return new ExerciseViewHolder ( view );
+        return new ExerciseViewHolder ( view , recyclerViewInterface );
     }
 
     @Override
@@ -59,7 +63,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
         private final ImageView exerciseImageView;
 
 
-        public ExerciseViewHolder ( @NonNull View itemView ) {
+        public ExerciseViewHolder ( @NonNull View itemView ,RecyclerViewInterface recyclerViewInterface) {
             super ( itemView );
             exerciseImageView = itemView.findViewById(R.id.exerciseImageView);
             exerciseNameTextView = itemView.findViewById ( R.id.name );
@@ -67,6 +71,16 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
             levelTextView = itemView.findViewById ( R.id.level );
             equipmentTextView = itemView.findViewById ( R.id.equipment );
             primaryMusclesTextView = itemView.findViewById ( R.id.primeMuscle );
+
+            itemView.setOnClickListener ( v -> {
+                if(recyclerViewInterface != null){
+                    int pos = getAdapterPosition ();
+
+                    if(pos != RecyclerView.NO_POSITION){
+                        recyclerViewInterface.onItemClick ( pos );
+                    }
+                }
+            } );
         }
 
 
@@ -86,6 +100,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
                 Drawable drawable = Drawable.createFromStream(inputStream, null);
                 exerciseImageView.setImageDrawable(drawable);
                 inputStream.close();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
