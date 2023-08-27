@@ -76,4 +76,7 @@
     <string name="primary_muscle">primary muscle</string>
     <string name="secondary_muscle">Secondary Muscle</string>
     <string name="exercise_list">Exercise List</string>
+    <string name="arrow_forward">arrow forward</string>
+    <string name="arrow_back">arrow back</string>
+    <string name="exercise">Exercise</string>
 </resources>
