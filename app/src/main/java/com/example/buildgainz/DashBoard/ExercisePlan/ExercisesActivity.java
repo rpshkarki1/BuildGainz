@@ -56,7 +56,7 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
         ExerciseAdapter exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
         recyclerView.setAdapter ( exerciseAdapter );
 
-        searchView.setOnClickListener ( v -> searchView.setOnQueryTextListener ( new SearchView.OnQueryTextListener ( ) {
+        searchView.setOnQueryTextListener ( new SearchView.OnQueryTextListener ( ) {
             @Override
             public boolean onQueryTextSubmit ( String query ) {
                 return false;
@@ -76,9 +76,7 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
                 exerciseAdapter.notifyDataSetChanged ( );
                 return true;
             }
-        } ) );
-
-
+        } );
 
 
     }

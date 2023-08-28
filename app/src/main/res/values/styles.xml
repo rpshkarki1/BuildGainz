@@ -22,6 +22,8 @@
     </style>
 
 
+
+
     <style name="CapitalizedText">
         <item name="android:textAllCaps">true</item>
     </style>
