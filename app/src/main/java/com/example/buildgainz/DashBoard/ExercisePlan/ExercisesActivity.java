@@ -1,5 +1,6 @@
 package com.example.buildgainz.DashBoard.ExercisePlan;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +31,7 @@ import java.util.Objects;
 
 public class ExercisesActivity extends AppCompatActivity implements RecyclerViewInterface {
     private List < Exercise > exercises;
+    private List < Exercise > originalExercises;
 
 
     @Override
@@ -38,16 +41,45 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
 
         Toolbar toolbar = findViewById ( R.id.toolbarExercise );
         setSupportActionBar ( toolbar );
+        SearchView searchView = findViewById ( R.id.search_view );
+        searchView.setQueryHint ( "Exercise name, equipment or muscle" );
+        RecyclerView recyclerView = findViewById ( R.id.recyclerExercise );
+
         Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 
 
-        RecyclerView recyclerView = findViewById ( R.id.recyclerExercise );
         recyclerView.setLayoutManager ( new LinearLayoutManager ( this ) );
+
 
         exercises = loadExercisesFromJson ( );
 
         ExerciseAdapter exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
         recyclerView.setAdapter ( exerciseAdapter );
+
+        searchView.setOnClickListener ( v -> searchView.setOnQueryTextListener ( new SearchView.OnQueryTextListener ( ) {
+            @Override
+            public boolean onQueryTextSubmit ( String query ) {
+                return false;
+            }
+
+            @SuppressLint ( "NotifyDataSetChanged" )
+            @Override
+            public boolean onQueryTextChange ( String newText ) {
+                List < Exercise > filteredExercises = new ArrayList <> ( );
+                for (Exercise exercise : originalExercises) {
+                    if (exercise.getName ( ).toLowerCase ( ).contains ( newText.toLowerCase ( ) )) {
+                        filteredExercises.add ( exercise );
+                    }
+                }
+                exercises.clear ( );
+                exercises.addAll ( filteredExercises );
+                exerciseAdapter.notifyDataSetChanged ( );
+                return true;
+            }
+        } ) );
+
+
+
 
     }
 
@@ -108,6 +140,8 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             e.printStackTrace ( );
         }
 
+        originalExercises = new ArrayList <> ( exercises );
+
         return exercises;
     }
 
@@ -140,9 +174,9 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             startActivity ( intent );
         } else {
             assert exercises != null;
-            Log.d("ExercisesActivity", "Exercises size: " + exercises.size());
+            Log.d ( "ExercisesActivity" , "Exercises size: " + exercises.size ( ) );
 
-            Toast.makeText(ExercisesActivity.this, "Error loading exercises.", Toast.LENGTH_SHORT).show();
+            Toast.makeText ( ExercisesActivity.this , "Error loading exercises." , Toast.LENGTH_SHORT ).show ( );
         }
     }
 }
