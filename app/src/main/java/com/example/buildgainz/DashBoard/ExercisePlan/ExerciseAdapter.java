@@ -23,8 +23,8 @@ import java.util.List;
 public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.ExerciseViewHolder > {
 
     private final RecyclerViewInterface recyclerViewInterface;
-    private final List < Exercise > exercises;
     Context context;
+    private List < Exercise > exercises;
 
     public ExerciseAdapter ( Context context , List < Exercise > exercises , RecyclerViewInterface recyclerViewInterface ) {
         this.context = context;
@@ -32,6 +32,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
         this.recyclerViewInterface = recyclerViewInterface;
 
     }
+
 
     @NonNull
     @Override
@@ -108,10 +109,10 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
 
             try {
                 AssetManager assetManager = context.getAssets ( );
-                String[] assetsList = assetManager.list ( "exercises_img/" + exercise.getImageSubdirectory () );
+                String[] assetsList = assetManager.list ( "exercises_img/" + exercise.getImageSubdirectory ( ) );
 
                 if (assetsList != null && assetsList.length >= 2) {
-                    String imagePath1 = "exercises_img/" + exercise.getImageSubdirectory () + "/" + assetsList[0];
+                    String imagePath1 = "exercises_img/" + exercise.getImageSubdirectory ( ) + "/" + assetsList[0];
 
                     Log.d ( "ExerciseViewActivity" , "Loading image 1: " + imagePath1 );
                     InputStream inputStream1 = assetManager.open ( imagePath1 );
@@ -130,6 +131,10 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
             }
         }
 
+    }
+
+    public void setExercises ( List < Exercise > exercises ) {
+        this.exercises = exercises;
     }
 }
 

@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.ExercisesActivity">
+    tools:context=".DashBoard.ExercisePlan.ExercisesActivity"
+    android:scrollbars="vertical"
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
@@ -24,8 +26,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarExercise"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways">
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -48,27 +49,148 @@
 
 
             </androidx.appcompat.widget.Toolbar>
-
-
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/search_view_background"
-            android:layout_margin="15sp"
-            app:iconifiedByDefault="false"
-            android:scrollbarStyle="insideInset"
-            />
+            android:padding="5sp"
+            >
 
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:background="@drawable/search_view_background"
+                android:scrollbarStyle="insideInset"
+                app:iconifiedByDefault="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="push"
+                android:text="@string/push"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="pull"
+                android:text="@string/pull"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="static_exercise"
+                android:text="@string/static_exercise"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="body"
+                android:text="@string/body"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="dumbbell"
+                android:text="@string/dumbbell"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="machine"
+                android:text="@string/machine"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="Beginner"
+                android:text="@string/beginner"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+
+                android:layout_weight="1"
+                android:onClick="Intermediate"
+                android:text="@string/intermediate"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:onClick="Expert"
+                android:text="@string/expert"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
+    </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerExercise"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content" />
 
-            />
 
     </LinearLayout>
 </ScrollView>

@@ -56,7 +56,7 @@
     <string name="level">Level</string>
     <string name="beginner">Beginner</string>
     <string name="your_goals">Your goals</string>
-    <string name="intermediate">Intermediate</string>
+    <string name="intermediate">Moderate</string>
     <string name="advanced">Advanced</string>
     <string name="losing_weight">Losing Weight</string>
     <string name="build_muscle">Build Muscle</string>
@@ -79,5 +79,12 @@
     <string name="arrow_forward">arrow forward</string>
     <string name="arrow_back">arrow back</string>
     <string name="exercise">Exercise</string>
+    <string name="push">Push</string>
+    <string name="pull">Pull</string>
+    <string name="body">Body</string>
+    <string name="dumbbell">Dumbbell</string>
+    <string name="machine">Machine</string>
+    <string name="expert">Expert</string>
+    <string name="static_exercise">Static</string>
 
 </resources>
