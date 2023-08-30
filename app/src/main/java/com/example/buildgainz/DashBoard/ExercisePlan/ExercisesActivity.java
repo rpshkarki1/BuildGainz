@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,8 +32,7 @@ import java.util.Objects;
 public class ExercisesActivity extends AppCompatActivity implements RecyclerViewInterface {
     private List < Exercise > exercises;
     private List < Exercise > originalExercises;
-    private List < Exercise > filteredExercises;
-private  ExerciseAdapter exerciseAdapter;
+
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
@@ -55,7 +53,7 @@ private  ExerciseAdapter exerciseAdapter;
 
         exercises = loadExercisesFromJson ( );
 
-        exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
+        ExerciseAdapter exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
         recyclerView.setAdapter ( exerciseAdapter );
 
         searchView.setOnQueryTextListener ( new SearchView.OnQueryTextListener ( ) {
@@ -67,7 +65,7 @@ private  ExerciseAdapter exerciseAdapter;
             @SuppressLint ( "NotifyDataSetChanged" )
             @Override
             public boolean onQueryTextChange ( String newText ) {
-                filteredExercises = new ArrayList <> ( );
+                List < Exercise > filteredExercises = new ArrayList <> ( );
                 for (Exercise exercise : originalExercises) {
                     if (exercise.getName ( ).toLowerCase ( ).contains ( newText.toLowerCase ( ) )) {
                         filteredExercises.add ( exercise );
@@ -79,7 +77,6 @@ private  ExerciseAdapter exerciseAdapter;
                 return true;
             }
         } );
-        originalExercises = new ArrayList<>(exercises);
 
 
     }
@@ -179,85 +176,5 @@ private  ExerciseAdapter exerciseAdapter;
 
             Toast.makeText ( ExercisesActivity.this , "Error loading exercises." , Toast.LENGTH_SHORT ).show ( );
         }
-    }
-
-    @SuppressLint ( "NotifyDataSetChanged" )
-    private void filterList( String status) {
-        filteredExercises = new ArrayList<>();
-
-        for (Exercise exercise : originalExercises) {
-            if (exercise.getCategory().equalsIgnoreCase(status) ||
-                    exercise.getLevel().equalsIgnoreCase(status)) {
-                filteredExercises.add(exercise);
-            }
-        }
-
-        exerciseAdapter.setExercises(filteredExercises);
-        exerciseAdapter.notifyDataSetChanged ( );
-    }
-
-    @SuppressLint ( "NotifyDataSetChanged" )
-    private void filterListByForce( String force) {
-        filteredExercises = new ArrayList<>();
-
-        for (Exercise exercise : originalExercises) {
-            if (exercise.getForce().equalsIgnoreCase(force)) {
-                filteredExercises.add(exercise);
-            }
-        }
-
-        exerciseAdapter.setExercises(filteredExercises);
-        exerciseAdapter.notifyDataSetChanged();
-    }
-
-    @SuppressLint ( "NotifyDataSetChanged" )
-    private void filterListByEquipment( String equipment) {
-        filteredExercises = new ArrayList<>();
-
-        for (Exercise exercise : originalExercises) {
-            if (exercise.getEquipment().equalsIgnoreCase(equipment)) {
-                filteredExercises.add(exercise);
-            }
-        }
-
-        exerciseAdapter.setExercises(filteredExercises);
-        exerciseAdapter.notifyDataSetChanged();
-    }
-
-    public void push ( View view ) {
-        filterListByForce ("push");
-    }
-
-    public void pull ( View view ) {
-        filterListByForce ("pull");
-
-    }
-
-    public void static_exercise ( View view ) {
-        filterListByForce ("static");
-    }
-
-    public void body ( View view ) {
-        filterListByEquipment("body only");
-    }
-
-    public void dumbbell ( View view ) {
-        filterListByEquipment("dumbbell");
-    }
-
-    public void machine ( View view ) {
-        filterListByEquipment("machine");
-    }
-
-    public void Beginner ( View view ) {
-        filterList ( "Beginner" );
-    }
-
-    public void Intermediate ( View view ) {
-        filterList ( "Intermediate" );
-    }
-
-    public void Expert ( View view ) {
-        filterList ( "Expert" );
     }
 }
