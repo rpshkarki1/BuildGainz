@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ExercisesActivity extends AppCompatActivity implements RecyclerViewInterface {
+    private ExerciseAdapter exerciseAdapter;
     private List < Exercise > exercises;
     private List < Exercise > originalExercises;
 
@@ -44,6 +46,15 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
         SearchView searchView = findViewById ( R.id.search_view );
         searchView.setQueryHint ( "Exercise name, equipment or muscle" );
         RecyclerView recyclerView = findViewById ( R.id.recyclerExercise );
+        Button push = findViewById ( R.id.push );
+        Button pull = findViewById ( R.id.pull );
+        Button staticBtn = findViewById ( R.id.staticBtn );
+        Button body = findViewById ( R.id.body );
+        Button dumbbell = findViewById ( R.id.dumbbell );
+        Button machine = findViewById ( R.id.machine );
+        Button beginner = findViewById ( R.id.beginner );
+        Button intermediate = findViewById ( R.id.moderate );
+        Button expert = findViewById ( R.id.expert );
 
         Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 
@@ -53,7 +64,7 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
 
         exercises = loadExercisesFromJson ( );
 
-        ExerciseAdapter exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
+        exerciseAdapter = new ExerciseAdapter ( this , exercises , this );
         recyclerView.setAdapter ( exerciseAdapter );
 
         searchView.setOnQueryTextListener ( new SearchView.OnQueryTextListener ( ) {
@@ -78,6 +89,29 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             }
         } );
 
+
+        push.setOnClickListener ( v -> filterListByForce ( "push" ) );
+
+        pull.setOnClickListener ( v -> filterListByForce ( "pull" ) );
+
+        staticBtn.setOnClickListener ( v -> filterListByForce ( "static" ) );
+
+
+        body.setOnClickListener ( v -> filterListByEquipment ( "body only" ) );
+
+
+        dumbbell.setOnClickListener ( v -> filterListByEquipment ( "dumbbell" ) );
+
+
+        machine.setOnClickListener ( v -> filterListByEquipment ( "machine" ) );
+
+
+        beginner.setOnClickListener ( v -> filterListByLevel ( "beginner" ) );
+
+
+        intermediate.setOnClickListener ( v -> filterListByLevel ( "intermediate" ) );
+
+        expert.setOnClickListener ( v -> filterListByLevel ( "expert" ) );
 
     }
 
@@ -170,6 +204,7 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             Intent intent = new Intent ( ExercisesActivity.this , ExerciseViewActivity.class );
             intent.putExtra ( ExerciseViewActivity.EXTRA_SIMPLE_EXERCISE , exerciseCnstrForViewActivity );
             startActivity ( intent );
+            exerciseAdapter.setSelectedExercise ( position );
         } else {
             assert exercises != null;
             Log.d ( "ExercisesActivity" , "Exercises size: " + exercises.size ( ) );
@@ -177,4 +212,50 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             Toast.makeText ( ExercisesActivity.this , "Error loading exercises." , Toast.LENGTH_SHORT ).show ( );
         }
     }
+
+    @SuppressLint ( "NotifyDataSetChanged" )
+    private void filterListByLevel ( String status ) {
+        List < Exercise > filteredExercises = new ArrayList <> ( );
+
+        for (Exercise exercise : originalExercises) {
+            if (exercise.getLevel ( ).equalsIgnoreCase ( status )) {
+                filteredExercises.add ( exercise );
+            }
+        }
+        exercises.clear ( );
+        exercises.addAll ( filteredExercises );
+        exerciseAdapter.setExercises ( filteredExercises );
+        exerciseAdapter.notifyDataSetChanged ( );
+    }
+
+    @SuppressLint ( "NotifyDataSetChanged" )
+    private void filterListByForce ( String force ) {
+        List < Exercise > filteredExercises = new ArrayList <> ( );
+
+        for (Exercise exercise : originalExercises) {
+            if (exercise.getForce ( ).equalsIgnoreCase ( force )) {
+                filteredExercises.add ( exercise );
+            }
+        }
+        exercises.clear ( );
+        exercises.addAll ( filteredExercises );
+        exerciseAdapter.setExercises ( filteredExercises );
+        exerciseAdapter.notifyDataSetChanged ( );
+    }
+
+    @SuppressLint ( "NotifyDataSetChanged" )
+    private void filterListByEquipment ( String equipment ) {
+        List < Exercise > filteredExercises = new ArrayList <> ( );
+
+        for (Exercise exercise : originalExercises) {
+            if (exercise.getEquipment ( ).equalsIgnoreCase ( equipment )) {
+                filteredExercises.add ( exercise );
+            }
+        }
+        exercises.clear ( );
+        exercises.addAll ( filteredExercises );
+        exerciseAdapter.setExercises ( filteredExercises );
+        exerciseAdapter.notifyDataSetChanged ( );
+    }
+
 }

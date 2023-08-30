@@ -47,7 +47,14 @@
     <string name="profile">Profile</string>
     <string name="change_profile_pic">Change Profile Picture</string>
     <string name="upload_profile_pic">Upload Profile Picture</string>
-
+    <string name="push">Push</string>
+    <string name="pull">Pull</string>
+    <string name="body">Body</string>
+    <string name="dumbbell">Dumbbell</string>
+    <string name="machine">Machine</string>
+    <string name="expert">Expert</string>
+    <string name="static_exercise">Static</string>
+    <string name="moderate">Moderate</string>
     <string name="profile_pic">Profile Pic</string>
     <string name="personal_data">Personal Data</string>
     <string name="gender">Gender</string>

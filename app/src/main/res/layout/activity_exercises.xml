@@ -56,12 +56,122 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/search_view_background"
             android:layout_margin="15sp"
-            app:iconifiedByDefault="false"
+            android:background="@drawable/search_view_background"
             android:scrollbarStyle="insideInset"
-            />
+            app:iconifiedByDefault="false" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/push"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/push"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/pull"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/pull"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/staticBtn"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/static_exercise"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/body"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/body"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/dumbbell"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/dumbbell"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/machine"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/machine"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/beginner"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/beginner"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/moderate"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/moderate"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/expert"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginEnd="11sp"
+                android:layout_weight="1"
+                android:text="@string/expert"
+                tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerExercise"

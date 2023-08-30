@@ -23,8 +23,9 @@ import java.util.List;
 public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.ExerciseViewHolder > {
 
     private final RecyclerViewInterface recyclerViewInterface;
-    private final List < Exercise > exercises;
+    private  List < Exercise > exercises;
     Context context;
+    private int selectedPosition = RecyclerView.NO_POSITION;
 
     public ExerciseAdapter ( Context context , List < Exercise > exercises , RecyclerViewInterface recyclerViewInterface ) {
         this.context = context;
@@ -33,6 +34,17 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
 
     }
 
+    public void setSelectedExercise(int position) {
+        if (selectedPosition != position) {
+            int previousSelected = selectedPosition;
+            selectedPosition = position;
+            notifyItemChanged(previousSelected);
+            notifyItemChanged(selectedPosition);
+        }
+    }
+    public void setExercises ( List < Exercise > exercises ) {
+        this.exercises = exercises;
+    }
     @NonNull
     @Override
     public ExerciseViewHolder onCreateViewHolder ( @NonNull ViewGroup parent , int viewType ) {
@@ -86,10 +98,9 @@ public class ExerciseAdapter extends RecyclerView.Adapter < ExerciseAdapter.Exer
 
             itemView.setOnClickListener ( v -> {
                 if (recyclerViewInterface != null) {
-                    int pos = getAdapterPosition ( );
-
-                    if (pos != RecyclerView.NO_POSITION) {
-                        recyclerViewInterface.onItemClick ( pos );
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        recyclerViewInterface.onItemClick(position);
                     }
                 }
             } );
