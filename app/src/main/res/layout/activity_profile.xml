@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@color/dark_grey"
     android:orientation="vertical"
     tools:context=".DashBoard.Profile.ProfileActivity">
 
@@ -18,7 +18,6 @@
             android:id="@+id/toolbarProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
             android:background="@color/grey">
 
             <RelativeLayout
@@ -58,26 +57,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/welcomeUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20sp"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:textColor="@color/green"
-                android:textColorHint="@color/green"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profilePic"
                 android:layout_width="200sp"
                 android:layout_height="200sp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
                 android:contentDescription="@string/profile_pic"
                 android:padding="10sp"
                 android:scaleType="centerCrop"
@@ -85,7 +71,6 @@
                 app:shapeAppearanceOverlay="@style/circular"
                 app:strokeColor="@color/sky_blue"
                 app:strokeWidth="2sp" />
-
             <TextView
                 android:id="@+id/changeProfilePic"
                 android:layout_width="match_parent"
@@ -96,6 +81,22 @@
                 android:textColor="@color/sky_blue"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/welcomeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/cooper"
+                android:gravity="center"
+                android:textColor="#6200EA"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -120,7 +121,6 @@
                         android:id="@+id/fullNameProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="48sp"
-
                         android:autofillHints="name"
                         android:drawablePadding="16sp"
                         android:gravity="center_vertical"
@@ -128,8 +128,9 @@
                         android:minWidth="280sp"
                         android:minHeight="48dp"
                         android:textColor="@color/sky_blue"
-                        android:textSize="18sp"
-                        app:drawableStartCompat="@drawable/email_icon"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/cooper"
+                        app:drawableStartCompat="@drawable/full_name"
                         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
                     <ImageView
@@ -173,7 +174,8 @@
                         android:minWidth="280sp"
                         android:minHeight="48dp"
                         android:textColor="@color/sky_blue"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/cooper"
                         app:drawableStartCompat="@drawable/email_icon"
                         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 

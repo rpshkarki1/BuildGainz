@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DashBoard.Settings.DeleteUserActivity"
     android:orientation="vertical"
-    android:background="@color/grey"
+    android:background="@color/dark_grey"
     >
 
 

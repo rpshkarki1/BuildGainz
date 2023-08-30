@@ -274,7 +274,7 @@ public class ProfileActivity extends AppCompatActivity {
                     fullName = writeUserDetails.fullName;
                     email = firebaseUser.getEmail ( );
 
-                    welcomeUser.setText ( "Welcome, " + fullName + "!" );
+                    welcomeUser.setText ( "WELCOME, " + fullName + "." );
                     fullNameProfile.setText ( fullName );
                     yourEmailProfile.setText ( email );
                 }
