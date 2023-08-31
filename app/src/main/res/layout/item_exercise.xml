@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardBackgroundColor="@color/grey"
+        app:cardBackgroundColor="@color/dark_grey"
         app:cardCornerRadius="20sp"
-        app:cardElevation="5sp"
+        app:cardElevation="10sp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -22,6 +22,7 @@
             android:layout_height="match_parent"
             android:minHeight="200sp"
             android:orientation="vertical"
+            android:background="@color/grey"
             android:padding="10sp">
 
 

@@ -51,9 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:cardBackgroundColor="@color/grey"
+            app:cardBackgroundColor="@color/dark_grey"
             app:cardCornerRadius="20sp"
-            app:cardElevation="5sp"
+            app:cardElevation="20sp"
             app:cardUseCompatPadding="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,7 +63,9 @@
                 android:layout_height="match_parent"
                 android:minHeight="300sp"
                 android:orientation="vertical"
-                android:padding="10sp">
+                android:padding="10sp"
+                android:background="@color/dark_grey"
+                >
 
 
                 <TextView
@@ -74,8 +76,9 @@
                     android:layout_marginBottom="8dp"
                     android:padding="10sp"
                     android:text="@string/force"
+                    android:fontFamily="@font/cooper"
                     android:textColor="#7ce6f7"
-                    android:textSize="15sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/level"
                     app:layout_constraintEnd_toEndOf="@+id/level"
@@ -86,11 +89,12 @@
                     android:id="@+id/level"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/cooper"
                     android:layout_marginStart="20sp"
                     android:padding="10sp"
                     android:text="@string/level"
                     android:textColor="#3fa1f5"
-                    android:textSize="15sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toTopOf="@+id/primeMuscle"
                     app:layout_constraintEnd_toEndOf="@+id/primeMuscle"
@@ -107,7 +111,8 @@
                     android:padding="10sp"
                     android:text="@string/primary_muscle"
                     android:textColor="#cab28c"
-                    android:textSize="15sp"
+                    android:fontFamily="@font/cooper"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -141,7 +146,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/dark_grey"
+            >
 
 
             <ImageSwitcher

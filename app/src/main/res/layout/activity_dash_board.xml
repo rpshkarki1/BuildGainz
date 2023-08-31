@@ -81,7 +81,9 @@
         android:layout_gravity="center"
         app:cardCornerRadius="20sp"
         app:cardElevation="12sp"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true"
+        android:background="@color/dark_grey"
+        >
 
         <RelativeLayout
             android:id="@+id/exerCardView"
@@ -104,6 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:cardCornerRadius="20sp"
+        android:background="@color/dark_grey"
         app:cardElevation="12sp"
         app:cardUseCompatPadding="true">
 
@@ -126,6 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@color/dark_grey"
         app:cardCornerRadius="20sp"
         app:cardElevation="12sp"
         app:cardUseCompatPadding="true">
