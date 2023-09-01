@@ -7,6 +7,41 @@
     android:background="@color/dark_grey"
     tools:context=".DashBoard.Calculator.BMI.BMIViewActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarBMIView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/cooper"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/result_bmi"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:layout_width="wrap_content"

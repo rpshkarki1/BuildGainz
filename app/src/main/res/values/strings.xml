@@ -99,4 +99,7 @@
     <string name="_22">22</string>
     <string name="your_bmi_category_is">Your BMI Category Is</string>
     <string name="recalculate">RECALCULATE</string>
+    <string name="calculator">Calculator</string>
+    <string name="result_bmi">Result BMI</string>
+    <string name="bmi">Body Mass Index</string>
 </resources>

@@ -5,14 +5,19 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.R;
+
+import java.util.Objects;
 
 public class BMIViewActivity extends AppCompatActivity {
 
@@ -39,9 +44,9 @@ public class BMIViewActivity extends AppCompatActivity {
         setContentView ( R.layout.activity_bmiview );
         ColorDrawable colorDrawable = new ColorDrawable ( Color.parseColor ( "#1E1D1D" ) );
 
-        ///   ColorDrawable colorDrawable2=new ColorDrawable(Color.parseColor("#1E1D1D"));
-        //      getSupportActionBar().setBackgroundDrawable(colorDrawable);
-
+        Toolbar toolbar = findViewById ( R.id.toolbarBMIView );
+        setSupportActionBar ( toolbar );
+        Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 
 
         intent = getIntent ( );
@@ -80,13 +85,11 @@ public class BMIViewActivity extends AppCompatActivity {
             bmiCategory.setText ( "Moderate Thinness" );
             background.setBackgroundColor ( R.color.half_warn );
             imageView.setImageResource ( R.drawable.warning );
-            //   imageView.setBackground(colorDrawable2);
 
         } else if (intBmi < 18.4 && intBmi > 17) {
             bmiCategory.setText ( "Mild Thinness" );
             background.setBackgroundColor ( R.color.half_warn );
             imageView.setImageResource ( R.drawable.warning );
-            //   imageView.setBackground(colorDrawable2);
         } else if (intBmi < 24.9 && intBmi > 18.5) {
             bmiCategory.setText ( "Normal" );
             imageView.setImageResource ( R.drawable.ok );
@@ -94,17 +97,14 @@ public class BMIViewActivity extends AppCompatActivity {
             bmiCategory.setText ( "Overweight" );
             background.setBackgroundColor ( R.color.half_warn );
             imageView.setImageResource ( R.drawable.warning );
-            //imageView.setBackground(colorDrawable2);
         } else if (intBmi < 34.9 && intBmi > 30) {
             bmiCategory.setText ( "Obese Class I" );
             background.setBackgroundColor ( R.color.half_warn );
             imageView.setImageResource ( R.drawable.warning );
-            //  imageView.setBackground(colorDrawable2);
         } else {
             bmiCategory.setText ( "Obese Class II" );
             background.setBackgroundColor ( R.color.warn );
             imageView.setImageResource ( R.drawable.crosss );
-            //  imageView.setBackground(colorDrawable2);
         }
 
         gender.setText ( intent.getStringExtra ( "gender" ) );
@@ -114,9 +114,17 @@ public class BMIViewActivity extends AppCompatActivity {
         goToMain.setOnClickListener ( v -> {
             Intent intent1 = new Intent ( BMIViewActivity.this , BMICalculatorActivity.class );
             startActivity ( intent1 );
-            finish ();
         } );
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if (item.getItemId ( ) == android.R.id.home) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }

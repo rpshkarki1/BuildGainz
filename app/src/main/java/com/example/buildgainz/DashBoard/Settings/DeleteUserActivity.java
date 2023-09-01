@@ -39,7 +39,7 @@ public class DeleteUserActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_delete_user );
 
-        Toolbar toolbar = findViewById ( R.id.toolbarChangePwd );
+        Toolbar toolbar = findViewById ( R.id.toolbarDeleteUser );
         setSupportActionBar ( toolbar );
         Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 

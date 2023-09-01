@@ -1,16 +1,52 @@
 package com.example.buildgainz.DashBoard.Calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
 import com.example.buildgainz.R;
 
+import java.util.Objects;
+
 public class CalculatorActivity extends AppCompatActivity {
+    RelativeLayout bmiCardView, bmrCardView, ibwCardView, calorieCardView;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_calculator );
+
+
+        Toolbar toolbar = findViewById ( R.id.toolbarCalc );
+        setSupportActionBar ( toolbar );
+        Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
+
+        bmiCardView = findViewById ( R.id.bmiCardView );
+        bmrCardView = findViewById ( R.id.bmrCardView );
+        ibwCardView = findViewById ( R.id.ibwCardView );
+        calorieCardView = findViewById ( R.id.calorieCardView );
+
+        bmiCardView.setOnClickListener ( v -> {
+            startActivity ( new Intent ( CalculatorActivity.this , BMICalculatorActivity.class ) );
+            finish ( );
+        } );
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if ( item.getItemId ( ) == android.R.id.home ) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }

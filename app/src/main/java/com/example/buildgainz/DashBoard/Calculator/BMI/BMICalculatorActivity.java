@@ -3,6 +3,7 @@ package com.example.buildgainz.DashBoard.Calculator.BMI;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -10,10 +11,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import com.example.buildgainz.R;
+
+import java.util.Objects;
 
 public class BMICalculatorActivity extends AppCompatActivity {
 
@@ -38,6 +43,10 @@ public class BMICalculatorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi_calculator );
+
+        Toolbar toolbar = findViewById ( R.id.toolbarBMI);
+        setSupportActionBar ( toolbar );
+        Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
 
         currentAge=findViewById(R.id.currentAge);
         currentWeight=findViewById(R.id.currentWeight);
@@ -155,5 +164,13 @@ public class BMICalculatorActivity extends AppCompatActivity {
         } );
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if ( item.getItemId ( ) == android.R.id.home ) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }
