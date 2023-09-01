@@ -96,4 +96,7 @@
     <string name="height">Height</string>
     <string name="calculate_your_bmi">Calculate Your BMI</string>
     <string name="weight">Weight</string>
+    <string name="_22">22</string>
+    <string name="your_bmi_category_is">Your BMI Category Is</string>
+    <string name="recalculate">RECALCULATE</string>
 </resources>
