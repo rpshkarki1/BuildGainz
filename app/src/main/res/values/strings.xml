@@ -86,5 +86,14 @@
     <string name="arrow_forward">arrow forward</string>
     <string name="arrow_back">arrow back</string>
     <string name="exercise">Exercise</string>
-
+    <string name="unit">Cm</string>
+    <string name="femaleText">Female</string>
+    <string name="age">Age</string>
+    <string name="startingHeight">170</string>
+    <string name="startingWeight">55</string>
+    <string name="startingAge">22</string>
+    <string name="todo">TODO</string>
+    <string name="height">Height</string>
+    <string name="calculate_your_bmi">Calculate Your BMI</string>
+    <string name="weight">Weight</string>
 </resources>

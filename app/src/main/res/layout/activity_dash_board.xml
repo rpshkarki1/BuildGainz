@@ -101,7 +101,6 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/calcCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -111,6 +110,7 @@
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
+            android:id="@+id/calcCardView"
             android:layout_width="match_parent"
             android:layout_height="180sp"
             android:background="@drawable/calc"

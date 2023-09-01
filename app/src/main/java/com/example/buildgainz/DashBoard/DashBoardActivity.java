@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
 import com.example.buildgainz.DashBoard.Profile.ProfileActivity;
 import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
 import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
@@ -31,7 +32,7 @@ public class DashBoardActivity extends AppCompatActivity {
     Toolbar toolbar;
     ImageButton settingButton;
     ShapeableImageView profileButton;
-    RelativeLayout exercisePlan;
+    RelativeLayout exercisePlan,calculator;
     FirebaseAuth authProfile;
 
     @Override
@@ -45,6 +46,8 @@ public class DashBoardActivity extends AppCompatActivity {
         settingButton = findViewById ( R.id.settingBtn );
         profileButton = findViewById ( R.id.profileBtn );
         exercisePlan = findViewById ( R.id.exerCardView );
+        calculator = findViewById ( R.id.calcCardView );
+
         authProfile = FirebaseAuth.getInstance ( );
         FirebaseUser firebaseUser = authProfile.getCurrentUser ( );
         if ( firebaseUser != null && firebaseUser.getPhotoUrl ( ) != null ) {
@@ -87,6 +90,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
         exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , ExercisesActivity.class ) ) );
 
+        calculator.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this, BMICalculatorActivity.class ) ) );
 
     }
 

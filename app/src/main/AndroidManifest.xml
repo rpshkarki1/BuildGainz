@@ -16,6 +16,12 @@
             android:name=".DashBoard.Calculator.CalculatorActivity"
             android:exported="false" />
         <activity
+            android:name=".DashBoard.Calculator.BMI.BMIViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.Calculator.BMI.BMICalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.ExercisePlan.ViewExercise.ExerciseViewActivity"
             android:exported="false" />
         <activity
