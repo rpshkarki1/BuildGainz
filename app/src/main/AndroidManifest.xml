@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.Calculator.BMR.BMRCalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.Calculator.CalculatorActivity"
             android:exported="false" />
         <activity

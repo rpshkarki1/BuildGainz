@@ -3,7 +3,6 @@ package com.example.buildgainz.DashBoard.Calculator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
@@ -11,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
+import com.example.buildgainz.DashBoard.Calculator.BMR.BMRCalculatorActivity;
 import com.example.buildgainz.R;
 
 import java.util.Objects;
@@ -33,12 +33,9 @@ public class CalculatorActivity extends AppCompatActivity {
         ibwCardView = findViewById ( R.id.ibwCardView );
         calorieCardView = findViewById ( R.id.calorieCardView );
 
-        bmiCardView.setOnClickListener ( v -> {
-            startActivity ( new Intent ( CalculatorActivity.this , BMICalculatorActivity.class ) );
-            finish ( );
-        } );
+        bmiCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMICalculatorActivity.class ) ) );
 
-
+        bmiCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMRCalculatorActivity.class ) ) );
     }
 
     @Override
