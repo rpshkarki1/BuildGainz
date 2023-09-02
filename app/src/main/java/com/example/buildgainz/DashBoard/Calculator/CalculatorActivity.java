@@ -11,14 +11,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
 import com.example.buildgainz.DashBoard.Calculator.BMR.BMRCalculatorActivity;
-import com.example.buildgainz.DashBoard.Calculator.CalorieCalc.CalorieCalcActivity;
 import com.example.buildgainz.DashBoard.Calculator.IBW.IBWActivity;
 import com.example.buildgainz.R;
 
 import java.util.Objects;
 
 public class CalculatorActivity extends AppCompatActivity {
-    RelativeLayout bmiCardView, bmrCardView, ibwCardView, calorieCardView;
+    RelativeLayout bmiCardView, bmrCardView, ibwCardView;
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
@@ -33,7 +32,6 @@ public class CalculatorActivity extends AppCompatActivity {
         bmiCardView = findViewById ( R.id.bmiCardView );
         bmrCardView = findViewById ( R.id.bmrCardView );
         ibwCardView = findViewById ( R.id.ibwCardView );
-        calorieCardView = findViewById ( R.id.calorieCardView );
 
         bmiCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMICalculatorActivity.class ) ) );
 
@@ -41,7 +39,6 @@ public class CalculatorActivity extends AppCompatActivity {
 
         ibwCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , IBWActivity.class ) ) );
 
-        calorieCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , CalorieCalcActivity.class ) ) );
 
     }
 

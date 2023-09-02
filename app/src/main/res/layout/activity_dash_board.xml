@@ -125,7 +125,6 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/trackingCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -135,6 +134,7 @@
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
+            android:id="@+id/trackingCardView"
             android:layout_width="match_parent"
             android:layout_height="180sp"
             android:background="@drawable/tracking"

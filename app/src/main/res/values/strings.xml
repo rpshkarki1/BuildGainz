@@ -112,4 +112,7 @@
     <string name="need_energy">You need energy of</string>
     <string name="the_ideal_weight">The ideal weight for you is</string>
     <string name="kgs">kgs</string>
+    <string name="tracking">Step Tracking</string>
+    <string name="steps">Steps</string>
+    <string name="goals">Goal: 8500 </string>
 </resources>
