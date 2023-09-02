@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
 import com.example.buildgainz.DashBoard.Calculator.BMR.BMRCalculatorActivity;
+import com.example.buildgainz.DashBoard.Calculator.CalorieCalc.CalorieCalcActivity;
+import com.example.buildgainz.DashBoard.Calculator.IBW.IBWActivity;
 import com.example.buildgainz.R;
 
 import java.util.Objects;
@@ -35,12 +37,17 @@ public class CalculatorActivity extends AppCompatActivity {
 
         bmiCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMICalculatorActivity.class ) ) );
 
-        bmiCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMRCalculatorActivity.class ) ) );
+        bmrCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , BMRCalculatorActivity.class ) ) );
+
+        ibwCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , IBWActivity.class ) ) );
+
+        calorieCardView.setOnClickListener ( v -> startActivity ( new Intent ( CalculatorActivity.this , CalorieCalcActivity.class ) ) );
+
     }
 
     @Override
     public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
-        if ( item.getItemId ( ) == android.R.id.home ) {
+        if (item.getItemId ( ) == android.R.id.home) {
             onBackPressed ( ); // This will emulate the behavior of the back button
             return true;
         }

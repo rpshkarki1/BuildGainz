@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_grey"
+    android:orientation="vertical"
+    tools:context=".DashBoard.Calculator.BMR.BMRViewActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarBMIView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/cooper"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/result_bmr"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20sp"
+        app:cardElevation="12sp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/dark_grey">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/card_background">
+
+            <TextView
+                android:id="@+id/calorieDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                android:fontFamily="@font/cooper"
+                android:gravity="center"
+                android:text="@string/calories_day"
+                android:textColor="@color/white"
+                android:textSize="35sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/bmrDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                android:fontFamily="@font/cooper"
+                android:layout_marginTop="40sp"
+                android:gravity="center"
+                android:text="@string/need_energy"
+                android:textColor="@color/white"
+                android:textSize="35sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <android.widget.Button
+        android:id="@+id/gotoMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/cooper"
+        android:padding="20sp"
+        android:text="@string/recalculate"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold">
+
+    </android.widget.Button>
+
+</LinearLayout>

@@ -13,6 +13,15 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.Calculator.BMR.BMRViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.Calculator.IBW.IBWActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.Calculator.CalorieCalc.CalorieCalcActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.Calculator.BMR.BMRCalculatorActivity"
             android:exported="false" />
         <activity
