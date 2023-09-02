@@ -2,6 +2,7 @@ package com.example.buildgainz.DashBoard.Calculator.IBW;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -9,6 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -139,5 +141,16 @@ public class IBWActivity extends AppCompatActivity {
 
         } );
 
+    }
+
+
+    //Back Button
+    @Override
+    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
+        if (item.getItemId ( ) == android.R.id.home) {
+            onBackPressed ( ); // This will emulate the behavior of the back button
+            return true;
+        }
+        return super.onOptionsItemSelected ( item );
     }
 }
