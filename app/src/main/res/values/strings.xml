@@ -96,6 +96,7 @@
     <string name="height">Height</string>
     <string name="calculate_your_bmi">Calculate Your BMI</string>
     <string name="calculate_your_bmr">Calculate Your BMR</string>
+    <string name="calculate_iwc">Calculate IW</string>
     <string name="weight">Weight</string>
     <string name="_22">22</string>
     <string name="your_bmi_category_is">Your BMI Category Is</string>
@@ -103,8 +104,12 @@
     <string name="calculator">Calculator</string>
     <string name="result_bmi">Result BMI</string>
     <string name="result_bmr">Result BMR</string>
+    <string name="result_iw">Result IW</string>
     <string name="bmi">Body Mass Index</string>
     <string name="bmr">Basal Metabolic Rate</string>
+    <string name="iwc">Ideal Weight Calculator</string>
     <string name="calories_day">calories/day</string>
     <string name="need_energy">You need energy of</string>
+    <string name="the_ideal_weight">The ideal weight for you is</string>
+    <string name="kgs">kgs</string>
 </resources>

@@ -1,9 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/dark_grey"
     android:layout_height="match_parent"
     tools:context=".DashBoard.Calculator.IBW.IBWActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarIWC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/cooper"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/iwc"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        tools:ignore="RelativeOverlap" />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/centerHorizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/centerVerticalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/male"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_above="@id/heightLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="35dp"
+            android:layout_toStartOf="@id/centerVerticalLine"
+            android:background="@drawable/card_background">
+
+            <ImageView
+                android:layout_width="170sp"
+                android:layout_height="170sp"
+                android:layout_above="@id/textMale"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="21dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/male">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/male"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/female"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_above="@id/heightLayout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="35dp"
+            android:layout_toEndOf="@id/centerVerticalLine"
+            android:background="@drawable/card_background">
+
+            <ImageView
+                android:layout_width="170sp"
+                android:layout_height="170sp"
+                android:layout_above="@id/textFemale"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/female">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/femaleText"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/heightLayout"
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:layout_above="@id/centerHorizontalLine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="-50dp"
+            android:background="@drawable/card_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/height"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/currentHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/startingHeight"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/currentHeight"
+                android:fontFamily="@font/cooper"
+                android:text="@string/unit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <SeekBar
+                android:id="@+id/seekbarForHeight"
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:progressTint="@color/red"
+                android:thumbTint="@color/white">
+
+            </SeekBar>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Age"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/heightLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="100sp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/card_background"
+        android:gravity="center">
+
+
+        <TextView
+
+            android:id="@+id/textAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/cooper"
+            android:text="@string/age"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/currentAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/cooper"
+
+            android:text="@string/startingAge"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/plus_minus">
+
+            <ImageView
+                android:id="@+id/decrementAge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/todo"
+
+                android:src="@drawable/minus">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/plus_minus">
+
+            <ImageView
+                android:id="@+id/incrementAge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/add">
+
+            </ImageView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+        <android.widget.Button
+            android:id="@+id/calculateIW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/cooper"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/calculate_iwc"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintButtonSize">
+
+        </android.widget.Button>
+
+</RelativeLayout>
