@@ -95,6 +95,7 @@
     <string name="todo">TODO</string>
     <string name="height">Height</string>
     <string name="calculate_your_bmi">Calculate Your BMI</string>
+    <string name="calculate_your_bmr">Calculate Your BMR</string>
     <string name="weight">Weight</string>
     <string name="_22">22</string>
     <string name="your_bmi_category_is">Your BMI Category Is</string>
@@ -105,5 +106,5 @@
     <string name="bmi">Body Mass Index</string>
     <string name="bmr">Basal Metabolic Rate</string>
     <string name="calories_day">calories/day</string>
-    <string name="need_energy">You need to energy of</string>
+    <string name="need_energy">You need energy of</string>
 </resources>

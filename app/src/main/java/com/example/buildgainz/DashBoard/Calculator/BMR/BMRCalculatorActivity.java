@@ -1,10 +1,5 @@
 package com.example.buildgainz.DashBoard.Calculator.BMR;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +11,11 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.buildgainz.DashBoard.Calculator.BMI.BMICalculatorActivity;
-import com.example.buildgainz.DashBoard.Calculator.BMI.BMIViewActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
 import com.example.buildgainz.R;
 
 import java.util.Objects;

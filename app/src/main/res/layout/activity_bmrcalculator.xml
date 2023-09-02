@@ -226,7 +226,7 @@
         android:fontFamily="@font/cooper"
         android:gravity="center"
         android:padding="5sp"
-        android:text="@string/calculate_your_bmi"
+        android:text="@string/calculate_your_bmr"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"

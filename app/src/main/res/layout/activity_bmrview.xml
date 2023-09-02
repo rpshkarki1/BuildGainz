@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark_grey"
     android:orientation="vertical"
     tools:context=".DashBoard.Calculator.BMR.BMRViewActivity">
@@ -16,7 +16,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarBMIView"
+            android:id="@+id/toolbarBMRView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/grey">
@@ -46,22 +46,35 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView
-        app:cardCornerRadius="20sp"
-        app:cardElevation="12sp"
-        app:cardUseCompatPadding="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/dark_grey">
+        android:background="@color/dark_grey"
+        app:cardCornerRadius="10sp"
+        app:cardElevation="20sp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
-            android:id="@+id/contentLayout"
             android:layout_width="match_parent"
-            android:layout_height="400sp"
+            android:layout_height="300sp"
             android:layout_gravity="center"
+            android:background="@drawable/card_background"
             android:gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/card_background">
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:background="@color/trans"
+                android:fontFamily="@font/cooper"
+                android:gravity="center"
+                android:text="@string/need_energy"
+                android:textColor="@color/white"
+                android:textSize="35sp">
+
+            </TextView>
 
             <TextView
                 android:id="@+id/calorieDisplay"
@@ -71,20 +84,6 @@
                 android:fontFamily="@font/cooper"
                 android:gravity="center"
                 android:text="@string/calories_day"
-                android:textColor="@color/white"
-                android:textSize="35sp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/bmrDisplay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/trans"
-                android:fontFamily="@font/cooper"
-                android:layout_marginTop="40sp"
-                android:gravity="center"
-                android:text="@string/need_energy"
                 android:textColor="@color/white"
                 android:textSize="35sp">
 
