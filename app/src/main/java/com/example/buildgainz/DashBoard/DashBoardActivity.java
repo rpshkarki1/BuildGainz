@@ -16,7 +16,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.buildgainz.DashBoard.Calculator.CalculatorActivity;
-import com.example.buildgainz.DashBoard.ExercisePlan.ExercisesActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourPlan;
 import com.example.buildgainz.DashBoard.Profile.ProfileActivity;
 import com.example.buildgainz.DashBoard.Settings.ChangePasswordActivity;
 import com.example.buildgainz.DashBoard.Settings.DeleteUserActivity;
@@ -90,7 +90,7 @@ public class DashBoardActivity extends AppCompatActivity {
             } );
         } );
 
-        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , ExercisesActivity.class ) ) );
+        exercisePlan.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , ChooseYourPlan.class ) ) );
 
         calculator.setOnClickListener ( v -> startActivity ( new Intent ( DashBoardActivity.this , CalculatorActivity.class ) ) );
 

@@ -1,4 +1,4 @@
-package com.example.buildgainz.DashBoard.ExercisePlan.ViewExercise;
+package com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList.ViewExercise;
 import android.os.Parcel;
 import android.os.Parcelable;
 

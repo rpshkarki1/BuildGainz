@@ -1,4 +1,4 @@
-package com.example.buildgainz.DashBoard.ExercisePlan;
+package com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList;
 
 
 import java.util.List;

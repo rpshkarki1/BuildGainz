@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
-    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourPlan"
+            android:exported="false" />
         <activity
             android:name=".DashBoard.Tracking.StepTrackingActivity"
             android:exported="false" />
@@ -44,10 +48,10 @@
             android:name=".DashBoard.Calculator.BMI.BMICalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.ViewExercise.ExerciseViewActivity"
+            android:name=".DashBoard.ExercisePlan.AllExerciseList.ViewExercise.ExerciseViewActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.ExercisesActivity"
+            android:name=".DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity"
             android:exported="false" />
         <activity
             android:name=".DashBoard.Profile.ChangeProfilePicActivity"

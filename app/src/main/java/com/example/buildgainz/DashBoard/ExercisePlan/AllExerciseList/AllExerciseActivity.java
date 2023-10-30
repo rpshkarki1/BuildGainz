@@ -1,4 +1,4 @@
-package com.example.buildgainz.DashBoard.ExercisePlan;
+package com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,8 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.buildgainz.DashBoard.ExercisePlan.ViewExercise.ExerciseCnstrForViewActivity;
-import com.example.buildgainz.DashBoard.ExercisePlan.ViewExercise.ExerciseViewActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList.ViewExercise.ExerciseCnstrForViewActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList.ViewExercise.ExerciseViewActivity;
 import com.example.buildgainz.R;
 
 import org.json.JSONArray;
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class ExercisesActivity extends AppCompatActivity implements RecyclerViewInterface {
+public class AllExerciseActivity extends AppCompatActivity implements RecyclerViewInterface {
     private ExerciseAdapter exerciseAdapter;
     private List < Exercise > exercises;
     private List < Exercise > originalExercises;
@@ -39,7 +39,7 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_exercises );
+        setContentView ( R.layout.activity_all_exercises );
 
         Toolbar toolbar = findViewById ( R.id.toolbarExercise );
         setSupportActionBar ( toolbar );
@@ -201,15 +201,15 @@ public class ExercisesActivity extends AppCompatActivity implements RecyclerView
             exerciseCnstrForViewActivity.setImageFilename ( clickedExercise.getImageFilename ( ) );
             exerciseCnstrForViewActivity.setImageSubdirectory ( clickedExercise.getImageSubdirectory ( ) );
 
-            Intent intent = new Intent ( ExercisesActivity.this , ExerciseViewActivity.class );
+            Intent intent = new Intent ( AllExerciseActivity.this , ExerciseViewActivity.class );
             intent.putExtra ( ExerciseViewActivity.EXTRA_SIMPLE_EXERCISE , exerciseCnstrForViewActivity );
             startActivity ( intent );
             exerciseAdapter.setSelectedExercise ( position );
         } else {
             assert exercises != null;
-            Log.d ( "ExercisesActivity" , "Exercises size: " + exercises.size ( ) );
+            Log.d ( "AllExerciseActivity" , "Exercises size: " + exercises.size ( ) );
 
-            Toast.makeText ( ExercisesActivity.this , "Error loading exercises." , Toast.LENGTH_SHORT ).show ( );
+            Toast.makeText ( AllExerciseActivity.this , "Error loading exercises." , Toast.LENGTH_SHORT ).show ( );
         }
     }
 

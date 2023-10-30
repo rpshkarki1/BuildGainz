@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.ExercisesActivity">
+    tools:context=".DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity">
 
 
     <LinearLayout
