@@ -24,7 +24,6 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,7 +37,6 @@
 
 
             </RelativeLayout>
-
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,11 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@color/grey"
         android:padding="10sp"
         android:layout_margin="20sp"
         >
-
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
@@ -62,25 +58,52 @@
             android:background="@drawable/circular_shape"
             android:progressDrawable="@drawable/circular_progress_bar" />
 
-
         <TextView
-            android:id="@+id/steps"
+            android:id="@+id/totalDistance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20sp"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="110dp"
             android:fontFamily="@font/cooper"
-            android:text="@string/steps"
-            android:textColor="@color/white"
-            android:textSize="50sp"
+            android:text="@string/_0_m"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
             tools:ignore="VisualLintOverlap" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="25dp"
+            >
+            <TextView
+                android:id="@+id/steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/cooper"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:text="@string/_0"
+                tools:ignore="VisualLintOverlap" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/steps"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                tools:ignore="VisualLintOverlap" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/progressBar"
-            android:layout_below="@+id/steps"
+            android:layout_below="@+id/linearLayout"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="71dp"
@@ -92,6 +115,5 @@
             android:text="@string/goals"
             android:textColor="@color/white"
             android:textSize="30sp" />
-
     </RelativeLayout>
 </RelativeLayout>

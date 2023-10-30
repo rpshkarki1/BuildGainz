@@ -115,4 +115,6 @@
     <string name="tracking">Step Tracking</string>
     <string name="steps">Steps</string>
     <string name="goals">Goal: 8500 </string>
+    <string name="_0_m">0 M</string>
+    <string name="_0">0</string>
 </resources>

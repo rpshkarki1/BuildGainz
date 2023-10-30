@@ -73,6 +73,7 @@
                 app:shapeAppearanceOverlay="@style/circular"
                 app:strokeColor="@color/sky_blue"
                 app:strokeWidth="2sp" />
+
             <TextView
                 android:id="@+id/changeProfilePic"
                 android:layout_width="match_parent"
@@ -97,7 +98,6 @@
                 android:textSize="35sp"
                 android:textStyle="bold"
                 tools:ignore="TextContrastCheck" />
-
 
 
             <androidx.cardview.widget.CardView
@@ -125,13 +125,13 @@
                         android:layout_height="48sp"
                         android:autofillHints="name"
                         android:drawablePadding="16sp"
+                        android:fontFamily="@font/cooper"
                         android:gravity="center_vertical"
                         android:hint="@string/full_name"
                         android:minWidth="280sp"
                         android:minHeight="48dp"
                         android:textColor="@color/sky_blue"
                         android:textSize="25sp"
-                        android:fontFamily="@font/cooper"
                         app:drawableStartCompat="@drawable/full_name"
                         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
@@ -171,13 +171,13 @@
 
                         android:autofillHints="emailAddress"
                         android:drawablePadding="16sp"
+                        android:fontFamily="@font/cooper"
                         android:gravity="center_vertical"
                         android:hint="@string/your_email"
                         android:minWidth="280sp"
                         android:minHeight="48dp"
                         android:textColor="@color/sky_blue"
                         android:textSize="22sp"
-                        android:fontFamily="@font/cooper"
                         app:drawableStartCompat="@drawable/email_icon"
                         tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
 
@@ -243,6 +243,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/male"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -258,6 +259,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/female"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -296,6 +298,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/beginner"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -311,6 +314,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/intermediate"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -326,6 +330,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/advanced"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -364,6 +369,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/losing_weight"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -379,6 +385,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/build_muscle"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -394,6 +401,7 @@
                         android:gravity="center"
                         android:padding="12dp"
                         android:text="@string/body_recomposition"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
