@@ -16,7 +16,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbarChoose"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/grey">
@@ -34,7 +34,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/cooper"
                     android:gravity="start|center_vertical"
-                    android:text="@string/exercise_plans"
+                    android:text="@string/choose_your_plan"
                     android:textColor="@color/white"
                     android:textSize="40sp"
                     tools:ignore="RelativeOverlap" />
@@ -59,7 +59,7 @@
         <RelativeLayout
             android:id="@+id/allExerCardView"
             android:layout_width="match_parent"
-            android:layout_height="180sp"
+            android:layout_height="240sp"
             android:background="@drawable/all_exercise_list"
             android:gravity="bottom">
 
@@ -80,7 +80,7 @@
         <RelativeLayout
             android:id="@+id/yourPlanCardView"
             android:layout_width="match_parent"
-            android:layout_height="180sp"
+            android:layout_height="240sp"
             android:background="@drawable/your_plan"
             android:gravity="bottom">
 

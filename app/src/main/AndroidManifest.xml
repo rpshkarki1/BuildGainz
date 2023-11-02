@@ -18,6 +18,9 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.ExercisePlan.YourPlan"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourPlan"
             android:exported="false" />
         <activity

@@ -4,34 +4,23 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 
-import com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity;
 import com.example.buildgainz.R;
 
 import java.util.Objects;
 
-public class ChooseYourPlan extends AppCompatActivity {
-
-    RelativeLayout allExercisePlan, yourPlan;
+public class YourPlan extends AppCompatActivity {
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_choose_your_plan );
-        Toolbar toolbar = findViewById ( R.id.toolbarChoose );
+        setContentView ( R.layout.activity_your_plan );
+        Toolbar toolbar = findViewById ( R.id.toolbarYourPlan);
         setSupportActionBar ( toolbar );
         Objects.requireNonNull ( getSupportActionBar ( ) ).setDisplayHomeAsUpEnabled ( true );
-        allExercisePlan = findViewById ( R.id.allExerCardView );
-        yourPlan = findViewById ( R.id.yourPlanCardView);
-
-        allExercisePlan.setOnClickListener (v-> startActivity (new Intent ( ChooseYourPlan.this, AllExerciseActivity.class )));
-        yourPlan.setOnClickListener ( v -> startActivity ( new Intent ( ChooseYourPlan.this,YourPlan.class ) ) );
     }
-
 
     //Back Button
     @Override
