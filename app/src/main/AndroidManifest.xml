@@ -18,6 +18,18 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.ExercisePlan._6dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan._5dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan._4dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan._3dayPlan"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.ExercisePlan.YourPlan"
             android:exported="false" />
         <activity
