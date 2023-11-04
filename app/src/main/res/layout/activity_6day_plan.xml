@@ -1,9 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:orientation="vertical"
     tools:context=".DashBoard.ExercisePlan._6dayPlan">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/_3dayPlan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/cooper"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/_6_day_plan"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="13sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_1_workout_a"
+
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_1_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_2_workout_b"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_2_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_3_workout_c"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_3_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_4_workout_d"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_4_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_5_workout_e"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_5_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_6_workout_f"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/dark_grey"
+                app:cardCornerRadius="20sp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/workout_6_CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:background="@drawable/_3_day_plan"
+                    android:gravity="bottom">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cooper"
+                android:padding="5sp"
+                android:text="@string/day_7_off"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

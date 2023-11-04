@@ -34,7 +34,6 @@ public class YourPlan extends AppCompatActivity {
         _4day.setOnClickListener ( v -> startActivity (new Intent (  YourPlan.this, _4dayPlan.class ) ));
         _5day.setOnClickListener ( v -> startActivity ( new Intent (YourPlan.this, _5dayPlan.class ) ));
         _6day.setOnClickListener ( v -> startActivity ( new Intent(  YourPlan.this, _6dayPlan.class )) );
-
     }
 
     //Back Button
