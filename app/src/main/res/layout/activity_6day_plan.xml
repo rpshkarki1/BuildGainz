@@ -81,7 +81,7 @@
                     android:id="@+id/workout_1_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_one_work_a"
                     android:gravity="bottom">
 
                 </RelativeLayout>
@@ -110,7 +110,7 @@
                     android:id="@+id/workout_2_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_two_w_b"
                     android:gravity="bottom">
 
                 </RelativeLayout>
@@ -140,7 +140,7 @@
                     android:id="@+id/workout_3_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_3_w_c"
                     android:gravity="bottom">
 
                 </RelativeLayout>
@@ -169,7 +169,7 @@
                     android:id="@+id/workout_4_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_4_w_d"
                     android:gravity="bottom">
 
                 </RelativeLayout>
@@ -199,7 +199,7 @@
                     android:id="@+id/workout_5_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_5_w_e"
                     android:gravity="bottom">
 
                 </RelativeLayout>
@@ -227,7 +227,7 @@
                     android:id="@+id/workout_6_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
-                    android:background="@drawable/_3_day_plan"
+                    android:background="@drawable/day_6_w_f"
                     android:gravity="bottom">
 
                 </RelativeLayout>
