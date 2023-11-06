@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity">
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.AllExerciseList.AllExerciseActivity">
 
 
     <LinearLayout
@@ -16,7 +16,6 @@
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey">
@@ -192,7 +191,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/dark_grey"
-
                 />
 
         </LinearLayout>

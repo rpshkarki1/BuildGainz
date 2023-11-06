@@ -6,7 +6,6 @@
     android:gravity="center">
 
     <ImageView
-        android:id="@+id/logoForApp"
         android:layout_width="110dp"
         android:layout_height="110sp"
         android:layout_marginTop="100sp"
@@ -15,7 +14,6 @@
         />
 
     <TextView
-        android:id="@+id/buildGainz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

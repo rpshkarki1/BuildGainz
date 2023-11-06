@@ -18,19 +18,28 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
-            android:name=".DashBoard.ExercisePlan._6dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayWorkoutCActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan._5dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayWorkoutBActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan._4dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayWorkoutAActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan._3dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.YourPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans.YourExercisePlan"
             android:exported="false" />
         <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourPlan"
@@ -63,10 +72,10 @@
             android:name=".DashBoard.Calculator.BMI.BMICalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.AllExerciseList.ViewExercise.ExerciseViewActivity"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.AllExerciseList.ViewExercise.ExerciseViewActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.AllExerciseList.AllExerciseActivity"
             android:exported="false" />
         <activity
             android:name=".DashBoard.Profile.ChangeProfilePicActivity"

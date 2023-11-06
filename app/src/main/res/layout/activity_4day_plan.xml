@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan._4dayPlan">
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/_3dayPlan"
+            android:id="@+id/_4dayPlan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/grey"
@@ -192,7 +192,6 @@
                 app:cardUseCompatPadding="true">
 
                 <RelativeLayout
-                    android:id="@+id/workout_7_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
                     android:background="@drawable/day_seven_work_d"

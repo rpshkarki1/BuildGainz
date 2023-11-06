@@ -9,7 +9,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
-import com.example.buildgainz.DashBoard.ExercisePlan.AllExerciseList.AllExerciseActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.AllExerciseList.AllExerciseActivity;
+import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans.YourExercisePlan;
 import com.example.buildgainz.R;
 
 import java.util.Objects;
@@ -29,7 +30,7 @@ public class ChooseYourPlan extends AppCompatActivity {
         yourPlan = findViewById ( R.id.yourPlanCardView);
 
         allExercisePlan.setOnClickListener (v-> startActivity (new Intent ( ChooseYourPlan.this, AllExerciseActivity.class )));
-        yourPlan.setOnClickListener ( v -> startActivity ( new Intent ( ChooseYourPlan.this,YourPlan.class ) ) );
+        yourPlan.setOnClickListener ( v -> startActivity ( new Intent ( ChooseYourPlan.this, YourExercisePlan.class ) ) );
     }
 
 
