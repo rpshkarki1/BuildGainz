@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan">
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayPlan">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

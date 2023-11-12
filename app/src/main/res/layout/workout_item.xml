@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         app:cardBackgroundColor="@color/grey"
         app:cardCornerRadius="20sp"
-        app:cardElevation="10sp"
+        app:cardElevation="3sp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -61,23 +61,20 @@
                         android:textSize="30sp" />
 
 
-                    <TextView
-                        android:id="@+id/repsXSets"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5sp"
-                        android:text="@string/rep_set"
-                        android:fontFamily="@font/cooper"
-                        android:textColor="#7ce6f7"
-                        android:textSize="21sp"
-                        android:textStyle="bold" />
-
-
                 </LinearLayout>
 
             </LinearLayout>
 
-
+            <TextView
+                android:id="@+id/repsXSets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:fontFamily="@font/cooper"
+                android:text="@string/rep_set"
+                android:textColor="#7ce6f7"
+                android:textSize="25sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
 

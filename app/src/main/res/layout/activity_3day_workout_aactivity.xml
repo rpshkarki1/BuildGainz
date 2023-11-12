@@ -6,7 +6,7 @@
     android:background="@color/dark_grey"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayWorkoutAActivity">
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayWorkoutAActivity">
 
 
 
@@ -14,11 +14,12 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/grey">
+        android:background="@color/grey"
+        android:layout_marginBottom="7sp">
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarExercise"
+            android:id="@+id/toolbarWorkout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways">
@@ -36,7 +37,7 @@
                     android:layout_marginBottom="20sp"
                     android:fontFamily="@font/cooper"
                     android:gravity="start|center_vertical"
-                    android:text="@string/exercise_list"
+                    android:text="@string/workout_a"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
@@ -50,7 +51,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerExercise"
+        android:id="@+id/recyclerWorkout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dark_grey"

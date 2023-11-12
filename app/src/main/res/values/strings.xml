@@ -130,4 +130,5 @@
     <string name="day_6_off">Day 6: Off</string>
     <string name="day_7_workout_d">Day 7: Workout D</string>
     <string name="rep_set">4 sets * 13 reps</string>
+    <string name="workout_a">Workout A</string>
 </resources>

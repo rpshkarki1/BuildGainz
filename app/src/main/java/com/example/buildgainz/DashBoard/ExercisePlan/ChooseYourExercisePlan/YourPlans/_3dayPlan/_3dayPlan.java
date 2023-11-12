@@ -1,4 +1,4 @@
-package com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans;
+package com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan;
 
 import android.content.Intent;
 import android.os.Bundle;
