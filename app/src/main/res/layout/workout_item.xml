@@ -13,6 +13,7 @@
         android:layout_gravity="center"
         app:cardBackgroundColor="@color/grey"
         app:cardCornerRadius="20sp"
+        android:minHeight="200sp"
         app:cardElevation="3sp"
         app:cardUseCompatPadding="true">
 
@@ -21,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/grey"
-            android:minHeight="170sp"
             android:orientation="vertical"
             android:padding="10sp">
 
@@ -30,12 +30,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:minHeight="150sp"
                 android:padding="10sp">
 
                 <ImageView
                     android:id="@+id/exerciseImageView"
-                    android:layout_width="150sp"
-                    android:layout_height="130sp"
+                    android:layout_width="140sp"
+                    android:layout_height="110sp"
                     android:layout_gravity="center"
                     android:background="@color/select_white"
                     android:contentDescription="@string/exercise_image"
@@ -69,12 +70,12 @@
                 android:id="@+id/repsXSets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15sp"
+                android:layout_marginStart="10sp"
                 android:fontFamily="@font/cooper"
                 android:text="@string/rep_set"
                 android:textColor="#7ce6f7"
-                android:textSize="25sp"
-                android:textStyle="italic" />
+                android:textSize="27sp"
+                 />
         </LinearLayout>
 
 
