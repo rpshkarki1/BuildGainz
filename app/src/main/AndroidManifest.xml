@@ -18,6 +18,18 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutAActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayWorkoutCActivity"
             android:exported="false" />
         <activity
@@ -33,7 +45,7 @@
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayPlan"
             android:exported="false" />
         <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayPlan"
