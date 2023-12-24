@@ -1,47 +1,65 @@
-# BuildGainz
-The-fitness-app-in-android-studio
+# BuildGainz App
 
-BuildGainz is a fitness app that helps you track your progress and improve your health.
-
-Getting Started
-To get started with BuildGainz, you'll need to create an account. Once you've created an account, you can start planning your workouts, tracking your calories, and tracking your weight.
-
-
-
-Contributing
-We're always looking for ways to improve BuildGainz. If you have any ideas or suggestions, please feel free to open a pull request.
-
-`Java`
-
-`Firebase `
-
-`Google Maps `
+BuildGainz is a fitness tracking application that helps users monitor their daily step count and set fitness goals.
+BuildGainz is a fitness app that tracks users' real-time steps and calories. It is built with React Native and uses the following technologies:
 
 ## Features
-> Track your steps and calories in real-time.
 
-> See your progress over time
+- Track daily steps
+- Set step count goals
+- Reset step count
+- View progress in a progress bar
+- Track your steps and calories in real-time.
+- See your progress over time
+- Explore different fitness challenges
 
-> Set goals and track your progress toward them
+## Getting Started
 
-> Explore different fitness challenges
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-> Connect with other users and share your progress
+### Prerequisites
 
-## Installation
-> To install BuildGainz, you will need to have the following installed:
+- Android Studio
+- Android SDK
+- Java Development Kit (JDK)
+- Firebase
 
-` Android Studio `
-` Emulator `
+### Installing
 
-This will start the BuildGainz app in development mode. You can then open the app on your mobile simulator or device.But you have to add dependencies and set up firebase for your own database use.
+1. Clone the repository to your local machine:
+`git clone https://github.com/4mritGiri/Build_Gainz.git`
 
-## Usage
-> To use BuildGainz,  To get started with BuildGainz, you'll need to create an account. Once you've created an account, you can start planning your workouts, tracking your calories, and tracking your weight.
+2. Open the project in Android Studio.
 
-## Auther 
->### Amrit Giri & Rupesh Karki.
+3. Build and run the application on an emulator or a connected device.
 
+## Built With
+
+- Android Studio - The official IDE for Android development
+- Java - The programming language used
+- [Sensor API](https://developer.android.com/guide/topics/sensors/sensors_overview) - For step tracking
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/4mritGiri/Build_Gainz/tags).
+
+## Authors
+
+- Amrit Giri - [4mritGiri](https://github.com/4mritGiri)
+- Rupesh Karki - [rpshkarki1](https://github.com/rpshkarki1)
+
+See also the list of [contributors](https://github.com/4mritGiri/Build_Gainz/contributors) who participated in this project.
 
 ## License
-> BuildGainz is licensed under the MIT License.
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc.
