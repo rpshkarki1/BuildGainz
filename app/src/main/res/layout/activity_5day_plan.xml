@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan">
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayPlan">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -107,6 +107,7 @@
                 app:cardUseCompatPadding="true">
 
                 <RelativeLayout
+                    android:id="@+id/workout_2_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
                     android:background="@drawable/day_two_w_b"
@@ -164,6 +165,7 @@
                 app:cardUseCompatPadding="true">
 
                 <RelativeLayout
+                    android:id="@+id/workout_4_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="180sp"
                     android:background="@drawable/day_4_w_d"

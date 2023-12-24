@@ -15,7 +15,7 @@ import java.util.Objects;
 
 public class _4dayPlan extends AppCompatActivity {
 
-    RelativeLayout workout_A_CardView, workout_B_CardView, workout_C_CardView,workout_D_CardView;
+    RelativeLayout workout_A_CardView, workout_B_CardView, workout_C_CardView, workout_D_CardView;
 
 
     @Override
@@ -39,11 +39,6 @@ public class _4dayPlan extends AppCompatActivity {
 
 
     }
-
-
-
-
-
 
     //Back Button
     @Override

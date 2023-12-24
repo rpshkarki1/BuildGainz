@@ -11,6 +11,8 @@ import android.widget.RelativeLayout;
 
 import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayPlan;
 import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayPlan;
+import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayPlan;
+import com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayPlan;
 import com.example.buildgainz.R;
 
 import java.util.Objects;

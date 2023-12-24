@@ -3232,7 +3232,7 @@
     ],
     "category": "strength",
     "images": [
-      "Cable_Rear_Delt_Fly/0.jpg",
+      "f/0.jpg",
       "Cable_Rear_Delt_Fly/1.jpg"
     ],
     "id": "Cable_Rear_Delt_Fly"
@@ -8776,7 +8776,7 @@
     "id": "Incline_Cable_Chest_Press"
   },
   {
-    "name": "Incline Cable Flye",
+    "name": "Incline de",
     "force": "push",
     "level": "intermediate",
     "mechanic": "isolation",

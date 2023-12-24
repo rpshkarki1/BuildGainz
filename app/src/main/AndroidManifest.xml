@@ -18,6 +18,39 @@
         android:theme="@style/Theme.BuildGainz"
         tools:targetApi="31">
         <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutFActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutEActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutAActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayWorkoutEActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayWorkoutDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayWorkoutCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayWorkoutBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayWorkoutAActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutDActivity"
             android:exported="false" />
         <activity
@@ -39,10 +72,10 @@
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._3dayPlan._3dayWorkoutAActivity"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayPlan"
             android:exported="false" />
         <activity
-            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan"
+            android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._5dayPlan._5dayPlan"
             android:exported="false" />
         <activity
             android:name=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayPlan"

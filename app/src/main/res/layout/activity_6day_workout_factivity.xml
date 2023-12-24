@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._4dayPlan._4dayWorkoutAActivity">
-
-
+    tools:context=".DashBoard.ExercisePlan.ChooseYourExercisePlan.YourPlans._6dayPlan._6dayWorkoutFActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +16,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarWorkout4A"
+            android:id="@+id/toolbarWorkout6F"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways">
@@ -35,7 +34,7 @@
                     android:layout_marginBottom="20sp"
                     android:fontFamily="@font/cooper"
                     android:gravity="start|center_vertical"
-                    android:text="@string/workout_a"
+                    android:text="@string/workout_f"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
@@ -49,7 +48,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerWorkout4A"
+        android:id="@+id/recyclerWorkout6F"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dark_grey" />
