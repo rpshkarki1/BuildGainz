@@ -33,19 +33,19 @@ public class StepTrackingActivity extends AppCompatActivity implements SensorEve
 
     private SensorManager sensorManager = null;
     private Sensor stepSensor;
-    private  int totalSteps = 0;
-    private  int previewTotalSteps = 0 ;
+    private int totalSteps = 0;
+    private int previewTotalSteps = 0;
     private ProgressBar progressBar;
     private TextView steps, totalDistance;
     int goalStep = 8500, currentSteps;
     double averageStrideLengthMeters = 0.762;
     private static final int REQUEST_ACTIVITY_RECOGNITION_PERMISSION = 1001;
 
-    @RequiresApi ( api = Build.VERSION_CODES.Q )
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
-    protected void onCreate ( Bundle savedInstanceState ) {
-        super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_step_tracking );
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_step_tracking);
 
         // Check if permission is granted
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACTIVITY_RECOGNITION)
@@ -59,37 +59,30 @@ public class StepTrackingActivity extends AppCompatActivity implements SensorEve
             initializeStepTracking();
         }
 
-        progressBar = findViewById ( R.id.progressBar );
-        steps = findViewById ( R.id.steps );
+        progressBar = findViewById(R.id.progressBar);
+        steps = findViewById(R.id.steps);
         totalDistance = findViewById(R.id.totalDistance);
 
-        sensorManager = (SensorManager) getSystemService ( SENSOR_SERVICE );
-        stepSensor = sensorManager.getDefaultSensor ( Sensor.TYPE_STEP_COUNTER );
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+
         onResume();
-        Toolbar toolbar = findViewById ( R.id.toolbarTracking);
-        setSupportActionBar ( toolbar );
+
+        Toolbar toolbar = findViewById(R.id.toolbarTracking);
+        setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         resetSteps();
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == REQUEST_ACTIVITY_RECOGNITION_PERMISSION) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // Permission granted
-                initializeStepTracking();
-            } else {
-                // Permission denied, handle this case
-                Toast.makeText(this, "Permission denied. Cannot track steps.", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
     private void initializeStepTracking() {
-        // Your step tracking initialization code goes here
-        // This is the part where you set up the sensor manager and start listening for step events
+        if (sensorManager == null) {
+            sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        }
+        stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        if (stepSensor == null) {
+            Toast.makeText(this, "This device has no step counter sensor.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -103,32 +96,30 @@ public class StepTrackingActivity extends AppCompatActivity implements SensorEve
     }
 
     @Override
-    protected void onPause ( ) {
-        super.onPause ( );
-        sensorManager.unregisterListener ( this );
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if(event.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
+        if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
             totalSteps = (int) event.values[0];
             currentSteps = totalSteps - previewTotalSteps;
-            steps.setTextColor(getColor(currentSteps>3000 ? R.color.green : R.color.red));
+            steps.setTextColor(getColor(currentSteps > 3000 ? R.color.green : R.color.red));
             steps.setText(String.valueOf(currentSteps));
             float barStep = ((float) currentSteps / goalStep) * 100;
             double totalDistanceMeters = currentSteps * averageStrideLengthMeters;
-            double totalDistanceKm = totalDistanceMeters/1000;
+            double totalDistanceKm = totalDistanceMeters / 1000;
 
             DecimalFormat df = new DecimalFormat("#.##");
             String formattedM = df.format(totalDistanceMeters);
             String formattedKm = df.format(totalDistanceKm);
 
-            totalDistance.setText(totalDistanceMeters >= 1000?formattedKm + " KM" : formattedM + " M");
+            totalDistance.setText(totalDistanceMeters >= 1000 ? formattedKm + " KM" : formattedM + " M");
             progressBar.setProgress((int) barStep);
-
         }
     }
-
 
     private void resetSteps() {
         steps.setOnClickListener(v -> Toast.makeText(StepTrackingActivity.this, "LONG PRESS TO RESET STEPS", Toast.LENGTH_SHORT).show());
@@ -152,46 +143,47 @@ public class StepTrackingActivity extends AppCompatActivity implements SensorEve
         });
     }
 
-
-
-    private void loadData(){
-        SharedPreferences sharedPreferences = getSharedPreferences ( "myPref",Context.MODE_PRIVATE );
-        previewTotalSteps = sharedPreferences.getInt ( "key1", 0 );
+    private void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("myPref", Context.MODE_PRIVATE);
+        previewTotalSteps = sharedPreferences.getInt("key1", 0);
     }
+
     private void saveDailySteps(int day, int stepCount) {
         SharedPreferences sharedPreferences = getSharedPreferences("daily_steps", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("day" + day, stepCount);
         editor.apply();
     }
+
     private int loadDailySteps(int day) {
         SharedPreferences sharedPreferences = getSharedPreferences("daily_steps", Context.MODE_PRIVATE);
         return sharedPreferences.getInt("day" + day, 0);
     }
+
     private void displaySevenDayRecord() {
         for (int i = 1; i <= 7; i++) {
             int stepCount = loadDailySteps(i);
-            Log.d("StepTrackingActivityDebug", stepCount + "DisplaySaveDayRecord");
+            Log.d("StepTrackingActivityDebug", stepCount + " DisplaySaveDayRecord for Day " + i);
             // Display stepCount for day i in your UI
             // You can use TextViews, a ListView, or any other UI component to display the data
         }
     }
+
     @Override
-    public void onAccuracyChanged ( Sensor sensor , int accuracy ) {
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
     @Override
-    public void onPointerCaptureChanged ( boolean hasCapture ) {
-        super.onPointerCaptureChanged ( hasCapture );
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 
     @Override
-    public boolean onOptionsItemSelected ( @NonNull MenuItem item ) {
-        if ( item.getItemId ( ) == android.R.id.home ) {
-            onBackPressed ( );
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
             return true;
         }
-        return super.onOptionsItemSelected ( item );
+        return super.onOptionsItemSelected(item);
     }
-
 }
