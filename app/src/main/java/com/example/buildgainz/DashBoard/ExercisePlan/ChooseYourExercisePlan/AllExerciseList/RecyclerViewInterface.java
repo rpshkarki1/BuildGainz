@@ -1,5 +1,5 @@
 package com.example.buildgainz.DashBoard.ExercisePlan.ChooseYourExercisePlan.AllExerciseList;
 
-interface RecyclerViewInterface {
+public interface RecyclerViewInterface {
     void onItemClick ( int position );
 }

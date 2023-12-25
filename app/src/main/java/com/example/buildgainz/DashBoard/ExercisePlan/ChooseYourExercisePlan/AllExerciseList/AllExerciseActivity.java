@@ -161,7 +161,7 @@ public class AllExerciseActivity extends AppCompatActivity implements RecyclerVi
                     String imagePath = imagesArray.getString ( 0 ); // Assuming the first image is used
                     String[] imagePathComponents = imagePath.split ( "/" );
                     if (imagePathComponents.length >= 2) {
-                        exercise.setImageFilename ( imagePathComponents[imagePathComponents.length - 1].replace ( ".jpg" , "" ) );
+                        exercise.setImageFilename ( imagePathComponents[imagePathComponents.length - 1].replace ( ".webp" , "" ) );
                         exercise.setImageSubdirectory ( imagePathComponents[imagePathComponents.length - 2] );
                     }
                 }
